@@ -586,6 +586,8 @@ function renderRequestStatuses(requests) {
 function openBook(book) {
   const cover = getCoverPath(book);
   const listenUrl = `${absConfig.publicUrl}/audiobookshelf/item/${encodeURIComponent(book.id)}`;
+  const description = book.descricao || "Descrição não disponível no momento.";
+  const hasLongDescription = description.length > 360;
   const details = [
     book.autor,
     book.narrador ? `Narração de ${book.narrador}` : "",
@@ -596,10 +598,11 @@ function openBook(book) {
     <div class="dialog-content">
       <img src="${cover}" alt="Capa de ${book.titulo}">
       <div>
-        <p class="eyebrow">${book.genero || "Audiolivro"}</p>
-        <h3>${book.titulo}</h3>
-        <div class="dialog-meta">${details.join(" · ")}</div>
-        <p>${book.descricao || "Descrição não disponível no momento."}</p>
+        <p class="eyebrow">${escapeHtml(book.genero || "Audiolivro")}</p>
+        <h3>${escapeHtml(book.titulo)}</h3>
+        <div class="dialog-meta">${escapeHtml(details.join(" · "))}</div>
+        <p class="dialog-description ${hasLongDescription ? "is-collapsed" : ""}">${escapeHtml(description)}</p>
+        ${hasLongDescription ? `<button class="read-more" type="button">Ler mais</button>` : ""}
         <a class="listen-link" href="${listenUrl}" target="_blank" rel="noopener noreferrer">Ouvir agora</a>
       </div>
     </div>
@@ -608,6 +611,14 @@ function openBook(book) {
   image.addEventListener("error", () => {
     image.src = "capas/hero-library.svg";
   }, { once: true });
+  const readMore = els.dialogBody.querySelector(".read-more");
+  const descriptionElement = els.dialogBody.querySelector(".dialog-description");
+  if (readMore && descriptionElement) {
+    readMore.addEventListener("click", () => {
+      const isCollapsed = descriptionElement.classList.toggle("is-collapsed");
+      readMore.textContent = isCollapsed ? "Ler mais" : "Mostrar menos";
+    });
+  }
   els.dialog.showModal();
 }
 

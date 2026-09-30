@@ -781,6 +781,31 @@ h2 {
   font-size: 0.9rem;
 }
 
+.dialog-description {
+  margin-bottom: 8px;
+}
+
+.dialog-description.is-collapsed {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.read-more {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 0 10px;
+  padding: 0;
+  color: var(--green-dark);
+  background: transparent;
+  border: 0;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
 .listen-link {
   display: inline-flex;
   align-items: center;
