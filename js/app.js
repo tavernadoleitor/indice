@@ -263,8 +263,10 @@ function createBookCard(book) {
     <div class="cover-wrap">
       <img src="${cover}" alt="Capa de ${book.titulo}" loading="lazy">
     </div>
-    <h3>${book.titulo}</h3>
-    <p>${book.autor}</p>
+    <div class="book-info">
+      <h3>${book.titulo}</h3>
+      <p>${book.autor || "Autor não informado"}</p>
+    </div>
   `;
   const image = button.querySelector("img");
   image.addEventListener("error", () => {
@@ -397,17 +399,20 @@ function renderRequests() {
 
 function openBook(book) {
   const cover = getCoverPath(book);
+  const details = [
+    book.autor,
+    book.narrador ? `Narração de ${book.narrador}` : "",
+    book.duracao,
+    book.serie
+  ].filter(Boolean);
   els.dialogBody.innerHTML = `
     <div class="dialog-content">
       <img src="${cover}" alt="Capa de ${book.titulo}">
       <div>
-        <p class="eyebrow">${book.genero}</p>
+        <p class="eyebrow">${book.genero || "Audiolivro"}</p>
         <h3>${book.titulo}</h3>
-        <div class="dialog-meta">
-          ${book.autor} - Narração de ${book.narrador}<br>
-          ${book.duracao}${book.serie ? ` - ${book.serie}` : ""}
-        </div>
-        <p>${book.descricao}</p>
+        <div class="dialog-meta">${details.join(" · ")}</div>
+        <p>${book.descricao || "Descrição não disponível no momento."}</p>
       </div>
     </div>
   `;
