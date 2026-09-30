@@ -169,6 +169,16 @@ const state = {
   requests: []
 };
 
+const requestFormConfig = {
+  action: "https://docs.google.com/forms/d/e/1FAIpQLSfWNMs8rfalo_ypUK0MLyIt1yIe-G6m-zKf3GI2Fngd4-MbEw/formResponse",
+  fields: {
+    nome: "entry.1394853025",
+    titulo: "entry.1389954983",
+    autor: "entry.1879948104",
+    observacao: "entry.1633326110"
+  }
+};
+
 const els = {
   searchInput: document.querySelector("#searchInput"),
   bookCount: document.querySelector("#bookCount"),
@@ -197,11 +207,13 @@ const els = {
   requestDialog: document.querySelector("#requestDialog"),
   requestClose: document.querySelector("#requestClose"),
   requestForm: document.querySelector("#requestForm"),
+  requestName: document.querySelector("#requestName"),
   requestTitle: document.querySelector("#requestTitle"),
   requestAuthor: document.querySelector("#requestAuthor"),
   requestNote: document.querySelector("#requestNote"),
   requestList: document.querySelector("#requestList"),
-  clearRequests: document.querySelector("#clearRequests")
+  clearRequests: document.querySelector("#clearRequests"),
+  requestFeedback: document.querySelector("#requestFeedback")
 };
 
 async function loadJson(path, fallback) {
@@ -384,6 +396,20 @@ function saveRequests() {
   localStorage.setItem("tavernaPedidos", JSON.stringify(state.requests));
 }
 
+async function submitRequestToGoogleForms(request) {
+  const payload = new FormData();
+  payload.append(requestFormConfig.fields.nome, request.nome);
+  payload.append(requestFormConfig.fields.titulo, request.titulo);
+  payload.append(requestFormConfig.fields.autor, request.autor);
+  payload.append(requestFormConfig.fields.observacao, request.observacao);
+
+  await fetch(requestFormConfig.action, {
+    method: "POST",
+    mode: "no-cors",
+    body: payload
+  });
+}
+
 function renderRequests() {
   if (!state.requests.length) {
     els.requestList.innerHTML = `<p class="request-empty">Nenhum pedido registrado neste dispositivo.</p>`;
@@ -395,7 +421,7 @@ function renderRequests() {
     item.className = "request-item";
     item.innerHTML = `
       <strong>${request.titulo}</strong>
-      <span>${request.autor || "Autor não informado"} - ${request.data}</span>
+      <span>${request.autor || "Autor não informado"} - ${request.nome} - ${request.data}</span>
       ${request.observacao ? `<p>${request.observacao}</p>` : ""}
     `;
     return item;
@@ -462,17 +488,32 @@ function bindEvents() {
     if (event.target === els.requestDialog) els.requestDialog.close();
   });
 
-  els.requestForm.addEventListener("submit", (event) => {
+  els.requestForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    state.requests.unshift({
+    const submitButton = els.requestForm.querySelector("button[type='submit']");
+    const request = {
+      nome: els.requestName.value.trim(),
       titulo: els.requestTitle.value.trim(),
       autor: els.requestAuthor.value.trim(),
       observacao: els.requestNote.value.trim(),
       data: new Date().toLocaleDateString("pt-BR")
-    });
-    saveRequests();
-    renderRequests();
-    els.requestForm.reset();
+    };
+
+    submitButton.disabled = true;
+    els.requestFeedback.textContent = "Enviando pedido...";
+
+    try {
+      await submitRequestToGoogleForms(request);
+      state.requests.unshift(request);
+      saveRequests();
+      renderRequests();
+      els.requestForm.reset();
+      els.requestFeedback.textContent = "Pedido enviado. Obrigado!";
+    } catch (error) {
+      els.requestFeedback.textContent = "Não foi possível enviar agora. Tente novamente em instantes.";
+    } finally {
+      submitButton.disabled = false;
+    }
   });
 
   els.clearRequests.addEventListener("click", () => {

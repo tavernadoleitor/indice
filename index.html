@@ -139,6 +139,10 @@
         <h2>Solicitar audiolivro</h2>
         <form class="request-form" id="requestForm">
           <label>
+            Nome ou apelido
+            <input id="requestName" type="text" required placeholder="Como devemos identificar o pedido?">
+          </label>
+          <label>
             Título
             <input id="requestTitle" type="text" required placeholder="Nome do livro">
           </label>
@@ -151,10 +155,11 @@
             <textarea id="requestNote" rows="3" placeholder="Edição, narrador, idioma ou outro detalhe"></textarea>
           </label>
           <button type="submit">Registrar pedido</button>
+          <p class="request-feedback" id="requestFeedback" role="status"></p>
         </form>
 
         <div class="request-list-header">
-          <h3>Pedidos registrados neste dispositivo</h3>
+          <h3>Últimos pedidos neste dispositivo</h3>
           <button id="clearRequests" type="button">Limpar lista</button>
         </div>
         <div class="request-list" id="requestList"></div>
