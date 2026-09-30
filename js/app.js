@@ -164,7 +164,10 @@ const state = {
   listening: [],
   status: {},
   query: "",
-  filter: "todos"
+  filter: "todos",
+  page: 1,
+  pageSize: 48,
+  requests: []
 };
 
 const els = {
@@ -172,19 +175,33 @@ const els = {
   bookCount: document.querySelector("#bookCount"),
   listenerCount: document.querySelector("#listenerCount"),
   onlineIndicator: document.querySelector("#onlineIndicator"),
-  lastSync: document.querySelector("#lastSync"),
+  syncIndicator: document.querySelector("#syncIndicator"),
   recentCount: document.querySelector("#recentCount"),
   recentGrid: document.querySelector("#recentGrid"),
+  listeningSection: document.querySelector("#ouvindo"),
   activeSessions: document.querySelector("#activeSessions"),
   listeningGrid: document.querySelector("#listeningGrid"),
   catalogGrid: document.querySelector("#catalogGrid"),
   emptyState: document.querySelector("#emptyState"),
+  catalogSummary: document.querySelector("#catalogSummary"),
+  prevPage: document.querySelector("#prevPage"),
+  pageIndicator: document.querySelector("#pageIndicator"),
+  nextPage: document.querySelector("#nextPage"),
   statusLight: document.querySelector("#statusLight"),
   statusTitle: document.querySelector("#statusTitle"),
   statusMessage: document.querySelector("#statusMessage"),
   dialog: document.querySelector("#bookDialog"),
   dialogBody: document.querySelector("#dialogBody"),
-  dialogClose: document.querySelector("#dialogClose")
+  dialogClose: document.querySelector("#dialogClose"),
+  requestFab: document.querySelector("#requestFab"),
+  requestDialog: document.querySelector("#requestDialog"),
+  requestClose: document.querySelector("#requestClose"),
+  requestForm: document.querySelector("#requestForm"),
+  requestTitle: document.querySelector("#requestTitle"),
+  requestAuthor: document.querySelector("#requestAuthor"),
+  requestNote: document.querySelector("#requestNote"),
+  requestList: document.querySelector("#requestList"),
+  clearRequests: document.querySelector("#clearRequests")
 };
 
 async function loadJson(path, fallback) {
@@ -205,14 +222,26 @@ function normalize(text) {
 }
 
 function formatRelativeSync(value) {
-  if (!value) return "Sem sincronizacao registrada";
+  if (!value) return "Sem registro";
   const syncDate = new Date(value);
-  if (Number.isNaN(syncDate.getTime())) return "Sincronizacao registrada";
+  if (Number.isNaN(syncDate.getTime())) return "Registrado";
   const minutes = Math.max(0, Math.round((Date.now() - syncDate.getTime()) / 60000));
   if (minutes < 1) return "Atualizado agora";
-  if (minutes < 60) return `Atualizado ha ${minutes} min`;
+  if (minutes < 60) return `Há ${minutes} min`;
   const hours = Math.round(minutes / 60);
-  if (hours < 24) return `Atualizado ha ${hours} h`;
+  if (hours < 24) return `Há ${hours} h`;
+  return syncDate.toLocaleDateString("pt-BR");
+}
+
+function formatStatusMessage(value) {
+  if (!value) return "Sem sincronização registrada";
+  const syncDate = new Date(value);
+  if (Number.isNaN(syncDate.getTime())) return "Sincronização registrada";
+  const minutes = Math.max(0, Math.round((Date.now() - syncDate.getTime()) / 60000));
+  if (minutes < 1) return "Atualizado agora";
+  if (minutes < 60) return `Atualizado há ${minutes} min`;
+  const hours = Math.round(minutes / 60);
+  if (hours < 24) return `Atualizado há ${hours} h`;
   return `Atualizado em ${syncDate.toLocaleDateString("pt-BR")}`;
 }
 
@@ -250,6 +279,12 @@ function renderRecent() {
 }
 
 function renderListening() {
+  if (!state.listening.length) {
+    els.listeningSection.hidden = true;
+    return;
+  }
+
+  els.listeningSection.hidden = false;
   const byId = new Map(state.catalog.map((book) => [book.id, book]));
   const cards = state.listening.map((session) => {
     const book = byId.get(session.id);
@@ -269,7 +304,7 @@ function renderListening() {
   });
 
   els.listeningGrid.replaceChildren(...cards);
-  els.activeSessions.textContent = `${state.listening.length} sessoes ativas`;
+  els.activeSessions.textContent = `${state.listening.length} sessões ativas`;
 }
 
 function getFilteredCatalog() {
@@ -283,15 +318,26 @@ function getFilteredCatalog() {
 
 function renderCatalog() {
   const books = getFilteredCatalog();
-  els.catalogGrid.replaceChildren(...books.map(createBookCard));
+  const totalPages = Math.max(1, Math.ceil(books.length / state.pageSize));
+  state.page = Math.min(state.page, totalPages);
+  const start = (state.page - 1) * state.pageSize;
+  const visibleBooks = books.slice(start, start + state.pageSize);
+
+  els.catalogGrid.replaceChildren(...visibleBooks.map(createBookCard));
   els.emptyState.hidden = books.length > 0;
+  els.catalogSummary.textContent = books.length
+    ? `Mostrando ${start + 1}-${start + visibleBooks.length} de ${books.length} audiolivros`
+    : "Nenhum audiolivro encontrado";
+  els.pageIndicator.textContent = `Página ${state.page} de ${totalPages}`;
+  els.prevPage.disabled = state.page <= 1;
+  els.nextPage.disabled = state.page >= totalPages;
 }
 
 function renderStatus() {
   const freshness = getFreshness(state.status);
   const statusLabels = {
     online: ["Online", "Servidor online"],
-    stale: ["Nao confirmado", "Status nao confirmado"],
+    stale: ["A conferir", "Status não confirmado"],
     offline: ["Offline", "Servidor offline"]
   };
   const [shortLabel, title] = statusLabels[freshness];
@@ -299,10 +345,40 @@ function renderStatus() {
   els.bookCount.textContent = state.status.total_audiolivros || state.catalog.length;
   els.listenerCount.textContent = state.status.ouvintes_ativos ?? state.listening.length;
   els.onlineIndicator.textContent = shortLabel;
-  els.lastSync.textContent = formatRelativeSync(state.status.ultima_sincronizacao);
+  els.syncIndicator.textContent = formatRelativeSync(state.status.ultima_sincronizacao);
   els.statusLight.className = `status-light ${freshness}`;
   els.statusTitle.textContent = title;
-  els.statusMessage.textContent = `${formatRelativeSync(state.status.ultima_sincronizacao)}. ${state.status.mensagem || ""}`;
+  els.statusMessage.textContent = `${formatStatusMessage(state.status.ultima_sincronizacao)}. ${state.status.mensagem || ""}`;
+}
+
+function loadRequests() {
+  try {
+    state.requests = JSON.parse(localStorage.getItem("tavernaPedidos") || "[]");
+  } catch (error) {
+    state.requests = [];
+  }
+}
+
+function saveRequests() {
+  localStorage.setItem("tavernaPedidos", JSON.stringify(state.requests));
+}
+
+function renderRequests() {
+  if (!state.requests.length) {
+    els.requestList.innerHTML = `<p class="request-empty">Nenhum pedido registrado neste dispositivo.</p>`;
+    return;
+  }
+
+  els.requestList.replaceChildren(...state.requests.map((request) => {
+    const item = document.createElement("article");
+    item.className = "request-item";
+    item.innerHTML = `
+      <strong>${request.titulo}</strong>
+      <span>${request.autor || "Autor não informado"} - ${request.data}</span>
+      ${request.observacao ? `<p>${request.observacao}</p>` : ""}
+    `;
+    return item;
+  }));
 }
 
 function openBook(book) {
@@ -313,7 +389,7 @@ function openBook(book) {
         <p class="eyebrow">${book.genero}</p>
         <h3>${book.titulo}</h3>
         <div class="dialog-meta">
-          ${book.autor} - Narracao de ${book.narrador}<br>
+          ${book.autor} - Narração de ${book.narrador}<br>
           ${book.duracao}${book.serie ? ` - ${book.serie}` : ""}
         </div>
         <p>${book.descricao}</p>
@@ -326,6 +402,7 @@ function openBook(book) {
 function bindEvents() {
   els.searchInput.addEventListener("input", (event) => {
     state.query = event.target.value;
+    state.page = 1;
     renderCatalog();
   });
 
@@ -334,13 +411,55 @@ function bindEvents() {
       document.querySelectorAll(".filter").forEach((item) => item.classList.remove("is-active"));
       button.classList.add("is-active");
       state.filter = button.dataset.filter;
+      state.page = 1;
       renderCatalog();
     });
+  });
+
+  els.prevPage.addEventListener("click", () => {
+    state.page = Math.max(1, state.page - 1);
+    renderCatalog();
+    document.querySelector("#catalogo").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  els.nextPage.addEventListener("click", () => {
+    state.page += 1;
+    renderCatalog();
+    document.querySelector("#catalogo").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
   els.dialogClose.addEventListener("click", () => els.dialog.close());
   els.dialog.addEventListener("click", (event) => {
     if (event.target === els.dialog) els.dialog.close();
+  });
+
+  els.requestFab.addEventListener("click", () => {
+    renderRequests();
+    els.requestDialog.showModal();
+  });
+
+  els.requestClose.addEventListener("click", () => els.requestDialog.close());
+  els.requestDialog.addEventListener("click", (event) => {
+    if (event.target === els.requestDialog) els.requestDialog.close();
+  });
+
+  els.requestForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    state.requests.unshift({
+      titulo: els.requestTitle.value.trim(),
+      autor: els.requestAuthor.value.trim(),
+      observacao: els.requestNote.value.trim(),
+      data: new Date().toLocaleDateString("pt-BR")
+    });
+    saveRequests();
+    renderRequests();
+    els.requestForm.reset();
+  });
+
+  els.clearRequests.addEventListener("click", () => {
+    state.requests = [];
+    saveRequests();
+    renderRequests();
   });
 }
 
@@ -354,6 +473,7 @@ async function init() {
   state.catalog = catalog;
   state.listening = listening;
   state.status = status;
+  loadRequests();
 
   renderStatus();
   renderRecent();

@@ -6,7 +6,7 @@
     <title>A Biblioteca da Taverna</title>
     <meta
       name="description"
-      content="Catalogo estatico de audiolivros para GitHub Pages: A Biblioteca da Taverna."
+      content="Acervo de audiolivros da A Biblioteca da Taverna."
     >
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -16,10 +16,9 @@
         <span class="brand-mark" aria-hidden="true">T</span>
         <span>A Biblioteca da Taverna</span>
       </a>
-      <nav class="desktop-nav" aria-label="Navegacao principal">
+      <nav class="desktop-nav" aria-label="Navegação principal">
         <a href="#recentes">Recentes</a>
-        <a href="#ouvindo">Ouvindo agora</a>
-        <a href="#catalogo">Catalogo</a>
+        <a href="#catalogo">Acervo</a>
         <a href="#status">Status</a>
       </nav>
     </header>
@@ -28,9 +27,9 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">Taverna do Leitor</p>
-          <h1 id="hero-title">Historias para ouvir. Mundos para descobrir.</h1>
+          <h1 id="hero-title">Histórias para ouvir. Mundos para descobrir.</h1>
           <p>
-            Explore nosso acervo de audiolivros e encontre sua proxima jornada entre classicos, fantasia, misterio, ficcao e grandes descobertas.
+            Explore uma curadoria de audiolivros para diferentes momentos: grandes clássicos, fantasia, mistério, ficção e descobertas para ouvir no seu ritmo.
           </p>
 
           <form class="search-panel" role="search">
@@ -39,7 +38,7 @@
             <input
               id="searchInput"
               type="search"
-              placeholder="Buscar por titulo, autor, genero ou narrador..."
+              placeholder="Buscar por título, autor, gênero ou narrador..."
               autocomplete="off"
             >
           </form>
@@ -55,7 +54,11 @@
             </article>
             <article>
               <strong id="onlineIndicator">--</strong>
-              <span id="lastSync">Carregando status...</span>
+              <span>status do acervo</span>
+            </article>
+            <article>
+              <strong id="syncIndicator">--</strong>
+              <span>última atualização</span>
             </article>
           </div>
         </div>
@@ -64,8 +67,8 @@
       <section class="section" id="recentes" aria-labelledby="recentes-title">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Novidades</p>
-            <h2 id="recentes-title">Adicionados recentemente</h2>
+            <p class="eyebrow">Novidades do acervo</p>
+            <h2 id="recentes-title">Últimas adições</h2>
           </div>
           <span id="recentCount" class="section-note"></span>
         </div>
@@ -75,7 +78,7 @@
       <section class="section listening-section" id="ouvindo" aria-labelledby="ouvindo-title">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Ao vivo</p>
+            <p class="eyebrow">Em andamento</p>
             <h2 id="ouvindo-title">Ouvindo agora</h2>
           </div>
           <span class="section-note" id="activeSessions"></span>
@@ -86,47 +89,89 @@
       <section class="section" id="catalogo" aria-labelledby="catalogo-title">
         <div class="section-heading catalog-heading">
           <div>
-            <p class="eyebrow">Estantes</p>
-            <h2 id="catalogo-title">Catalogo</h2>
+            <p class="eyebrow">Biblioteca completa</p>
+            <h2 id="catalogo-title">Acervo</h2>
           </div>
-          <div class="filters" aria-label="Filtros do catalogo">
+          <div class="filters" aria-label="Filtros do catálogo">
             <button class="filter is-active" type="button" data-filter="todos">Todos</button>
             <button class="filter" type="button" data-filter="fantasia">Fantasia</button>
-            <button class="filter" type="button" data-filter="ficcao">Ficcao</button>
-            <button class="filter" type="button" data-filter="misterio">Misterio</button>
+            <button class="filter" type="button" data-filter="ficcao">Ficção</button>
+            <button class="filter" type="button" data-filter="misterio">Mistério</button>
           </div>
         </div>
         <p class="empty-state" id="emptyState" hidden>Nenhum audiolivro encontrado.</p>
         <div class="catalog-grid" id="catalogGrid"></div>
+        <div class="pagination" id="pagination" aria-label="Paginação do catálogo">
+          <span id="catalogSummary"></span>
+          <div class="pagination-actions">
+            <button id="prevPage" type="button">Anterior</button>
+            <strong id="pageIndicator">Página 1 de 1</strong>
+            <button id="nextPage" type="button">Próxima</button>
+          </div>
+        </div>
       </section>
 
       <section class="section status-section" id="status" aria-labelledby="status-title">
         <div>
-          <p class="eyebrow">Sincronizacao</p>
-          <h2 id="status-title">Status da biblioteca</h2>
+          <p class="eyebrow">Atualização</p>
+          <h2 id="status-title">Disponibilidade do acervo</h2>
         </div>
         <div class="status-card">
           <div class="status-light" id="statusLight" aria-hidden="true"></div>
           <div>
             <strong id="statusTitle">Carregando...</strong>
             <p id="statusMessage">
-              Verificando os arquivos publicados pelo sincronizador.
+              Verificando a atualização mais recente do acervo.
             </p>
           </div>
         </div>
       </section>
     </main>
 
-    <nav class="mobile-nav" aria-label="Navegacao inferior">
-      <a href="#inicio" aria-label="Inicio">⌂<span>Inicio</span></a>
+    <nav class="mobile-nav" aria-label="Navegação inferior">
+      <a href="#inicio" aria-label="Início">⌂<span>Início</span></a>
       <a href="#recentes" aria-label="Recentes">✦<span>Recentes</span></a>
-      <a href="#ouvindo" aria-label="Ouvindo agora">♫<span>Agora</span></a>
-      <a href="#catalogo" aria-label="Catalogo">▦<span>Catalogo</span></a>
+      <a href="#catalogo" aria-label="Acervo">▦<span>Acervo</span></a>
+      <a href="#status" aria-label="Status">●<span>Status</span></a>
     </nav>
+
+    <button class="request-fab" id="requestFab" type="button">
+      <span aria-hidden="true">+</span>
+      Pedidos
+    </button>
 
     <dialog class="book-dialog" id="bookDialog">
       <button class="dialog-close" id="dialogClose" type="button" aria-label="Fechar">×</button>
       <div class="dialog-body" id="dialogBody"></div>
+    </dialog>
+
+    <dialog class="request-dialog" id="requestDialog">
+      <button class="dialog-close" id="requestClose" type="button" aria-label="Fechar">×</button>
+      <div class="request-body">
+        <p class="eyebrow">Pedidos</p>
+        <h2>Solicitar audiolivro</h2>
+        <form class="request-form" id="requestForm">
+          <label>
+            Título
+            <input id="requestTitle" type="text" required placeholder="Nome do livro">
+          </label>
+          <label>
+            Autor
+            <input id="requestAuthor" type="text" placeholder="Opcional">
+          </label>
+          <label>
+            Observação
+            <textarea id="requestNote" rows="3" placeholder="Edição, narrador, idioma ou outro detalhe"></textarea>
+          </label>
+          <button type="submit">Registrar pedido</button>
+        </form>
+
+        <div class="request-list-header">
+          <h3>Pedidos registrados neste dispositivo</h3>
+          <button id="clearRequests" type="button">Limpar lista</button>
+        </div>
+        <div class="request-list" id="requestList"></div>
+      </div>
     </dialog>
 
     <script src="js/app.js"></script>
