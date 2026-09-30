@@ -256,17 +256,26 @@ function getFreshness(status) {
 
 function createBookCard(book) {
   const button = document.createElement("button");
+  const cover = getCoverPath(book);
   button.className = "book-card";
   button.type = "button";
   button.innerHTML = `
     <div class="cover-wrap">
-      <img src="${book.capa}" alt="Capa de ${book.titulo}" loading="lazy">
+      <img src="${cover}" alt="Capa de ${book.titulo}" loading="lazy">
     </div>
     <h3>${book.titulo}</h3>
     <p>${book.autor}</p>
   `;
+  const image = button.querySelector("img");
+  image.addEventListener("error", () => {
+    image.src = "capas/hero-library.svg";
+  }, { once: true });
   button.addEventListener("click", () => openBook(book));
   return button;
+}
+
+function getCoverPath(book) {
+  return String(book.capa || "capas/hero-library.svg").replace(/\\/g, "/");
 }
 
 function renderRecent() {
@@ -291,8 +300,9 @@ function renderListening() {
     const article = document.createElement("article");
     article.className = "listening-card";
     if (!book) return article;
+    const cover = getCoverPath(book);
     article.innerHTML = `
-      <img src="${book.capa}" alt="Capa de ${book.titulo}" loading="lazy">
+      <img src="${cover}" alt="Capa de ${book.titulo}" loading="lazy">
       <div>
         <h3>${book.titulo}</h3>
         <p>${session.usuario} - ${session.capitulo}</p>
@@ -300,6 +310,10 @@ function renderListening() {
         <div class="progress" aria-hidden="true"><i style="width: ${session.progresso}%"></i></div>
       </div>
     `;
+    const image = article.querySelector("img");
+    image.addEventListener("error", () => {
+      image.src = "capas/hero-library.svg";
+    }, { once: true });
     return article;
   });
 
@@ -382,9 +396,10 @@ function renderRequests() {
 }
 
 function openBook(book) {
+  const cover = getCoverPath(book);
   els.dialogBody.innerHTML = `
     <div class="dialog-content">
-      <img src="${book.capa}" alt="Capa de ${book.titulo}">
+      <img src="${cover}" alt="Capa de ${book.titulo}">
       <div>
         <p class="eyebrow">${book.genero}</p>
         <h3>${book.titulo}</h3>
@@ -396,6 +411,10 @@ function openBook(book) {
       </div>
     </div>
   `;
+  const image = els.dialogBody.querySelector("img");
+  image.addEventListener("error", () => {
+    image.src = "capas/hero-library.svg";
+  }, { once: true });
   els.dialog.showModal();
 }
 
@@ -470,9 +489,9 @@ async function init() {
     loadJson("data/status.json", fallbackStatus)
   ]);
 
-  state.catalog = catalog;
-  state.listening = listening;
-  state.status = status;
+  state.catalog = Array.isArray(catalog) ? catalog : fallbackCatalog;
+  state.listening = Array.isArray(listening) ? listening : [];
+  state.status = status && typeof status === "object" && !Array.isArray(status) ? status : fallbackStatus;
   loadRequests();
 
   renderStatus();

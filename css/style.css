@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 76px;
 }
 
 body {
@@ -109,8 +110,8 @@ main {
 
 .hero {
   display: grid;
-  min-height: 455px;
-  padding: 50px clamp(18px, 5vw, 64px) 42px;
+  min-height: 390px;
+  padding: 34px clamp(18px, 5vw, 64px) 32px;
   background:
     linear-gradient(90deg, rgba(255, 250, 241, 0.99) 0%, rgba(255, 250, 241, 0.91) 54%, rgba(255, 250, 241, 0.48) 100%),
     url("../capas/hero-library.svg") center right / cover no-repeat;
@@ -118,8 +119,8 @@ main {
 }
 
 .hero-copy {
-  width: min(680px, 100%);
-  align-self: end;
+  width: min(760px, 100%);
+  align-self: center;
 }
 
 .eyebrow {
@@ -139,10 +140,10 @@ p {
 }
 
 h1 {
-  max-width: 620px;
-  margin-bottom: 14px;
-  font-size: clamp(2.45rem, 5.4vw, 4.55rem);
-  line-height: 1;
+  max-width: 640px;
+  margin-bottom: 12px;
+  font-size: clamp(2.25rem, 4.5vw, 3.55rem);
+  line-height: 1.04;
   letter-spacing: 0;
 }
 
@@ -154,7 +155,7 @@ h2 {
 }
 
 .hero p:not(.eyebrow) {
-  max-width: 590px;
+  max-width: 640px;
   color: var(--muted);
   font-family: Inter, Arial, sans-serif;
   font-size: 1rem;
@@ -166,7 +167,7 @@ h2 {
   grid-template-columns: 28px 1fr;
   align-items: center;
   width: min(650px, 100%);
-  margin: 26px 0 14px;
+  margin: 22px 0 14px;
   padding: 7px 14px;
   background: var(--white);
   border: 1px solid var(--line);
@@ -193,13 +194,14 @@ h2 {
 
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(132px, 1fr));
   gap: 10px;
-  width: min(760px, 100%);
+  width: min(780px, 100%);
 }
 
 .hero-stats article {
-  padding: 12px 14px;
+  min-width: 0;
+  padding: 11px 13px;
   background: rgba(255, 255, 255, 0.68);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -208,7 +210,7 @@ h2 {
 
 .hero-stats strong {
   display: block;
-  font-size: 1.28rem;
+  font-size: 1.16rem;
   line-height: 1;
 }
 
@@ -217,11 +219,11 @@ h2 {
   margin-top: 6px;
   color: var(--muted);
   font-family: Inter, Arial, sans-serif;
-  font-size: 0.84rem;
+  font-size: 0.78rem;
 }
 
 .section {
-  padding: 42px clamp(18px, 5vw, 64px);
+  padding: 34px clamp(18px, 5vw, 64px);
 }
 
 .section-heading {
@@ -691,15 +693,15 @@ h2 {
   }
 
   .hero {
-    min-height: 470px;
-    padding: 36px 18px 28px;
+    min-height: 440px;
+    padding: 34px 18px 28px;
     background:
       linear-gradient(180deg, rgba(255, 250, 241, 0.98) 0%, rgba(255, 250, 241, 0.82) 60%, rgba(255, 250, 241, 0.56) 100%),
       url("../capas/hero-library.svg") center bottom / cover no-repeat;
   }
 
   h1 {
-    font-size: clamp(2.45rem, 14vw, 3.65rem);
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
   }
 
   .hero-stats {
