@@ -392,7 +392,7 @@ function renderListening() {
 
   els.listeningSection.hidden = false;
   els.listeningGrid.replaceChildren(...cards);
-  els.activeSessions.textContent = `${cards.length} sessões ativas`;
+  els.activeSessions.textContent = `${state.listening.length} sessões ativas`;
 }
 
 function getFilteredCatalog() {
