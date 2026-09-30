@@ -499,9 +499,24 @@ function rowValue(row, names) {
 
 function statusClass(status) {
   const value = normalize(status);
+  if (value.includes("disponivel")) return "available";
   if (value.includes("adicionado") || value.includes("atendido") || value.includes("concluido")) return "done";
   if (value.includes("procurando") || value.includes("prepar") || value.includes("analise") || value.includes("andamento")) return "progress";
   return "pending";
+}
+
+function findCatalogMatch(title, author = "") {
+  const wantedTitle = normalize(title);
+  const wantedAuthor = normalize(author);
+  if (!wantedTitle) return null;
+
+  return state.catalog.find((book) => {
+    const bookTitle = normalize(book.titulo);
+    const bookAuthor = normalize(book.autor);
+    const titleMatches = bookTitle === wantedTitle || bookTitle.includes(wantedTitle) || wantedTitle.includes(bookTitle);
+    const authorMatches = !wantedAuthor || !bookAuthor || bookAuthor.includes(wantedAuthor) || wantedAuthor.includes(bookAuthor);
+    return titleMatches && authorMatches;
+  }) || null;
 }
 
 async function loadRequestStatuses() {
@@ -531,7 +546,9 @@ function renderRequestStatuses(requests) {
     const title = rowValue(request, ["Título", "Titulo", "Livro"]);
     const author = rowValue(request, ["Autor", "Autora"]);
     const requester = rowValue(request, ["Pedido por", "Solicitante", "Nome", "Apelido"]);
-    const status = rowValue(request, ["Status", "Situação", "Situacao"]) || "Recebido";
+    const catalogMatch = findCatalogMatch(title, author);
+    const rawStatus = rowValue(request, ["Status", "Situação", "Situacao"]) || "Recebido";
+    const status = catalogMatch ? "Disponível no acervo" : rawStatus;
     const estimate = rowValue(request, ["Previsão", "Previsao", "Prazo"]);
     const note = rowValue(request, ["Observação", "Observacao", "Notas", "Nota"]);
     const updated = rowValue(request, ["Atualizado em", "Atualização", "Atualizacao", "Data"]);
@@ -539,7 +556,10 @@ function renderRequestStatuses(requests) {
     item.className = "request-status-item";
     item.innerHTML = `
       <span class="request-status-badge ${statusClass(status)}">${escapeHtml(status)}</span>
-      <strong>${escapeHtml(title)}</strong>
+      <div class="request-status-title-row">
+        <strong>${escapeHtml(title)}</strong>
+        ${catalogMatch ? `<button class="request-open-book" type="button" data-book-id="${escapeHtml(catalogMatch.id)}">Abrir</button>` : ""}
+      </div>
       <div class="request-status-meta">
         ${author ? `<span>${escapeHtml(author)}</span>` : ""}
         ${requester ? `<span>Pedido por ${escapeHtml(requester)}</span>` : ""}
@@ -550,6 +570,13 @@ function renderRequestStatuses(requests) {
     `;
     return item;
   }));
+
+  els.requestStatusList.querySelectorAll(".request-open-book").forEach((button) => {
+    button.addEventListener("click", () => {
+      const book = state.catalog.find((item) => item.id === button.dataset.bookId);
+      if (book) openBook(book);
+    });
+  });
 }
 
 function openBook(book) {

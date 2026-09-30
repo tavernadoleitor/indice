@@ -536,6 +536,38 @@ h2 {
   text-align: center;
 }
 
+.access-section {
+  background: var(--paper-soft);
+  border-top: 1px solid var(--line);
+}
+
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.access-grid article {
+  padding: 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.access-grid strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.access-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
 .status-section {
   display: grid;
   grid-template-columns: minmax(0, 0.75fr) minmax(280px, 1.25fr);
@@ -653,6 +685,7 @@ h2 {
 .book-dialog,
 .request-dialog {
   width: min(720px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
   padding: 0;
   border: 0;
   border-radius: 22px;
@@ -721,6 +754,8 @@ h2 {
 
 .request-body {
   padding: 24px;
+  max-height: calc(100vh - 32px);
+  overflow: auto;
 }
 
 .request-body h2 {
@@ -791,6 +826,26 @@ h2 {
   min-width: 0;
 }
 
+.request-status-title-row {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.request-open-book {
+  flex: 0 0 auto;
+  padding: 6px 9px;
+  color: var(--green-dark);
+  background: rgba(61, 117, 93, 0.12);
+  border: 0;
+  border-radius: 999px;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
 .request-status-item strong {
   display: block;
   margin: 0;
@@ -845,6 +900,11 @@ h2 {
 .request-status-badge.progress {
   color: #7b551e;
   background: rgba(185, 130, 49, 0.18);
+}
+
+.request-status-badge.available {
+  color: var(--white);
+  background: var(--green);
 }
 
 @media (max-width: 1160px) {
@@ -919,6 +979,10 @@ h2 {
     display: grid;
     grid-template-columns: 1fr;
     align-items: start;
+  }
+
+  .access-grid {
+    grid-template-columns: 1fr;
   }
 
   .book-row,
@@ -1004,6 +1068,25 @@ h2 {
 
   .dialog-content img {
     width: min(190px, 58vw);
+  }
+
+  .request-dialog {
+    width: min(720px, calc(100vw - 20px));
+    max-height: calc(100vh - 20px);
+  }
+
+  .request-body {
+    padding: 20px;
+    max-height: calc(100vh - 20px);
+  }
+
+  .request-status-title-row {
+    display: grid;
+    gap: 8px;
+  }
+
+  .request-open-book {
+    width: fit-content;
   }
 }
 
