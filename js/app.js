@@ -182,6 +182,7 @@ const requestFormConfig = {
 
 const els = {
   searchInput: document.querySelector("#searchInput"),
+  searchSuggestions: document.querySelector("#searchSuggestions"),
   bookCount: document.querySelector("#bookCount"),
   listenerCount: document.querySelector("#listenerCount"),
   onlineIndicator: document.querySelector("#onlineIndicator"),
@@ -302,6 +303,48 @@ function createBookCard(book) {
 
 function getCoverPath(book) {
   return String(book.capa || "capas/hero-library.svg").replace(/\\/g, "/");
+}
+
+function createSuggestion(book) {
+  const button = document.createElement("button");
+  const cover = getCoverPath(book);
+  button.className = "search-suggestion";
+  button.type = "button";
+  button.innerHTML = `
+    <img src="${cover}" alt="" loading="lazy">
+    <span>
+      <strong>${escapeHtml(book.titulo)}</strong>
+      <span>${escapeHtml(book.autor || "Autor não informado")}</span>
+    </span>
+  `;
+  const image = button.querySelector("img");
+  image.addEventListener("error", () => {
+    image.src = "capas/hero-library.svg";
+  }, { once: true });
+  button.addEventListener("click", () => {
+    els.searchSuggestions.hidden = true;
+    openBook(book);
+  });
+  return button;
+}
+
+function renderSearchSuggestions() {
+  const query = normalize(state.query);
+  if (query.length < 2) {
+    els.searchSuggestions.hidden = true;
+    els.searchSuggestions.replaceChildren();
+    return;
+  }
+
+  const matches = getFilteredCatalog().slice(0, 8);
+  if (!matches.length) {
+    els.searchSuggestions.hidden = false;
+    els.searchSuggestions.innerHTML = `<p class="search-suggestion-empty">Nenhum audiolivro encontrado.</p>`;
+    return;
+  }
+
+  els.searchSuggestions.hidden = false;
+  els.searchSuggestions.replaceChildren(...matches.map(createSuggestion));
 }
 
 function renderRecent() {
@@ -539,7 +582,16 @@ function bindEvents() {
   els.searchInput.addEventListener("input", (event) => {
     state.query = event.target.value;
     state.page = 1;
+    renderSearchSuggestions();
     renderCatalog();
+  });
+
+  els.searchInput.addEventListener("focus", renderSearchSuggestions);
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".search-panel") && !event.target.closest(".search-suggestions")) {
+      els.searchSuggestions.hidden = true;
+    }
   });
 
   els.prevPage.addEventListener("click", () => {

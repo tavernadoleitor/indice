@@ -172,6 +172,8 @@ h2 {
 }
 
 .search-panel {
+  position: relative;
+  z-index: 5;
   display: grid;
   grid-template-columns: 28px 1fr;
   align-items: center;
@@ -182,6 +184,81 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 999px;
   box-shadow: var(--shadow);
+}
+
+.search-suggestions {
+  position: relative;
+  z-index: 6;
+  display: grid;
+  gap: 6px;
+  width: min(610px, 100%);
+  max-height: 360px;
+  margin: -4px 0 12px;
+  overflow: auto;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 16px 38px rgba(54, 38, 24, 0.14);
+}
+
+.search-suggestion {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  padding: 7px;
+  color: inherit;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.search-suggestion:hover,
+.search-suggestion:focus-visible {
+  background: var(--paper);
+  outline: none;
+}
+
+.search-suggestion img {
+  width: 42px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 7px;
+  background: var(--paper-deep);
+}
+
+.search-suggestion strong,
+.search-suggestion span {
+  display: -webkit-box;
+  overflow: hidden;
+  font-family: Inter, Arial, sans-serif;
+  -webkit-box-orient: vertical;
+}
+
+.search-suggestion strong {
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.2;
+  -webkit-line-clamp: 2;
+}
+
+.search-suggestion span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  -webkit-line-clamp: 1;
+}
+
+.search-suggestion-empty {
+  padding: 10px;
+  color: var(--muted);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.86rem;
 }
 
 .search-panel span {
@@ -807,7 +884,7 @@ h2 {
 
   .search-panel {
     margin-top: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     padding: 5px 12px;
   }
 
@@ -820,6 +897,12 @@ h2 {
 
   .search-panel input {
     padding: 10px 2px;
+  }
+
+  .search-suggestions {
+    max-height: 260px;
+    margin-bottom: 10px;
+    border-radius: 16px;
   }
 
   .section {
