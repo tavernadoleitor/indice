@@ -520,7 +520,7 @@ h2 {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 31;
+  z-index: 42;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -549,7 +549,7 @@ h2 {
   position: fixed;
   right: 28px;
   bottom: 78px;
-  z-index: 31;
+  z-index: 43;
   display: grid;
   width: 48px;
   height: 48px;
@@ -856,15 +856,19 @@ h2 {
 
   .request-fab {
     right: 16px;
-    bottom: 88px;
+    bottom: 92px;
     padding: 12px 14px;
   }
 
   .request-status-fab {
-    right: 18px;
-    bottom: 146px;
-    width: 44px;
-    height: 44px;
+    right: 20px;
+    bottom: 154px;
+    width: 46px;
+    height: 46px;
+    color: var(--white);
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+    box-shadow: 0 14px 34px rgba(36, 74, 59, 0.3);
   }
 
   .pagination {
