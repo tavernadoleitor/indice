@@ -180,6 +180,10 @@ const requestFormConfig = {
   }
 };
 
+const absConfig = {
+  publicUrl: "http://bibliotecadataverna.duckdns.org:13378"
+};
+
 const els = {
   searchInput: document.querySelector("#searchInput"),
   searchSuggestions: document.querySelector("#searchSuggestions"),
@@ -581,6 +585,7 @@ function renderRequestStatuses(requests) {
 
 function openBook(book) {
   const cover = getCoverPath(book);
+  const listenUrl = `${absConfig.publicUrl}/audiobookshelf/item/${encodeURIComponent(book.id)}`;
   const details = [
     book.autor,
     book.narrador ? `Narração de ${book.narrador}` : "",
@@ -595,6 +600,7 @@ function openBook(book) {
         <h3>${book.titulo}</h3>
         <div class="dialog-meta">${details.join(" · ")}</div>
         <p>${book.descricao || "Descrição não disponível no momento."}</p>
+        <a class="listen-link" href="${listenUrl}" target="_blank" rel="noopener noreferrer">Ouvir agora</a>
       </div>
     </div>
   `;
