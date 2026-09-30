@@ -546,15 +546,27 @@ h2 {
 }
 
 .request-status-fab {
+  position: fixed;
+  right: 28px;
   bottom: 78px;
+  z-index: 31;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
   color: var(--green-dark);
   background: var(--white);
   border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 14px 34px rgba(54, 38, 24, 0.18);
+  cursor: pointer;
 }
 
 .request-status-fab span {
-  color: var(--white);
-  background: var(--green-dark);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 1.08rem;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .book-dialog,
@@ -689,15 +701,20 @@ h2 {
 }
 
 .request-status-item {
+  display: grid;
+  gap: 8px;
   padding: 12px;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 12px;
+  min-width: 0;
 }
 
 .request-status-item strong {
   display: block;
-  margin-bottom: 4px;
+  margin: 0;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
 }
 
 .request-status-item span,
@@ -714,13 +731,14 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 6px 10px;
-  margin-top: 6px;
+  margin-top: 0;
 }
 
 .request-status-badge {
   display: inline-flex;
   align-items: center;
   width: fit-content;
+  max-width: 100%;
   padding: 4px 8px;
   color: var(--green-dark);
   background: rgba(61, 117, 93, 0.12);
@@ -728,6 +746,9 @@ h2 {
   font-family: Inter, Arial, sans-serif;
   font-size: 0.75rem;
   font-weight: 800;
+  line-height: 1.25;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .request-status-badge.done {
@@ -840,7 +861,10 @@ h2 {
   }
 
   .request-status-fab {
+    right: 18px;
     bottom: 146px;
+    width: 44px;
+    height: 44px;
   }
 
   .pagination {
