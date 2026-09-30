@@ -193,6 +193,7 @@ const els = {
   listeningSection: document.querySelector("#ouvindo"),
   activeSessions: document.querySelector("#activeSessions"),
   listeningGrid: document.querySelector("#listeningGrid"),
+  listeningHint: document.querySelector("#listeningHint"),
   catalogGrid: document.querySelector("#catalogGrid"),
   emptyState: document.querySelector("#emptyState"),
   catalogSummary: document.querySelector("#catalogSummary"),
@@ -631,6 +632,10 @@ function bindEvents() {
     state.page += 1;
     renderCatalog();
     document.querySelector("#catalogo").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  els.listeningHint.addEventListener("click", () => {
+    els.listeningGrid.scrollBy({ left: 320, behavior: "smooth" });
   });
 
   els.dialogClose.addEventListener("click", () => els.dialog.close());
