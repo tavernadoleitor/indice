@@ -446,33 +446,17 @@ h2 {
   top: 0;
   right: 0;
   bottom: 12px;
-  width: 58px;
-  pointer-events: none;
-  content: "";
-  background: linear-gradient(90deg, rgba(251, 244, 233, 0), var(--paper-soft));
-}
-
-.carousel-hint {
-  position: absolute;
-  top: 50%;
-  right: 8px;
-  z-index: 2;
   display: grid;
-  width: 32px;
-  height: 32px;
-  place-items: center;
-  color: var(--green-dark);
-  background: rgba(255, 255, 255, 0.74);
-  border: 1px solid rgba(223, 209, 189, 0.8);
-  border-radius: 999px;
-  box-shadow: 0 8px 20px rgba(54, 38, 24, 0.1);
-  cursor: pointer;
-  opacity: 0.72;
-  transform: translateY(-50%);
-}
-
-.carousel-hint:hover {
-  opacity: 1;
+  width: 64px;
+  place-items: center end;
+  padding-right: 10px;
+  pointer-events: none;
+  content: "›";
+  color: rgba(36, 74, 59, 0.42);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, rgba(251, 244, 233, 0), var(--paper-soft));
 }
 
 .listening-card {
@@ -1036,12 +1020,6 @@ h2 {
     grid-auto-columns: minmax(245px, 82vw);
   }
 
-  .carousel-hint {
-    width: 30px;
-    height: 30px;
-    right: 6px;
-    opacity: 0.66;
-  }
 
   .mobile-nav {
     position: fixed;
