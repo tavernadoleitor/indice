@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Biblioteca da Taverna - GitHub Edition</title>
+    <meta
+      name="description"
+      content="Catalogo estatico de audiolivros para GitHub Pages: A Biblioteca da Taverna."
+    >
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="topbar" id="inicio">
+      <a class="brand" href="#inicio" aria-label="A Biblioteca da Taverna">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span>A Biblioteca da Taverna</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegacao principal">
+        <a href="#recentes">Recentes</a>
+        <a href="#ouvindo">Ouvindo agora</a>
+        <a href="#catalogo">Catalogo</a>
+        <a href="#status">Status</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">GitHub Edition</p>
+          <h1 id="hero-title">Historias para ouvir. Mundos para descobrir.</h1>
+          <p>
+            Um catalogo leve para acompanhar sua biblioteca do Audiobookshelf em qualquer tela.
+          </p>
+
+          <form class="search-panel" role="search">
+            <label class="sr-only" for="searchInput">Buscar audiolivro</label>
+            <span aria-hidden="true">⌕</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Buscar por titulo, autor, genero ou narrador..."
+              autocomplete="off"
+            >
+          </form>
+
+          <div class="hero-stats" aria-label="Resumo da biblioteca">
+            <article>
+              <strong id="bookCount">0</strong>
+              <span>audiolivros</span>
+            </article>
+            <article>
+              <strong id="listenerCount">0</strong>
+              <span>ouvintes</span>
+            </article>
+            <article>
+              <strong id="onlineIndicator">--</strong>
+              <span id="lastSync">Carregando status...</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="recentes" aria-labelledby="recentes-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Novidades</p>
+            <h2 id="recentes-title">Adicionados recentemente</h2>
+          </div>
+          <span id="recentCount" class="section-note"></span>
+        </div>
+        <div class="book-row" id="recentGrid"></div>
+      </section>
+
+      <section class="section listening-section" id="ouvindo" aria-labelledby="ouvindo-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Ao vivo</p>
+            <h2 id="ouvindo-title">Ouvindo agora</h2>
+          </div>
+          <span class="section-note" id="activeSessions"></span>
+        </div>
+        <div class="listening-grid" id="listeningGrid"></div>
+      </section>
+
+      <section class="section" id="catalogo" aria-labelledby="catalogo-title">
+        <div class="section-heading catalog-heading">
+          <div>
+            <p class="eyebrow">Estantes</p>
+            <h2 id="catalogo-title">Catalogo</h2>
+          </div>
+          <div class="filters" aria-label="Filtros do catalogo">
+            <button class="filter is-active" type="button" data-filter="todos">Todos</button>
+            <button class="filter" type="button" data-filter="fantasia">Fantasia</button>
+            <button class="filter" type="button" data-filter="ficcao">Ficcao</button>
+            <button class="filter" type="button" data-filter="misterio">Misterio</button>
+          </div>
+        </div>
+        <p class="empty-state" id="emptyState" hidden>Nenhum audiolivro encontrado.</p>
+        <div class="catalog-grid" id="catalogGrid"></div>
+      </section>
+
+      <section class="section status-section" id="status" aria-labelledby="status-title">
+        <div>
+          <p class="eyebrow">Sincronizacao</p>
+          <h2 id="status-title">Status da biblioteca</h2>
+        </div>
+        <div class="status-card">
+          <div class="status-light" id="statusLight" aria-hidden="true"></div>
+          <div>
+            <strong id="statusTitle">Carregando...</strong>
+            <p id="statusMessage">
+              Verificando os arquivos publicados pelo sincronizador.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Navegacao inferior">
+      <a href="#inicio" aria-label="Inicio">⌂<span>Inicio</span></a>
+      <a href="#recentes" aria-label="Recentes">✦<span>Recentes</span></a>
+      <a href="#ouvindo" aria-label="Ouvindo agora">♫<span>Agora</span></a>
+      <a href="#catalogo" aria-label="Catalogo">▦<span>Catalogo</span></a>
+    </nav>
+
+    <dialog class="book-dialog" id="bookDialog">
+      <button class="dialog-close" id="dialogClose" type="button" aria-label="Fechar">×</button>
+      <div class="dialog-body" id="dialogBody"></div>
+    </dialog>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
