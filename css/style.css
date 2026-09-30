@@ -202,6 +202,10 @@ h2 {
   box-shadow: 0 16px 38px rgba(54, 38, 24, 0.14);
 }
 
+.search-suggestions[hidden] {
+  display: none;
+}
+
 .search-suggestion {
   display: grid;
   grid-template-columns: 42px 1fr;
@@ -900,6 +904,7 @@ h2 {
   }
 
   .search-suggestions {
+    width: 100%;
     max-height: 260px;
     margin-bottom: 10px;
     border-radius: 16px;
