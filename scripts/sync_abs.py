@@ -16,6 +16,7 @@ import json
 import os
 import re
 import sys
+import argparse
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -36,9 +37,16 @@ def env(name: str, required: bool = True) -> str:
     return value
 
 
-ABS_URL = env("ABS_URL").rstrip("/")
-ABS_API_KEY = env("ABS_API_KEY")
-ABS_LIBRARY_ID = env("ABS_LIBRARY_ID", required=False)
+ABS_URL = ""
+ABS_API_KEY = ""
+ABS_LIBRARY_ID = ""
+
+
+def configure_from_env() -> None:
+    global ABS_URL, ABS_API_KEY, ABS_LIBRARY_ID
+    ABS_URL = env("ABS_URL").rstrip("/")
+    ABS_API_KEY = env("ABS_API_KEY")
+    ABS_LIBRARY_ID = env("ABS_LIBRARY_ID", required=False)
 
 
 def request_json(path: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
@@ -180,6 +188,10 @@ def cover_extension(content_type: str) -> str:
 
 
 def download_cover(item_id: str, file_id: str) -> str:
+    existing = find_existing_cover(file_id)
+    if existing:
+        return f"capas/{existing.name}"
+
     try:
         data, content_type = request_bytes(f"/api/items/{item_id}/cover")
     except Exception:
@@ -189,6 +201,14 @@ def download_cover(item_id: str, file_id: str) -> str:
     filename = f"{file_id}{ext}"
     (COVERS_DIR / filename).write_bytes(data)
     return f"capas/{filename}"
+
+
+def find_existing_cover(file_id: str) -> Path | None:
+    for ext in (".webp", ".jpg", ".jpeg", ".png"):
+        path = COVERS_DIR / f"{file_id}{ext}"
+        if path.exists():
+            return path
+    return None
 
 
 def convert_item(item: dict[str, Any]) -> dict[str, Any]:
@@ -316,20 +336,20 @@ def fetch_online_activity(catalog: list[dict[str, Any]]) -> tuple[list[dict[str,
     return listening, active_listeners
 
 
-def write_json(path: Path, payload: Any) -> None:
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+def read_catalog() -> list[dict[str, Any]]:
+    catalog_path = DATA_DIR / "catalogo.json"
+    if not catalog_path.exists():
+        raise SystemExit(
+            "Nao encontrei data/catalogo.json. Rode primeiro a sincronizacao completa."
+        )
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    if not isinstance(catalog, list):
+        raise SystemExit("data/catalogo.json nao contem uma lista valida.")
+    return catalog
 
 
-def main() -> int:
-    DATA_DIR.mkdir(exist_ok=True)
-    COVERS_DIR.mkdir(exist_ok=True)
-
-    library_id = find_library_id()
-    items = fetch_items(library_id)
-    catalog = [convert_item(item) for item in items]
-    listening, active_listeners = fetch_online_activity(catalog)
-
-    status = {
+def build_status(catalog: list[dict[str, Any]], active_listeners: int) -> dict[str, Any]:
+    return {
         "servidor": "online",
         "ultima_sincronizacao": datetime.now(timezone.utc).isoformat(),
         "total_audiolivros": len(catalog),
@@ -337,9 +357,45 @@ def main() -> int:
         "mensagem": "Sincronizacao concluida com o Audiobookshelf.",
     }
 
+
+def write_json(path: Path, payload: Any) -> None:
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Sincroniza Audiobookshelf com os arquivos estaticos do site."
+    )
+    parser.add_argument(
+        "--online-only",
+        action="store_true",
+        help="Atualiza apenas data/ouvindo-agora.json e data/status.json.",
+    )
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    configure_from_env()
+    DATA_DIR.mkdir(exist_ok=True)
+    COVERS_DIR.mkdir(exist_ok=True)
+
+    if args.online_only:
+        catalog = read_catalog()
+        listening, active_listeners = fetch_online_activity(catalog)
+        write_json(DATA_DIR / "ouvindo-agora.json", listening)
+        write_json(DATA_DIR / "status.json", build_status(catalog, active_listeners))
+        print(f"Atualizadas {len(listening)} sessoes abertas.")
+        return 0
+
+    library_id = find_library_id()
+    items = fetch_items(library_id)
+    catalog = [convert_item(item) for item in items]
+    listening, active_listeners = fetch_online_activity(catalog)
+
     write_json(DATA_DIR / "catalogo.json", catalog)
     write_json(DATA_DIR / "ouvindo-agora.json", listening)
-    write_json(DATA_DIR / "status.json", status)
+    write_json(DATA_DIR / "status.json", build_status(catalog, active_listeners))
 
     print(
         f"Sincronizados {len(catalog)} audiolivros da biblioteca {library_id}. "
