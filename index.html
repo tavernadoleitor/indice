@@ -44,23 +44,14 @@
             >
           </form>
 
-          <div class="hero-stats" aria-label="Resumo da biblioteca">
-            <article>
-              <strong id="bookCount">0</strong>
-              <span>audiolivros</span>
-            </article>
-            <article>
-              <strong id="listenerCount">0</strong>
-              <span>ouvintes</span>
-            </article>
-            <article>
+          <div class="hero-status" aria-label="Resumo da biblioteca">
+            <span class="status-pill">
+              <i id="heroStatusDot" aria-hidden="true"></i>
               <strong id="onlineIndicator">--</strong>
-              <span>status do acervo</span>
-            </article>
-            <article>
-              <strong id="syncIndicator">--</strong>
-              <span>última atualização</span>
-            </article>
+            </span>
+            <span><strong id="bookCount">0</strong> audiolivros</span>
+            <span><strong id="listenerCount">0</strong> ouvintes</span>
+            <span>Atualizado <strong id="syncIndicator">--</strong></span>
           </div>
         </div>
       </section>

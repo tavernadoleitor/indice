@@ -201,34 +201,49 @@ h2 {
   font-family: Inter, Arial, sans-serif;
 }
 
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(124px, 1fr));
-  gap: 8px;
-  width: min(740px, 100%);
-}
-
-.hero-stats article {
-  min-width: 0;
-  padding: 9px 11px;
-  background: rgba(255, 255, 255, 0.68);
+.hero-status {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  max-width: 100%;
+  padding: 10px 13px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: 999px;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.84rem;
   backdrop-filter: blur(10px);
 }
 
-.hero-stats strong {
-  display: block;
-  font-size: 1.02rem;
-  line-height: 1;
+.hero-status strong {
+  color: var(--ink);
+  font-weight: 800;
 }
 
-.hero-stats span {
-  display: block;
-  margin-top: 6px;
-  color: var(--muted);
-  font-family: Inter, Arial, sans-serif;
-  font-size: 0.74rem;
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-pill i {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(185, 130, 49, 0.14);
+}
+
+.status-pill i.online {
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgba(61, 117, 93, 0.14);
+}
+
+.status-pill i.offline {
+  background: var(--berry);
+  box-shadow: 0 0 0 4px rgba(138, 63, 82, 0.14);
 }
 
 .section {
@@ -694,29 +709,17 @@ h2 {
     font-size: 0.92rem;
   }
 
-  .hero-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-  }
-
-  .hero-stats article {
-    display: block;
-    padding: 9px 10px;
-  }
-
-  .hero-stats strong {
-    font-size: 0.98rem;
-  }
-
-  .hero-stats span {
-    margin-top: 4px;
-    font-size: 0.68rem;
-  }
-
   .search-panel {
     margin-top: 16px;
     margin-bottom: 10px;
     padding: 5px 12px;
+  }
+
+  .hero-status {
+    display: flex;
+    border-radius: 16px;
+    font-size: 0.78rem;
+    line-height: 1.35;
   }
 
   .search-panel input {

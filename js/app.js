@@ -174,6 +174,7 @@ const els = {
   bookCount: document.querySelector("#bookCount"),
   listenerCount: document.querySelector("#listenerCount"),
   onlineIndicator: document.querySelector("#onlineIndicator"),
+  heroStatusDot: document.querySelector("#heroStatusDot"),
   syncIndicator: document.querySelector("#syncIndicator"),
   recentCount: document.querySelector("#recentCount"),
   recentGrid: document.querySelector("#recentGrid"),
@@ -357,6 +358,7 @@ function renderStatus() {
   els.bookCount.textContent = state.status.total_audiolivros || state.catalog.length;
   els.listenerCount.textContent = state.status.ouvintes_ativos ?? state.listening.length;
   els.onlineIndicator.textContent = shortLabel;
+  els.heroStatusDot.className = freshness;
   els.syncIndicator.textContent = formatRelativeSync(state.status.ultima_sincronizacao);
   els.statusLight.className = `status-light ${freshness}`;
   els.statusTitle.textContent = title;
