@@ -1,0 +1,7 @@
+{
+  "servidor": "online",
+  "ultima_sincronizacao": "2026-09-29T20:40:00-03:00",
+  "total_audiolivros": 12,
+  "ouvintes_ativos": 3,
+  "mensagem": "Dados de exemplo carregados. Substitua os JSONs pelo resultado do sync_abs.py."
+}

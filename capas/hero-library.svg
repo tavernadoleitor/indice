@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Biblioteca clara com estantes e luz suave</title>
+  <desc id="desc">Ilustracao decorativa de uma biblioteca elegante para o hero da pagina.</desc>
+  <rect width="1200" height="760" fill="#f5ebdb"/>
+  <rect x="630" y="80" width="430" height="610" rx="22" fill="#d8c2a1"/>
+  <rect x="670" y="120" width="350" height="520" rx="14" fill="#fffaf1"/>
+  <g fill="#244a3b">
+    <rect x="705" y="155" width="35" height="148" rx="4"/>
+    <rect x="750" y="185" width="28" height="118" rx="4"/>
+    <rect x="790" y="138" width="42" height="165" rx="4"/>
+    <rect x="845" y="170" width="31" height="133" rx="4"/>
+    <rect x="890" y="150" width="38" height="153" rx="4"/>
+    <rect x="705" y="352" width="42" height="162" rx="4"/>
+    <rect x="760" y="375" width="30" height="139" rx="4"/>
+    <rect x="804" y="340" width="36" height="174" rx="4"/>
+    <rect x="854" y="390" width="44" height="124" rx="4"/>
+    <rect x="912" y="360" width="29" height="154" rx="4"/>
+  </g>
+  <g fill="#8a3f52">
+    <rect x="945" y="150" width="32" height="153" rx="4"/>
+    <rect x="955" y="350" width="34" height="164" rx="4"/>
+  </g>
+  <g fill="#b98231">
+    <rect x="705" y="306" width="286" height="10" rx="5"/>
+    <rect x="705" y="518" width="286" height="10" rx="5"/>
+  </g>
+  <circle cx="465" cy="260" r="145" fill="#fffaf1" opacity="0.74"/>
+  <circle cx="465" cy="260" r="95" fill="#d8c2a1" opacity="0.8"/>
+  <path d="M338 645c95-85 170-96 254-74 73 19 138 4 206-55 30 106-14 166-113 186H359c-40 0-48-30-21-57z" fill="#3d755d"/>
+  <path d="M700 706H250c42-78 109-117 201-117s176 39 249 117z" fill="#244a3b"/>
+</svg>
