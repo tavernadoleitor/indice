@@ -430,9 +430,7 @@ h2 {
 }
 
 .pagination-actions button,
-.request-form button,
-.request-list-header button,
-.request-tabs button {
+.request-form button {
   padding: 9px 13px;
   color: var(--ink);
   background: var(--white);
@@ -547,6 +545,18 @@ h2 {
   font-weight: 800;
 }
 
+.request-status-fab {
+  bottom: 78px;
+  color: var(--green-dark);
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.request-status-fab span {
+  color: var(--white);
+  background: var(--green-dark);
+}
+
 .book-dialog,
 .request-dialog {
   width: min(720px, calc(100vw - 32px));
@@ -624,39 +634,9 @@ h2 {
   margin-bottom: 18px;
 }
 
-.request-tabs {
-  display: inline-flex;
-  gap: 4px;
-  padding: 4px;
-  margin-bottom: 18px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-}
-
-.request-tabs button {
-  border-color: transparent;
-  background: transparent;
-}
-
-.request-tabs button.is-active {
-  color: var(--white);
-  background: var(--green-dark);
-}
-
-.request-panel {
-  display: none;
-}
-
-.request-panel.is-active {
-  display: block;
-}
-
 .request-form {
   display: grid;
   gap: 12px;
-  padding-bottom: 22px;
-  border-bottom: 1px solid var(--line);
 }
 
 .request-form label {
@@ -699,25 +679,6 @@ h2 {
   font-size: 0.88rem;
 }
 
-.request-list-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-top: 18px;
-}
-
-.request-list-header h3 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.request-list {
-  display: grid;
-  gap: 10px;
-  margin-top: 12px;
-}
-
 .request-status-list {
   display: grid;
   gap: 10px;
@@ -727,7 +688,6 @@ h2 {
   padding-right: 4px;
 }
 
-.request-item,
 .request-status-item {
   padding: 12px;
   background: var(--paper);
@@ -735,14 +695,11 @@ h2 {
   border-radius: 12px;
 }
 
-.request-item strong,
 .request-status-item strong {
   display: block;
   margin-bottom: 4px;
 }
 
-.request-item span,
-.request-item p,
 .request-status-item span,
 .request-status-item p,
 .request-empty {
@@ -882,6 +839,10 @@ h2 {
     padding: 12px 14px;
   }
 
+  .request-status-fab {
+    bottom: 146px;
+  }
+
   .pagination {
     display: grid;
     justify-items: start;
@@ -897,16 +858,6 @@ h2 {
 
   .pagination-actions button {
     min-width: 0;
-  }
-
-  .request-list-header {
-    display: grid;
-  }
-
-  .request-tabs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
   }
 
   .mobile-nav a {

@@ -205,22 +205,18 @@ const els = {
   dialogBody: document.querySelector("#dialogBody"),
   dialogClose: document.querySelector("#dialogClose"),
   requestFab: document.querySelector("#requestFab"),
+  requestStatusFab: document.querySelector("#requestStatusFab"),
   requestDialog: document.querySelector("#requestDialog"),
   requestClose: document.querySelector("#requestClose"),
+  requestStatusDialog: document.querySelector("#requestStatusDialog"),
+  requestStatusClose: document.querySelector("#requestStatusClose"),
   requestForm: document.querySelector("#requestForm"),
   requestName: document.querySelector("#requestName"),
   requestTitle: document.querySelector("#requestTitle"),
   requestAuthor: document.querySelector("#requestAuthor"),
   requestNote: document.querySelector("#requestNote"),
-  requestList: document.querySelector("#requestList"),
-  clearRequests: document.querySelector("#clearRequests"),
   requestFeedback: document.querySelector("#requestFeedback"),
-  requestSubmitTab: document.querySelector("#requestSubmitTab"),
-  requestStatusTab: document.querySelector("#requestStatusTab"),
-  requestSubmitPanel: document.querySelector("#requestSubmitPanel"),
-  requestStatusPanel: document.querySelector("#requestStatusPanel"),
-  requestStatusList: document.querySelector("#requestStatusList"),
-  refreshRequestStatus: document.querySelector("#refreshRequestStatus")
+  requestStatusList: document.querySelector("#requestStatusList")
 };
 
 async function loadJson(path, fallback) {
@@ -400,18 +396,6 @@ function renderStatus() {
   els.statusMessage.textContent = `${formatStatusMessage(state.status.ultima_sincronizacao)}. ${state.status.mensagem || ""}`;
 }
 
-function loadRequests() {
-  try {
-    state.requests = JSON.parse(localStorage.getItem("tavernaPedidos") || "[]");
-  } catch (error) {
-    state.requests = [];
-  }
-}
-
-function saveRequests() {
-  localStorage.setItem("tavernaPedidos", JSON.stringify(state.requests));
-}
-
 async function submitRequestToGoogleForms(request) {
   const payload = new FormData();
   payload.append(requestFormConfig.fields.nome, request.nome);
@@ -525,35 +509,6 @@ function renderRequestStatuses(requests) {
   }));
 }
 
-function renderRequests() {
-  if (!state.requests.length) {
-    els.requestList.innerHTML = `<p class="request-empty">Nenhum pedido registrado neste dispositivo.</p>`;
-    return;
-  }
-
-  els.requestList.replaceChildren(...state.requests.map((request) => {
-    const item = document.createElement("article");
-    item.className = "request-item";
-    item.innerHTML = `
-      <strong>${escapeHtml(request.titulo)}</strong>
-      <span>${escapeHtml(request.autor || "Autor não informado")} - ${escapeHtml(request.nome)} - ${escapeHtml(request.data)}</span>
-      ${request.observacao ? `<p>${escapeHtml(request.observacao)}</p>` : ""}
-    `;
-    return item;
-  }));
-}
-
-function setRequestTab(tab) {
-  const showStatus = tab === "status";
-  els.requestSubmitTab.classList.toggle("is-active", !showStatus);
-  els.requestStatusTab.classList.toggle("is-active", showStatus);
-  els.requestSubmitTab.setAttribute("aria-selected", String(!showStatus));
-  els.requestStatusTab.setAttribute("aria-selected", String(showStatus));
-  els.requestSubmitPanel.classList.toggle("is-active", !showStatus);
-  els.requestStatusPanel.classList.toggle("is-active", showStatus);
-  if (showStatus) loadRequestStatuses();
-}
-
 function openBook(book) {
   const cover = getCoverPath(book);
   const details = [
@@ -605,18 +560,22 @@ function bindEvents() {
   });
 
   els.requestFab.addEventListener("click", () => {
-    renderRequests();
-    setRequestTab("submit");
+    els.requestFeedback.textContent = "";
     els.requestDialog.showModal();
   });
 
-  els.requestSubmitTab.addEventListener("click", () => setRequestTab("submit"));
-  els.requestStatusTab.addEventListener("click", () => setRequestTab("status"));
-  els.refreshRequestStatus.addEventListener("click", loadRequestStatuses);
+  els.requestStatusFab.addEventListener("click", () => {
+    loadRequestStatuses();
+    els.requestStatusDialog.showModal();
+  });
 
   els.requestClose.addEventListener("click", () => els.requestDialog.close());
+  els.requestStatusClose.addEventListener("click", () => els.requestStatusDialog.close());
   els.requestDialog.addEventListener("click", (event) => {
     if (event.target === els.requestDialog) els.requestDialog.close();
+  });
+  els.requestStatusDialog.addEventListener("click", (event) => {
+    if (event.target === els.requestStatusDialog) els.requestStatusDialog.close();
   });
 
   els.requestForm.addEventListener("submit", async (event) => {
@@ -635,9 +594,6 @@ function bindEvents() {
 
     try {
       await submitRequestToGoogleForms(request);
-      state.requests.unshift(request);
-      saveRequests();
-      renderRequests();
       els.requestForm.reset();
       els.requestFeedback.textContent = "Pedido enviado. Obrigado!";
     } catch (error) {
@@ -645,12 +601,6 @@ function bindEvents() {
     } finally {
       submitButton.disabled = false;
     }
-  });
-
-  els.clearRequests.addEventListener("click", () => {
-    state.requests = [];
-    saveRequests();
-    renderRequests();
   });
 }
 
@@ -664,7 +614,6 @@ async function init() {
   state.catalog = Array.isArray(catalog) ? catalog : fallbackCatalog;
   state.listening = Array.isArray(listening) ? listening : [];
   state.status = status && typeof status === "object" && !Array.isArray(status) ? status : fallbackStatus;
-  loadRequests();
 
   renderStatus();
   renderRecent();
