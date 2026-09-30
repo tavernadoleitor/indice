@@ -20,6 +20,7 @@
       <nav class="desktop-nav" aria-label="Navegação principal">
         <a href="#recentes">Recentes</a>
         <a href="#catalogo">Acervo</a>
+        <a href="#acesso">Acesso</a>
         <a href="#status">Status</a>
       </nav>
     </header>
@@ -43,6 +44,7 @@
               autocomplete="off"
             >
           </form>
+          <div class="search-suggestions" id="searchSuggestions" hidden></div>
 
           <div class="hero-status" aria-label="Resumo da biblioteca">
             <span class="status-pill">
@@ -75,7 +77,9 @@
           </div>
           <span class="section-note" id="activeSessions"></span>
         </div>
-        <div class="listening-grid" id="listeningGrid"></div>
+        <div class="carousel-wrap">
+          <div class="listening-grid" id="listeningGrid"></div>
+        </div>
       </section>
 
       <section class="section" id="catalogo" aria-labelledby="catalogo-title">
@@ -95,6 +99,29 @@
             <strong id="pageIndicator">Página 1 de 1</strong>
             <button id="nextPage" type="button">Próxima</button>
           </div>
+        </div>
+      </section>
+
+      <section class="section access-section" id="acesso" aria-labelledby="acesso-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Como acessar</p>
+            <h2 id="acesso-title">Entre na biblioteca</h2>
+          </div>
+        </div>
+        <div class="access-grid">
+          <article>
+            <strong>1. Solicite seu acesso</strong>
+            <p>Use o canal combinado com a Taverna do Leitor para pedir uma conta ou recuperar seus dados de entrada.</p>
+          </article>
+          <article>
+            <strong>2. Acesse pelo app ou navegador</strong>
+            <p>Depois de receber seu login, entre no Audiobookshelf pelo endereço informado e escolha seu audiolivro.</p>
+          </article>
+          <article>
+            <strong>3. Peça novos títulos</strong>
+            <p>Não encontrou o que queria? Use o botão Pedidos e acompanhe o andamento pelo botão acima dele.</p>
+          </article>
         </div>
       </section>
 
@@ -119,12 +146,16 @@
       <a href="#inicio" aria-label="Início">⌂<span>Início</span></a>
       <a href="#recentes" aria-label="Recentes">✦<span>Recentes</span></a>
       <a href="#catalogo" aria-label="Acervo">▦<span>Acervo</span></a>
-      <a href="#status" aria-label="Status">●<span>Status</span></a>
+      <a href="#acesso" aria-label="Acesso">↗<span>Acesso</span></a>
     </nav>
 
     <button class="request-fab" id="requestFab" type="button">
       <span aria-hidden="true">+</span>
       Pedidos
+    </button>
+
+    <button class="request-status-fab" id="requestStatusFab" type="button" aria-label="Acompanhar pedidos">
+      <span aria-hidden="true">✓</span>
     </button>
 
     <dialog class="book-dialog" id="bookDialog">
@@ -137,7 +168,12 @@
       <div class="request-body">
         <p class="eyebrow">Pedidos</p>
         <h2>Solicitar audiolivro</h2>
+
         <form class="request-form" id="requestForm">
+          <label>
+            Nome ou apelido
+            <input id="requestName" type="text" required placeholder="Como devemos identificar o pedido?">
+          </label>
           <label>
             Título
             <input id="requestTitle" type="text" required placeholder="Nome do livro">
@@ -151,13 +187,19 @@
             <textarea id="requestNote" rows="3" placeholder="Edição, narrador, idioma ou outro detalhe"></textarea>
           </label>
           <button type="submit">Registrar pedido</button>
+          <p class="request-feedback" id="requestFeedback" role="status"></p>
         </form>
+      </div>
+    </dialog>
 
-        <div class="request-list-header">
-          <h3>Pedidos registrados neste dispositivo</h3>
-          <button id="clearRequests" type="button">Limpar lista</button>
+    <dialog class="request-dialog" id="requestStatusDialog">
+      <button class="dialog-close" id="requestStatusClose" type="button" aria-label="Fechar">×</button>
+      <div class="request-body">
+        <p class="eyebrow">Acompanhamento</p>
+        <h2>Pedidos em andamento</h2>
+        <div class="request-status-list" id="requestStatusList">
+          <p class="request-empty">Carregando pedidos...</p>
         </div>
-        <div class="request-list" id="requestList"></div>
       </div>
     </dialog>
 

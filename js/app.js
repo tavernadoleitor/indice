@@ -169,8 +169,24 @@ const state = {
   requests: []
 };
 
+const requestFormConfig = {
+  action: "https://docs.google.com/forms/d/e/1FAIpQLSfWNMs8rfalo_ypUK0MLyIt1yIe-G6m-zKf3GI2Fngd4-MbEw/formResponse",
+  statusCsv: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQCuf8TnTisw3gT4fDwnDxK2yJqmjmboEUGZzPYN3MH06yEcksg-M4gn864OoiKbrpX7bLoUYIWtSg/pub?gid=1050794349&single=true&output=csv",
+  fields: {
+    nome: "entry.1394853025",
+    titulo: "entry.1389954983",
+    autor: "entry.1879948104",
+    observacao: "entry.1633326110"
+  }
+};
+
+const absConfig = {
+  publicUrl: "http://bibliotecadataverna.duckdns.org:13378"
+};
+
 const els = {
   searchInput: document.querySelector("#searchInput"),
+  searchSuggestions: document.querySelector("#searchSuggestions"),
   bookCount: document.querySelector("#bookCount"),
   listenerCount: document.querySelector("#listenerCount"),
   onlineIndicator: document.querySelector("#onlineIndicator"),
@@ -194,14 +210,18 @@ const els = {
   dialogBody: document.querySelector("#dialogBody"),
   dialogClose: document.querySelector("#dialogClose"),
   requestFab: document.querySelector("#requestFab"),
+  requestStatusFab: document.querySelector("#requestStatusFab"),
   requestDialog: document.querySelector("#requestDialog"),
   requestClose: document.querySelector("#requestClose"),
+  requestStatusDialog: document.querySelector("#requestStatusDialog"),
+  requestStatusClose: document.querySelector("#requestStatusClose"),
   requestForm: document.querySelector("#requestForm"),
+  requestName: document.querySelector("#requestName"),
   requestTitle: document.querySelector("#requestTitle"),
   requestAuthor: document.querySelector("#requestAuthor"),
   requestNote: document.querySelector("#requestNote"),
-  requestList: document.querySelector("#requestList"),
-  clearRequests: document.querySelector("#clearRequests")
+  requestFeedback: document.querySelector("#requestFeedback"),
+  requestStatusList: document.querySelector("#requestStatusList")
 };
 
 async function loadJson(path, fallback) {
@@ -219,6 +239,15 @@ function normalize(text) {
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 function formatRelativeSync(value) {
@@ -280,6 +309,48 @@ function getCoverPath(book) {
   return String(book.capa || "capas/hero-library.svg").replace(/\\/g, "/");
 }
 
+function createSuggestion(book) {
+  const button = document.createElement("button");
+  const cover = getCoverPath(book);
+  button.className = "search-suggestion";
+  button.type = "button";
+  button.innerHTML = `
+    <img src="${cover}" alt="" loading="lazy">
+    <span>
+      <strong>${escapeHtml(book.titulo)}</strong>
+      <span>${escapeHtml(book.autor || "Autor não informado")}</span>
+    </span>
+  `;
+  const image = button.querySelector("img");
+  image.addEventListener("error", () => {
+    image.src = "capas/hero-library.svg";
+  }, { once: true });
+  button.addEventListener("click", () => {
+    els.searchSuggestions.hidden = true;
+    openBook(book);
+  });
+  return button;
+}
+
+function renderSearchSuggestions() {
+  const query = normalize(state.query);
+  if (query.length < 2) {
+    els.searchSuggestions.hidden = true;
+    els.searchSuggestions.replaceChildren();
+    return;
+  }
+
+  const matches = getFilteredCatalog().slice(0, 8);
+  if (!matches.length) {
+    els.searchSuggestions.hidden = false;
+    els.searchSuggestions.innerHTML = `<p class="search-suggestion-empty">Nenhum audiolivro encontrado.</p>`;
+    return;
+  }
+
+  els.searchSuggestions.hidden = false;
+  els.searchSuggestions.replaceChildren(...matches.map(createSuggestion));
+}
+
 function renderRecent() {
   const recent = [...state.catalog]
     .sort((a, b) => new Date(b.adicionado_em) - new Date(a.adicionado_em))
@@ -325,7 +396,7 @@ function renderListening() {
 
   els.listeningSection.hidden = false;
   els.listeningGrid.replaceChildren(...cards);
-  els.activeSessions.textContent = `${cards.length} sessões ativas`;
+  els.activeSessions.textContent = `${state.listening.length} sessões ativas`;
 }
 
 function getFilteredCatalog() {
@@ -372,38 +443,149 @@ function renderStatus() {
   els.statusMessage.textContent = `${formatStatusMessage(state.status.ultima_sincronizacao)}. ${state.status.mensagem || ""}`;
 }
 
-function loadRequests() {
+async function submitRequestToGoogleForms(request) {
+  const payload = new FormData();
+  payload.append(requestFormConfig.fields.nome, request.nome);
+  payload.append(requestFormConfig.fields.titulo, request.titulo);
+  payload.append(requestFormConfig.fields.autor, request.autor);
+  payload.append(requestFormConfig.fields.observacao, request.observacao);
+
+  await fetch(requestFormConfig.action, {
+    method: "POST",
+    mode: "no-cors",
+    body: payload
+  });
+}
+
+function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let cell = "";
+  let quoted = false;
+
+  for (let index = 0; index < text.length; index += 1) {
+    const char = text[index];
+    const next = text[index + 1];
+
+    if (char === '"' && quoted && next === '"') {
+      cell += '"';
+      index += 1;
+    } else if (char === '"') {
+      quoted = !quoted;
+    } else if (char === "," && !quoted) {
+      row.push(cell);
+      cell = "";
+    } else if ((char === "\n" || char === "\r") && !quoted) {
+      if (char === "\r" && next === "\n") index += 1;
+      row.push(cell);
+      if (row.some((value) => value.trim())) rows.push(row);
+      row = [];
+      cell = "";
+    } else {
+      cell += char;
+    }
+  }
+
+  row.push(cell);
+  if (row.some((value) => value.trim())) rows.push(row);
+  return rows;
+}
+
+function rowValue(row, names) {
+  const keys = Object.keys(row);
+  for (const name of names) {
+    const wanted = normalize(name);
+    const key = keys.find((candidate) => normalize(candidate) === wanted);
+    if (key && row[key]) return row[key].trim();
+  }
+  return "";
+}
+
+function statusClass(status) {
+  const value = normalize(status);
+  if (value.includes("disponivel")) return "available";
+  if (value.includes("adicionado") || value.includes("atendido") || value.includes("concluido")) return "done";
+  if (value.includes("procurando") || value.includes("prepar") || value.includes("analise") || value.includes("andamento")) return "progress";
+  return "pending";
+}
+
+function findCatalogMatch(title, author = "") {
+  const wantedTitle = normalize(title);
+  const wantedAuthor = normalize(author);
+  if (!wantedTitle) return null;
+
+  return state.catalog.find((book) => {
+    const bookTitle = normalize(book.titulo);
+    const bookAuthor = normalize(book.autor);
+    const titleMatches = bookTitle === wantedTitle || bookTitle.includes(wantedTitle) || wantedTitle.includes(bookTitle);
+    const authorMatches = !wantedAuthor || !bookAuthor || bookAuthor.includes(wantedAuthor) || wantedAuthor.includes(bookAuthor);
+    return titleMatches && authorMatches;
+  }) || null;
+}
+
+async function loadRequestStatuses() {
+  els.requestStatusList.innerHTML = `<p class="request-empty">Carregando pedidos...</p>`;
+
   try {
-    state.requests = JSON.parse(localStorage.getItem("tavernaPedidos") || "[]");
+    const response = await fetch(requestFormConfig.statusCsv, { cache: "no-store" });
+    if (!response.ok) throw new Error("Falha ao carregar planilha");
+    const rows = parseCsv(await response.text());
+    const headers = rows.shift() || [];
+    const requests = rows.map((row) => Object.fromEntries(headers.map((header, index) => [header.trim(), row[index] || ""])))
+      .filter((row) => rowValue(row, ["Título", "Titulo", "Livro"]));
+
+    renderRequestStatuses(requests);
   } catch (error) {
-    state.requests = [];
+    els.requestStatusList.innerHTML = `<p class="request-empty">Não foi possível carregar os status agora.</p>`;
   }
 }
 
-function saveRequests() {
-  localStorage.setItem("tavernaPedidos", JSON.stringify(state.requests));
-}
-
-function renderRequests() {
-  if (!state.requests.length) {
-    els.requestList.innerHTML = `<p class="request-empty">Nenhum pedido registrado neste dispositivo.</p>`;
+function renderRequestStatuses(requests) {
+  if (!requests.length) {
+    els.requestStatusList.innerHTML = `<p class="request-empty">Nenhum pedido publicado para acompanhamento.</p>`;
     return;
   }
 
-  els.requestList.replaceChildren(...state.requests.map((request) => {
+  els.requestStatusList.replaceChildren(...requests.map((request) => {
+    const title = rowValue(request, ["Título", "Titulo", "Livro"]);
+    const author = rowValue(request, ["Autor", "Autora"]);
+    const requester = rowValue(request, ["Pedido por", "Solicitante", "Nome", "Apelido"]);
+    const catalogMatch = findCatalogMatch(title, author);
+    const rawStatus = rowValue(request, ["Status", "Situação", "Situacao"]) || "Recebido";
+    const status = catalogMatch ? "Disponível no acervo" : rawStatus;
+    const estimate = rowValue(request, ["Previsão", "Previsao", "Prazo"]);
+    const note = rowValue(request, ["Observação", "Observacao", "Notas", "Nota"]);
+    const updated = rowValue(request, ["Atualizado em", "Atualização", "Atualizacao", "Data"]);
     const item = document.createElement("article");
-    item.className = "request-item";
+    item.className = "request-status-item";
     item.innerHTML = `
-      <strong>${request.titulo}</strong>
-      <span>${request.autor || "Autor não informado"} - ${request.data}</span>
-      ${request.observacao ? `<p>${request.observacao}</p>` : ""}
+      <span class="request-status-badge ${statusClass(status)}">${escapeHtml(status)}</span>
+      <div class="request-status-title-row">
+        <strong>${escapeHtml(title)}</strong>
+        ${catalogMatch ? `<button class="request-open-book" type="button" data-book-id="${escapeHtml(catalogMatch.id)}">Abrir</button>` : ""}
+      </div>
+      <div class="request-status-meta">
+        ${author ? `<span>${escapeHtml(author)}</span>` : ""}
+        ${requester ? `<span>Pedido por ${escapeHtml(requester)}</span>` : ""}
+        ${estimate ? `<span>Previsão: ${escapeHtml(estimate)}</span>` : ""}
+        ${updated ? `<span>Atualizado em ${escapeHtml(updated)}</span>` : ""}
+      </div>
+      ${note ? `<p>${escapeHtml(note)}</p>` : ""}
     `;
     return item;
   }));
+
+  els.requestStatusList.querySelectorAll(".request-open-book").forEach((button) => {
+    button.addEventListener("click", () => {
+      const book = state.catalog.find((item) => item.id === button.dataset.bookId);
+      if (book) openBook(book);
+    });
+  });
 }
 
 function openBook(book) {
   const cover = getCoverPath(book);
+  const listenUrl = `${absConfig.publicUrl}/audiobookshelf/item/${encodeURIComponent(book.id)}`;
   const details = [
     book.autor,
     book.narrador ? `Narração de ${book.narrador}` : "",
@@ -418,6 +600,7 @@ function openBook(book) {
         <h3>${book.titulo}</h3>
         <div class="dialog-meta">${details.join(" · ")}</div>
         <p>${book.descricao || "Descrição não disponível no momento."}</p>
+        <a class="listen-link" href="${listenUrl}" target="_blank" rel="noopener noreferrer">Ouvir agora</a>
       </div>
     </div>
   `;
@@ -432,7 +615,16 @@ function bindEvents() {
   els.searchInput.addEventListener("input", (event) => {
     state.query = event.target.value;
     state.page = 1;
+    renderSearchSuggestions();
     renderCatalog();
+  });
+
+  els.searchInput.addEventListener("focus", renderSearchSuggestions);
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".search-panel") && !event.target.closest(".search-suggestions")) {
+      els.searchSuggestions.hidden = true;
+    }
   });
 
   els.prevPage.addEventListener("click", () => {
@@ -453,32 +645,47 @@ function bindEvents() {
   });
 
   els.requestFab.addEventListener("click", () => {
-    renderRequests();
+    els.requestFeedback.textContent = "";
     els.requestDialog.showModal();
   });
 
+  els.requestStatusFab.addEventListener("click", () => {
+    loadRequestStatuses();
+    els.requestStatusDialog.showModal();
+  });
+
   els.requestClose.addEventListener("click", () => els.requestDialog.close());
+  els.requestStatusClose.addEventListener("click", () => els.requestStatusDialog.close());
   els.requestDialog.addEventListener("click", (event) => {
     if (event.target === els.requestDialog) els.requestDialog.close();
   });
+  els.requestStatusDialog.addEventListener("click", (event) => {
+    if (event.target === els.requestStatusDialog) els.requestStatusDialog.close();
+  });
 
-  els.requestForm.addEventListener("submit", (event) => {
+  els.requestForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    state.requests.unshift({
+    const submitButton = els.requestForm.querySelector("button[type='submit']");
+    const request = {
+      nome: els.requestName.value.trim(),
       titulo: els.requestTitle.value.trim(),
       autor: els.requestAuthor.value.trim(),
       observacao: els.requestNote.value.trim(),
       data: new Date().toLocaleDateString("pt-BR")
-    });
-    saveRequests();
-    renderRequests();
-    els.requestForm.reset();
-  });
+    };
 
-  els.clearRequests.addEventListener("click", () => {
-    state.requests = [];
-    saveRequests();
-    renderRequests();
+    submitButton.disabled = true;
+    els.requestFeedback.textContent = "Enviando pedido...";
+
+    try {
+      await submitRequestToGoogleForms(request);
+      els.requestForm.reset();
+      els.requestFeedback.textContent = "Pedido enviado. Obrigado!";
+    } catch (error) {
+      els.requestFeedback.textContent = "Não foi possível enviar agora. Tente novamente em instantes.";
+    } finally {
+      submitButton.disabled = false;
+    }
   });
 }
 
@@ -492,7 +699,6 @@ async function init() {
   state.catalog = Array.isArray(catalog) ? catalog : fallbackCatalog;
   state.listening = Array.isArray(listening) ? listening : [];
   state.status = status && typeof status === "object" && !Array.isArray(status) ? status : fallbackStatus;
-  loadRequests();
 
   renderStatus();
   renderRecent();
