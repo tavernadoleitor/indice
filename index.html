@@ -136,33 +136,55 @@
       <button class="dialog-close" id="requestClose" type="button" aria-label="Fechar">×</button>
       <div class="request-body">
         <p class="eyebrow">Pedidos</p>
-        <h2>Solicitar audiolivro</h2>
-        <form class="request-form" id="requestForm">
-          <label>
-            Nome ou apelido
-            <input id="requestName" type="text" required placeholder="Como devemos identificar o pedido?">
-          </label>
-          <label>
-            Título
-            <input id="requestTitle" type="text" required placeholder="Nome do livro">
-          </label>
-          <label>
-            Autor
-            <input id="requestAuthor" type="text" placeholder="Opcional">
-          </label>
-          <label>
-            Observação
-            <textarea id="requestNote" rows="3" placeholder="Edição, narrador, idioma ou outro detalhe"></textarea>
-          </label>
-          <button type="submit">Registrar pedido</button>
-          <p class="request-feedback" id="requestFeedback" role="status"></p>
-        </form>
+        <h2>Pedidos de audiolivros</h2>
 
-        <div class="request-list-header">
-          <h3>Últimos pedidos neste dispositivo</h3>
-          <button id="clearRequests" type="button">Limpar lista</button>
+        <div class="request-tabs" role="tablist" aria-label="Pedidos">
+          <button class="is-active" id="requestSubmitTab" type="button" role="tab" aria-selected="true">
+            Fazer pedido
+          </button>
+          <button id="requestStatusTab" type="button" role="tab" aria-selected="false">
+            Acompanhar
+          </button>
         </div>
-        <div class="request-list" id="requestList"></div>
+
+        <section class="request-panel is-active" id="requestSubmitPanel" role="tabpanel" aria-labelledby="requestSubmitTab">
+          <form class="request-form" id="requestForm">
+            <label>
+              Nome ou apelido
+              <input id="requestName" type="text" required placeholder="Como devemos identificar o pedido?">
+            </label>
+            <label>
+              Título
+              <input id="requestTitle" type="text" required placeholder="Nome do livro">
+            </label>
+            <label>
+              Autor
+              <input id="requestAuthor" type="text" placeholder="Opcional">
+            </label>
+            <label>
+              Observação
+              <textarea id="requestNote" rows="3" placeholder="Edição, narrador, idioma ou outro detalhe"></textarea>
+            </label>
+            <button type="submit">Registrar pedido</button>
+            <p class="request-feedback" id="requestFeedback" role="status"></p>
+          </form>
+
+          <div class="request-list-header">
+            <h3>Últimos pedidos neste dispositivo</h3>
+            <button id="clearRequests" type="button">Limpar lista</button>
+          </div>
+          <div class="request-list" id="requestList"></div>
+        </section>
+
+        <section class="request-panel" id="requestStatusPanel" role="tabpanel" aria-labelledby="requestStatusTab">
+          <div class="request-list-header">
+            <h3>Status dos pedidos</h3>
+            <button id="refreshRequestStatus" type="button">Atualizar</button>
+          </div>
+          <div class="request-status-list" id="requestStatusList">
+            <p class="request-empty">Carregando pedidos...</p>
+          </div>
+        </section>
       </div>
     </dialog>
 

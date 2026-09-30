@@ -171,6 +171,7 @@ const state = {
 
 const requestFormConfig = {
   action: "https://docs.google.com/forms/d/e/1FAIpQLSfWNMs8rfalo_ypUK0MLyIt1yIe-G6m-zKf3GI2Fngd4-MbEw/formResponse",
+  statusCsv: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQCuf8TnTisw3gT4fDwnDxK2yJqmjmboEUGZzPYN3MH06yEcksg-M4gn864OoiKbrpX7bLoUYIWtSg/pub?gid=1123356956&single=true&output=csv",
   fields: {
     nome: "entry.1394853025",
     titulo: "entry.1389954983",
@@ -213,7 +214,13 @@ const els = {
   requestNote: document.querySelector("#requestNote"),
   requestList: document.querySelector("#requestList"),
   clearRequests: document.querySelector("#clearRequests"),
-  requestFeedback: document.querySelector("#requestFeedback")
+  requestFeedback: document.querySelector("#requestFeedback"),
+  requestSubmitTab: document.querySelector("#requestSubmitTab"),
+  requestStatusTab: document.querySelector("#requestStatusTab"),
+  requestSubmitPanel: document.querySelector("#requestSubmitPanel"),
+  requestStatusPanel: document.querySelector("#requestStatusPanel"),
+  requestStatusList: document.querySelector("#requestStatusList"),
+  refreshRequestStatus: document.querySelector("#refreshRequestStatus")
 };
 
 async function loadJson(path, fallback) {
@@ -231,6 +238,15 @@ function normalize(text) {
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 function formatRelativeSync(value) {
@@ -410,6 +426,105 @@ async function submitRequestToGoogleForms(request) {
   });
 }
 
+function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let cell = "";
+  let quoted = false;
+
+  for (let index = 0; index < text.length; index += 1) {
+    const char = text[index];
+    const next = text[index + 1];
+
+    if (char === '"' && quoted && next === '"') {
+      cell += '"';
+      index += 1;
+    } else if (char === '"') {
+      quoted = !quoted;
+    } else if (char === "," && !quoted) {
+      row.push(cell);
+      cell = "";
+    } else if ((char === "\n" || char === "\r") && !quoted) {
+      if (char === "\r" && next === "\n") index += 1;
+      row.push(cell);
+      if (row.some((value) => value.trim())) rows.push(row);
+      row = [];
+      cell = "";
+    } else {
+      cell += char;
+    }
+  }
+
+  row.push(cell);
+  if (row.some((value) => value.trim())) rows.push(row);
+  return rows;
+}
+
+function rowValue(row, names) {
+  const keys = Object.keys(row);
+  for (const name of names) {
+    const wanted = normalize(name);
+    const key = keys.find((candidate) => normalize(candidate) === wanted);
+    if (key && row[key]) return row[key].trim();
+  }
+  return "";
+}
+
+function statusClass(status) {
+  const value = normalize(status);
+  if (value.includes("adicionado") || value.includes("atendido") || value.includes("concluido")) return "done";
+  if (value.includes("procurando") || value.includes("prepar") || value.includes("analise") || value.includes("andamento")) return "progress";
+  return "pending";
+}
+
+async function loadRequestStatuses() {
+  els.requestStatusList.innerHTML = `<p class="request-empty">Carregando pedidos...</p>`;
+
+  try {
+    const response = await fetch(requestFormConfig.statusCsv, { cache: "no-store" });
+    if (!response.ok) throw new Error("Falha ao carregar planilha");
+    const rows = parseCsv(await response.text());
+    const headers = rows.shift() || [];
+    const requests = rows.map((row) => Object.fromEntries(headers.map((header, index) => [header.trim(), row[index] || ""])))
+      .filter((row) => rowValue(row, ["Título", "Titulo", "Livro"]));
+
+    renderRequestStatuses(requests);
+  } catch (error) {
+    els.requestStatusList.innerHTML = `<p class="request-empty">Não foi possível carregar os status agora.</p>`;
+  }
+}
+
+function renderRequestStatuses(requests) {
+  if (!requests.length) {
+    els.requestStatusList.innerHTML = `<p class="request-empty">Nenhum pedido publicado para acompanhamento.</p>`;
+    return;
+  }
+
+  els.requestStatusList.replaceChildren(...requests.map((request) => {
+    const title = rowValue(request, ["Título", "Titulo", "Livro"]);
+    const author = rowValue(request, ["Autor", "Autora"]);
+    const requester = rowValue(request, ["Pedido por", "Solicitante", "Nome", "Apelido"]);
+    const status = rowValue(request, ["Status", "Situação", "Situacao"]) || "Recebido";
+    const estimate = rowValue(request, ["Previsão", "Previsao", "Prazo"]);
+    const note = rowValue(request, ["Observação", "Observacao", "Notas", "Nota"]);
+    const updated = rowValue(request, ["Atualizado em", "Atualização", "Atualizacao", "Data"]);
+    const item = document.createElement("article");
+    item.className = "request-status-item";
+    item.innerHTML = `
+      <span class="request-status-badge ${statusClass(status)}">${escapeHtml(status)}</span>
+      <strong>${escapeHtml(title)}</strong>
+      <div class="request-status-meta">
+        ${author ? `<span>${escapeHtml(author)}</span>` : ""}
+        ${requester ? `<span>Pedido por ${escapeHtml(requester)}</span>` : ""}
+        ${estimate ? `<span>Previsão: ${escapeHtml(estimate)}</span>` : ""}
+        ${updated ? `<span>Atualizado em ${escapeHtml(updated)}</span>` : ""}
+      </div>
+      ${note ? `<p>${escapeHtml(note)}</p>` : ""}
+    `;
+    return item;
+  }));
+}
+
 function renderRequests() {
   if (!state.requests.length) {
     els.requestList.innerHTML = `<p class="request-empty">Nenhum pedido registrado neste dispositivo.</p>`;
@@ -420,12 +535,23 @@ function renderRequests() {
     const item = document.createElement("article");
     item.className = "request-item";
     item.innerHTML = `
-      <strong>${request.titulo}</strong>
-      <span>${request.autor || "Autor não informado"} - ${request.nome} - ${request.data}</span>
-      ${request.observacao ? `<p>${request.observacao}</p>` : ""}
+      <strong>${escapeHtml(request.titulo)}</strong>
+      <span>${escapeHtml(request.autor || "Autor não informado")} - ${escapeHtml(request.nome)} - ${escapeHtml(request.data)}</span>
+      ${request.observacao ? `<p>${escapeHtml(request.observacao)}</p>` : ""}
     `;
     return item;
   }));
+}
+
+function setRequestTab(tab) {
+  const showStatus = tab === "status";
+  els.requestSubmitTab.classList.toggle("is-active", !showStatus);
+  els.requestStatusTab.classList.toggle("is-active", showStatus);
+  els.requestSubmitTab.setAttribute("aria-selected", String(!showStatus));
+  els.requestStatusTab.setAttribute("aria-selected", String(showStatus));
+  els.requestSubmitPanel.classList.toggle("is-active", !showStatus);
+  els.requestStatusPanel.classList.toggle("is-active", showStatus);
+  if (showStatus) loadRequestStatuses();
 }
 
 function openBook(book) {
@@ -480,8 +606,13 @@ function bindEvents() {
 
   els.requestFab.addEventListener("click", () => {
     renderRequests();
+    setRequestTab("submit");
     els.requestDialog.showModal();
   });
+
+  els.requestSubmitTab.addEventListener("click", () => setRequestTab("submit"));
+  els.requestStatusTab.addEventListener("click", () => setRequestTab("status"));
+  els.refreshRequestStatus.addEventListener("click", loadRequestStatuses);
 
   els.requestClose.addEventListener("click", () => els.requestDialog.close());
   els.requestDialog.addEventListener("click", (event) => {
