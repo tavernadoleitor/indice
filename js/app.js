@@ -164,7 +164,6 @@ const state = {
   listening: [],
   status: {},
   query: "",
-  filter: "todos",
   page: 1,
   pageSize: 48,
   requests: []
@@ -324,9 +323,8 @@ function renderListening() {
 function getFilteredCatalog() {
   const query = normalize(state.query);
   return state.catalog.filter((book) => {
-    const matchesFilter = state.filter === "todos" || normalize(book.genero) === state.filter;
     const haystack = normalize([book.titulo, book.autor, book.narrador, book.genero, book.serie].join(" "));
-    return matchesFilter && (!query || haystack.includes(query));
+    return !query || haystack.includes(query);
   });
 }
 
@@ -423,16 +421,6 @@ function bindEvents() {
     state.query = event.target.value;
     state.page = 1;
     renderCatalog();
-  });
-
-  document.querySelectorAll(".filter").forEach((button) => {
-    button.addEventListener("click", () => {
-      document.querySelectorAll(".filter").forEach((item) => item.classList.remove("is-active"));
-      button.classList.add("is-active");
-      state.filter = button.dataset.filter;
-      state.page = 1;
-      renderCatalog();
-    });
   });
 
   els.prevPage.addEventListener("click", () => {
