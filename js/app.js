@@ -295,13 +295,12 @@ function renderListening() {
     return;
   }
 
-  els.listeningSection.hidden = false;
   const byId = new Map(state.catalog.map((book) => [book.id, book]));
   const cards = state.listening.map((session) => {
     const book = byId.get(session.id);
+    if (!book) return null;
     const article = document.createElement("article");
     article.className = "listening-card";
-    if (!book) return article;
     const cover = getCoverPath(book);
     article.innerHTML = `
       <img src="${cover}" alt="Capa de ${book.titulo}" loading="lazy">
@@ -317,10 +316,16 @@ function renderListening() {
       image.src = "capas/hero-library.svg";
     }, { once: true });
     return article;
-  });
+  }).filter(Boolean);
 
+  if (!cards.length) {
+    els.listeningSection.hidden = true;
+    return;
+  }
+
+  els.listeningSection.hidden = false;
   els.listeningGrid.replaceChildren(...cards);
-  els.activeSessions.textContent = `${state.listening.length} sessões ativas`;
+  els.activeSessions.textContent = `${cards.length} sessões ativas`;
 }
 
 function getFilteredCatalog() {

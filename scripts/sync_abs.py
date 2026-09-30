@@ -56,6 +56,14 @@ def request_json(path: str, params: dict[str, Any] | None = None) -> dict[str, A
         raise SystemExit(f"Nao consegui conectar ao Audiobookshelf em {ABS_URL}: {error}") from error
 
 
+def request_json_optional(path: str, params: dict[str, Any] | None = None) -> dict[str, Any] | None:
+    try:
+        return request_json(path, params)
+    except SystemExit as error:
+        print(f"Aviso: nao foi possivel acessar {path}. {error}", file=sys.stderr)
+        return None
+
+
 def request_bytes(path: str) -> tuple[bytes, str]:
     request = Request(f"{ABS_URL}{path}", headers={"Authorization": f"Bearer {ABS_API_KEY}"})
     with urlopen(request, timeout=40) as response:
@@ -116,6 +124,13 @@ def format_date(value: Any) -> str:
         pass
     text = str(value)
     return text[:10] if len(text) >= 10 else datetime.now(timezone.utc).date().isoformat()
+
+
+def as_seconds(value: Any) -> float:
+    try:
+        return float(value or 0)
+    except (TypeError, ValueError):
+        return 0
 
 
 def find_library_id() -> str:
@@ -204,6 +219,103 @@ def convert_item(item: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def user_display_name(user: dict[str, Any] | None) -> str:
+    if not isinstance(user, dict):
+        return ""
+    return first_text(
+        user.get("displayName"),
+        user.get("name"),
+        user.get("username"),
+        user.get("email"),
+    )
+
+
+def session_user_name(session: dict[str, Any], users_by_id: dict[str, str]) -> str:
+    user = session.get("user")
+    name = user_display_name(user) if isinstance(user, dict) else ""
+    if name:
+        return name
+
+    user_id = str(session.get("userId") or session.get("userID") or "")
+    if user_id and user_id in users_by_id:
+        return users_by_id[user_id]
+    return "Ouvinte"
+
+
+def session_item_id(session: dict[str, Any]) -> str:
+    item = session.get("libraryItem")
+    if isinstance(item, dict) and item.get("id"):
+        return str(item["id"])
+    return str(session.get("libraryItemId") or session.get("itemId") or "")
+
+
+def session_progress(session: dict[str, Any], catalog_item: dict[str, Any] | None) -> int:
+    current_time = as_seconds(session.get("currentTime"))
+    duration = as_seconds(session.get("duration"))
+    if duration <= 0:
+        media_metadata = session.get("mediaMetadata") or {}
+        duration = as_seconds(media_metadata.get("duration"))
+    if duration <= 0:
+        return 0
+    return max(0, min(100, round((current_time / duration) * 100)))
+
+
+def session_chapter(session: dict[str, Any]) -> str:
+    chapter = session.get("currentChapter")
+    if isinstance(chapter, dict):
+        return first_text(chapter.get("title"), chapter.get("id"))
+    chapter_title = first_text(session.get("chapterTitle"), session.get("episodeTitle"))
+    if chapter_title:
+        return chapter_title
+    current_time = as_seconds(session.get("currentTime"))
+    if current_time:
+        return f"{format_duration(current_time)} ouvidos"
+    return "Em reproducao"
+
+
+def fetch_online_activity(catalog: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], int]:
+    payload = request_json_optional("/api/users/online")
+    if not payload:
+        return [], 0
+
+    users_online = payload.get("usersOnline") or []
+    open_sessions = payload.get("openSessions") or []
+    catalog_by_id = {str(book["id"]): book for book in catalog}
+    users_by_id = {
+        str(user.get("id")): user_display_name(user)
+        for user in users_online
+        if isinstance(user, dict) and user.get("id")
+    }
+
+    listening: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for session in open_sessions:
+        if not isinstance(session, dict):
+            continue
+        item_id = session_item_id(session)
+        if not item_id or item_id not in catalog_by_id:
+            continue
+
+        key = str(session.get("id") or f"{item_id}-{session.get('userId', '')}")
+        if key in seen:
+            continue
+        seen.add(key)
+
+        listening.append(
+            {
+                "id": item_id,
+                "usuario": session_user_name(session, users_by_id),
+                "progresso": session_progress(session, catalog_by_id.get(item_id)),
+                "capitulo": session_chapter(session),
+            }
+        )
+
+    active_listeners = len(users_online) if isinstance(users_online, list) else len(listening)
+    if not active_listeners:
+        active_listeners = len(listening)
+    return listening, active_listeners
+
+
 def write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -215,20 +327,24 @@ def main() -> int:
     library_id = find_library_id()
     items = fetch_items(library_id)
     catalog = [convert_item(item) for item in items]
+    listening, active_listeners = fetch_online_activity(catalog)
 
     status = {
         "servidor": "online",
         "ultima_sincronizacao": datetime.now(timezone.utc).isoformat(),
         "total_audiolivros": len(catalog),
-        "ouvintes_ativos": 0,
+        "ouvintes_ativos": active_listeners,
         "mensagem": "Sincronizacao concluida com o Audiobookshelf.",
     }
 
     write_json(DATA_DIR / "catalogo.json", catalog)
-    write_json(DATA_DIR / "ouvindo-agora.json", [])
+    write_json(DATA_DIR / "ouvindo-agora.json", listening)
     write_json(DATA_DIR / "status.json", status)
 
-    print(f"Sincronizados {len(catalog)} audiolivros da biblioteca {library_id}.")
+    print(
+        f"Sincronizados {len(catalog)} audiolivros da biblioteca {library_id}. "
+        f"{len(listening)} sessoes abertas."
+    )
     return 0
 
 
