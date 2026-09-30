@@ -8,8 +8,8 @@
   {
     "id": "4b4caee2-fd74-4d13-ac7a-30378966ea49",
     "usuario": "Ouvinte",
-    "progresso": 61,
-    "capitulo": "10h 19min ouvidos"
+    "progresso": 62,
+    "capitulo": "10h 24min ouvidos"
   },
   {
     "id": "308ea04a-5a9a-45a1-bf5a-bf3dea820fb9",
@@ -108,12 +108,6 @@
     "capitulo": "7h 48min ouvidos"
   },
   {
-    "id": "b44b34dd-fc54-4f21-8cbe-3c1f260b6d55",
-    "usuario": "pa.joicemota",
-    "progresso": 100,
-    "capitulo": "33h 17min ouvidos"
-  },
-  {
     "id": "32415ee8-b1a4-4b28-b223-bbcd7ec88fda",
     "usuario": "Ouvinte",
     "progresso": 74,
@@ -152,8 +146,8 @@
   {
     "id": "d04e14c3-78d5-4ce3-a46b-852b760ae1a9",
     "usuario": "Ouvinte",
-    "progresso": 28,
-    "capitulo": "2h 25min ouvidos"
+    "progresso": 29,
+    "capitulo": "2h 30min ouvidos"
   },
   {
     "id": "8b21af83-495b-439f-9097-50b49642de2c",
@@ -236,7 +230,13 @@
   {
     "id": "b3a066cf-f734-4bef-acee-41271bfdda57",
     "usuario": "Fontes",
+    "progresso": 2,
+    "capitulo": "4min ouvidos"
+  },
+  {
+    "id": "e7a3cd58-4bd5-4885-a60c-72e984ec736d",
+    "usuario": "pa.joicemota",
     "progresso": 0,
-    "capitulo": "Em reproducao"
+    "capitulo": "0min ouvidos"
   }
 ]
