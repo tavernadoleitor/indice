@@ -2,8 +2,8 @@
   {
     "id": "4b4caee2-fd74-4d13-ac7a-30378966ea49",
     "usuario": "Ouvinte",
-    "progresso": 85,
-    "capitulo": "14h 25min ouvidos"
+    "progresso": 86,
+    "capitulo": "14h 30min ouvidos"
   },
   {
     "id": "06543290-0bf4-482d-ba96-08a0036baff6",
@@ -80,8 +80,8 @@
   {
     "id": "4e9c6355-b095-46b4-93e9-ee4614f85dd6",
     "usuario": "Ouvinte",
-    "progresso": 58,
-    "capitulo": "10h 40min ouvidos"
+    "progresso": 59,
+    "capitulo": "10h 46min ouvidos"
   },
   {
     "id": "8b21af83-495b-439f-9097-50b49642de2c",
@@ -136,12 +136,6 @@
     "usuario": "yt.teste",
     "progresso": 29,
     "capitulo": "2h 57min ouvidos"
-  },
-  {
-    "id": "735d5ea3-5636-455b-9ae0-0f4e6f724b73",
-    "usuario": "Ouvinte",
-    "progresso": 21,
-    "capitulo": "51min ouvidos"
   },
   {
     "id": "6ada6661-6ca9-44d0-ad5e-61294ab43fff",
@@ -271,15 +265,15 @@
   },
   {
     "id": "3a1cd1ac-34dc-458f-975a-488ebadd8286",
-    "usuario": "Ouvinte",
+    "usuario": "pa.anajeronimo",
     "progresso": 81,
     "capitulo": "12h 02min ouvidos"
   },
   {
     "id": "e2ceae68-d9f7-4951-8314-086181143449",
     "usuario": "yt.teste",
-    "progresso": 12,
-    "capitulo": "1h 26min ouvidos"
+    "progresso": 13,
+    "capitulo": "1h 33min ouvidos"
   },
   {
     "id": "b52afd74-463a-4f7b-b1d9-1581d9689f76",
@@ -296,19 +290,25 @@
   {
     "id": "9b4552bf-3831-452d-b8c8-be57f7a1aab5",
     "usuario": "Ouvinte",
-    "progresso": 47,
-    "capitulo": "10h 35min ouvidos"
+    "progresso": 48,
+    "capitulo": "10h 40min ouvidos"
   },
   {
     "id": "444a986f-c190-44a2-abbc-c768558d2de1",
-    "usuario": "pa.leandroaraujo",
+    "usuario": "Ouvinte",
     "progresso": 44,
-    "capitulo": "4h 03min ouvidos"
+    "capitulo": "4h 06min ouvidos"
   },
   {
     "id": "17d8f434-3418-4db4-85c6-5941e04eb43f",
     "usuario": "bt.teste",
-    "progresso": 89,
-    "capitulo": "10h 52min ouvidos"
+    "progresso": 90,
+    "capitulo": "10h 57min ouvidos"
+  },
+  {
+    "id": "735d5ea3-5636-455b-9ae0-0f4e6f724b73",
+    "usuario": "pa.JessicaStein",
+    "progresso": 24,
+    "capitulo": "57min ouvidos"
   }
 ]
