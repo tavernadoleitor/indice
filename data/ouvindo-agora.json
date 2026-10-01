@@ -1,11 +1,5 @@
 [
   {
-    "id": "4b4caee2-fd74-4d13-ac7a-30378966ea49",
-    "usuario": "Ouvinte",
-    "progresso": 100,
-    "capitulo": "16h 53min ouvidos"
-  },
-  {
     "id": "06543290-0bf4-482d-ba96-08a0036baff6",
     "usuario": "Ouvinte",
     "progresso": 5,
@@ -74,8 +68,8 @@
   {
     "id": "4e9c6355-b095-46b4-93e9-ee4614f85dd6",
     "usuario": "pa.fernandokugi",
-    "progresso": 71,
-    "capitulo": "13h 03min ouvidos"
+    "progresso": 72,
+    "capitulo": "13h 11min ouvidos"
   },
   {
     "id": "8b21af83-495b-439f-9097-50b49642de2c",
@@ -219,7 +213,7 @@
     "id": "e7a3cd58-4bd5-4885-a60c-72e984ec736d",
     "usuario": "Ouvinte",
     "progresso": 12,
-    "capitulo": "2h 34min ouvidos"
+    "capitulo": "2h 38min ouvidos"
   },
   {
     "id": "32415ee8-b1a4-4b28-b223-bbcd7ec88fda",
@@ -255,7 +249,7 @@
     "id": "72f1ea0f-3148-4118-a277-b0356431d05d",
     "usuario": "yt.teste",
     "progresso": 72,
-    "capitulo": "20h 30min ouvidos"
+    "capitulo": "20h 35min ouvidos"
   },
   {
     "id": "735d5ea3-5636-455b-9ae0-0f4e6f724b73",
@@ -280,12 +274,6 @@
     "usuario": "Ouvinte",
     "progresso": 93,
     "capitulo": "11h 17min ouvidos"
-  },
-  {
-    "id": "a97f4e67-0aea-4534-a5d2-ac22ebc974fb",
-    "usuario": "yt.teste",
-    "progresso": 41,
-    "capitulo": "4h 12min ouvidos"
   },
   {
     "id": "b5a263f3-ca4d-4c07-83e8-638bf8082f82",
@@ -333,12 +321,24 @@
     "id": "8d3beb8c-4dc9-4b07-8f35-71729a32eaa2",
     "usuario": "Ouvinte",
     "progresso": 1,
-    "capitulo": "32min ouvidos"
+    "capitulo": "33min ouvidos"
   },
   {
     "id": "e2ceae68-d9f7-4951-8314-086181143449",
     "usuario": "yt.teste",
-    "progresso": 21,
-    "capitulo": "2h 25min ouvidos"
+    "progresso": 22,
+    "capitulo": "2h 31min ouvidos"
+  },
+  {
+    "id": "e0755054-06ff-4ea8-b05e-5a98d33e529e",
+    "usuario": "Ouvinte",
+    "progresso": 0,
+    "capitulo": "2min ouvidos"
+  },
+  {
+    "id": "a97f4e67-0aea-4534-a5d2-ac22ebc974fb",
+    "usuario": "yt.teste",
+    "progresso": 41,
+    "capitulo": "4h 12min ouvidos"
   }
 ]
