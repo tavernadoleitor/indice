@@ -68,8 +68,8 @@
   {
     "id": "4e9c6355-b095-46b4-93e9-ee4614f85dd6",
     "usuario": "pa.fernandokugi",
-    "progresso": 96,
-    "capitulo": "17h 35min ouvidos"
+    "progresso": 97,
+    "capitulo": "17h 42min ouvidos"
   },
   {
     "id": "8b21af83-495b-439f-9097-50b49642de2c",
@@ -247,9 +247,9 @@
   },
   {
     "id": "e0755054-06ff-4ea8-b05e-5a98d33e529e",
-    "usuario": "bt.adina",
-    "progresso": 3,
-    "capitulo": "54min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 4,
+    "capitulo": "56min ouvidos"
   },
   {
     "id": "15b7f2b6-88a6-4ae7-b42b-49ab862a7131",
@@ -315,7 +315,7 @@
     "id": "72f1ea0f-3148-4118-a277-b0356431d05d",
     "usuario": "yt.teste",
     "progresso": 79,
-    "capitulo": "22h 33min ouvidos"
+    "capitulo": "22h 38min ouvidos"
   },
   {
     "id": "a97f4e67-0aea-4534-a5d2-ac22ebc974fb",
@@ -325,14 +325,20 @@
   },
   {
     "id": "5816947d-47fe-4f2b-819d-d87962122f69",
-    "usuario": "Ouvinte",
-    "progresso": 45,
-    "capitulo": "5h 09min ouvidos"
+    "usuario": "bt.guiaguiar",
+    "progresso": 46,
+    "capitulo": "5h 19min ouvidos"
   },
   {
     "id": "e2ceae68-d9f7-4951-8314-086181143449",
     "usuario": "yt.teste",
     "progresso": 30,
     "capitulo": "3h 29min ouvidos"
+  },
+  {
+    "id": "772430cf-05dc-4076-af55-e9251b7321bc",
+    "usuario": "yt.teste",
+    "progresso": 0,
+    "capitulo": "0min ouvidos"
   }
 ]
