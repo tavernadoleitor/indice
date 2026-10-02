@@ -1,7 +1,7 @@
 [
   {
     "id": "6c74b3d1-2342-4675-a705-0b5262bc8dff",
-    "usuario": "bt.teste",
+    "usuario": "Ouvinte",
     "progresso": 0,
     "capitulo": "0min ouvidos"
   },
@@ -43,7 +43,7 @@
   },
   {
     "id": "4f57008d-f989-48ca-b64d-9fb50736d383",
-    "usuario": "bt.teste",
+    "usuario": "Ouvinte",
     "progresso": 1,
     "capitulo": "25min ouvidos"
   },
@@ -145,7 +145,7 @@
   },
   {
     "id": "72f1ea0f-3148-4118-a277-b0356431d05d",
-    "usuario": "bt.teste",
+    "usuario": "Ouvinte",
     "progresso": 9,
     "capitulo": "2h 29min ouvidos"
   },
@@ -259,7 +259,7 @@
   },
   {
     "id": "15b7f2b6-88a6-4ae7-b42b-49ab862a7131",
-    "usuario": "bt.teste",
+    "usuario": "Ouvinte",
     "progresso": 59,
     "capitulo": "4h 41min ouvidos"
   },
@@ -278,37 +278,37 @@
   {
     "id": "b52afd74-463a-4f7b-b1d9-1581d9689f76",
     "usuario": "bt.lagaresgisele",
-    "progresso": 42,
-    "capitulo": "9h 56min ouvidos"
+    "progresso": 43,
+    "capitulo": "10h 01min ouvidos"
   },
   {
     "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
     "usuario": "bt.eduardolouvize",
     "progresso": 15,
-    "capitulo": "7h 09min ouvidos"
+    "capitulo": "7h 10min ouvidos"
   },
   {
     "id": "17d8f434-3418-4db4-85c6-5941e04eb43f",
-    "usuario": "bt.teste",
-    "progresso": 96,
-    "capitulo": "11h 43min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 97,
+    "capitulo": "11h 46min ouvidos"
   },
   {
     "id": "3a1cd1ac-34dc-458f-975a-488ebadd8286",
     "usuario": "pa.anajeronimo",
-    "progresso": 95,
-    "capitulo": "14h 07min ouvidos"
+    "progresso": 96,
+    "capitulo": "14h 12min ouvidos"
   },
   {
     "id": "5816947d-47fe-4f2b-819d-d87962122f69",
-    "usuario": "bt.guiaguiar",
-    "progresso": 53,
-    "capitulo": "6h 08min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 54,
+    "capitulo": "6h 16min ouvidos"
   },
   {
     "id": "ee99f095-9a6f-4873-8f3a-a4e319596932",
-    "usuario": "bt.teste",
-    "progresso": 58,
-    "capitulo": "9h 01min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 59,
+    "capitulo": "9h 05min ouvidos"
   }
 ]
