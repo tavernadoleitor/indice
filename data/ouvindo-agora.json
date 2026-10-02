@@ -366,15 +366,15 @@
     "capitulo": "11h 58min ouvidos"
   },
   {
-    "id": "760c2f54-5ec6-4e80-be6b-94d27b09159e",
-    "usuario": "yt.teste",
-    "progresso": 4,
-    "capitulo": "32min ouvidos"
-  },
-  {
     "id": "17d8f434-3418-4db4-85c6-5941e04eb43f",
     "usuario": "yt.teste",
     "progresso": 31,
     "capitulo": "3h 43min ouvidos"
+  },
+  {
+    "id": "760c2f54-5ec6-4e80-be6b-94d27b09159e",
+    "usuario": "yt.teste",
+    "progresso": 4,
+    "capitulo": "33min ouvidos"
   }
 ]
