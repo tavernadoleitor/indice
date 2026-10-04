@@ -211,20 +211,20 @@
   },
   {
     "id": "becbb9ba-75e6-4fa2-a189-9a57ea544c15",
-    "usuario": "pa.beatriz",
-    "progresso": 77,
-    "capitulo": "3h 37min ouvidos"
-  },
-  {
-    "id": "fa1c812d-6447-473d-bc39-a095eb0d0519",
-    "usuario": "yt.teste",
-    "progresso": 89,
-    "capitulo": "21h 06min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 79,
+    "capitulo": "3h 44min ouvidos"
   },
   {
     "id": "d04e14c3-78d5-4ce3-a46b-852b760ae1a9",
     "usuario": "yt.teste",
     "progresso": 1,
     "capitulo": "7min ouvidos"
+  },
+  {
+    "id": "fa1c812d-6447-473d-bc39-a095eb0d0519",
+    "usuario": "yt.teste",
+    "progresso": 87,
+    "capitulo": "20h 46min ouvidos"
   }
 ]
