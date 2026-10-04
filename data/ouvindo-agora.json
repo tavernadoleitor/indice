@@ -180,12 +180,6 @@
     "capitulo": "3h 38min ouvidos"
   },
   {
-    "id": "8d3beb8c-4dc9-4b07-8f35-71729a32eaa2",
-    "usuario": "Ouvinte",
-    "progresso": 18,
-    "capitulo": "9h 25min ouvidos"
-  },
-  {
     "id": "5b3e146b-33c7-4801-8004-edb8fbd403fc",
     "usuario": "Ouvinte",
     "progresso": 3,
@@ -226,5 +220,11 @@
     "usuario": "Ouvinte",
     "progresso": 100,
     "capitulo": "23h 43min ouvidos"
+  },
+  {
+    "id": "8d3beb8c-4dc9-4b07-8f35-71729a32eaa2",
+    "usuario": "pa.valte",
+    "progresso": 18,
+    "capitulo": "9h 28min ouvidos"
   }
 ]
