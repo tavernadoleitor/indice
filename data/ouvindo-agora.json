@@ -144,12 +144,6 @@
     "capitulo": "3h 07min ouvidos"
   },
   {
-    "id": "56cae763-ddb0-49ba-b0f9-47f8fc99eb74",
-    "usuario": "Ouvinte",
-    "progresso": 89,
-    "capitulo": "6h 48min ouvidos"
-  },
-  {
     "id": "46bf2481-23b1-4496-bd61-5b60678abc02",
     "usuario": "Ouvinte",
     "progresso": 21,
@@ -160,5 +154,11 @@
     "usuario": "Ouvinte",
     "progresso": 71,
     "capitulo": "11h 16min ouvidos"
+  },
+  {
+    "id": "56cae763-ddb0-49ba-b0f9-47f8fc99eb74",
+    "usuario": "pa.teste2",
+    "progresso": 81,
+    "capitulo": "6h 10min ouvidos"
   }
 ]
