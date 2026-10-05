@@ -260,13 +260,19 @@
   {
     "id": "e2ceae68-d9f7-4951-8314-086181143449",
     "usuario": "yt.teste",
-    "progresso": 57,
-    "capitulo": "6h 39min ouvidos"
+    "progresso": 58,
+    "capitulo": "6h 45min ouvidos"
   },
   {
     "id": "5816947d-47fe-4f2b-819d-d87962122f69",
-    "usuario": "bt.guiaguiar",
-    "progresso": 93,
-    "capitulo": "10h 45min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 94,
+    "capitulo": "10h 55min ouvidos"
+  },
+  {
+    "id": "5dc0acdd-5413-4945-9965-b17761e0a256",
+    "usuario": "yt.teste",
+    "progresso": 2,
+    "capitulo": "3min ouvidos"
   }
 ]
