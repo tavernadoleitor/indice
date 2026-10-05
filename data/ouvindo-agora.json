@@ -139,15 +139,15 @@
   },
   {
     "id": "568a3507-0906-44e3-9f88-25e43cfc3bda",
-    "usuario": "pa.teste2",
+    "usuario": "Ouvinte",
     "progresso": 7,
-    "capitulo": "37min ouvidos"
+    "capitulo": "40min ouvidos"
   },
   {
     "id": "5816947d-47fe-4f2b-819d-d87962122f69",
     "usuario": "Ouvinte",
-    "progresso": 87,
-    "capitulo": "10h 04min ouvidos"
+    "progresso": 88,
+    "capitulo": "10h 13min ouvidos"
   },
   {
     "id": "e7a3cd58-4bd5-4885-a60c-72e984ec736d",
@@ -165,12 +165,18 @@
     "id": "a255f6ce-368a-411e-a930-736bc1693101",
     "usuario": "Paulinha",
     "progresso": 40,
-    "capitulo": "6h 57min ouvidos"
+    "capitulo": "7h 02min ouvidos"
   },
   {
     "id": "c88f7ce9-f14f-4ffb-9c26-8a6d428252ac",
     "usuario": "giovana",
-    "progresso": 51,
-    "capitulo": "3h 08min ouvidos"
+    "progresso": 53,
+    "capitulo": "3h 15min ouvidos"
+  },
+  {
+    "id": "dd8e6c43-94bc-46b7-b3c4-fcbdf514e2fe",
+    "usuario": "paLarinhaarts",
+    "progresso": 0,
+    "capitulo": "Em reproducao"
   }
 ]
