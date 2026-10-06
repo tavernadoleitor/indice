@@ -162,12 +162,6 @@
     "capitulo": "Em reproducao"
   },
   {
-    "id": "d0d66f45-d4f0-410d-b2a6-87ccb9c2e3fb",
-    "usuario": "Ruby",
-    "progresso": 97,
-    "capitulo": "12h 35min ouvidos"
-  },
-  {
     "id": "dd8e6c43-94bc-46b7-b3c4-fcbdf514e2fe",
     "usuario": "Ouvinte",
     "progresso": 21,
@@ -271,9 +265,9 @@
   },
   {
     "id": "0d1b5b69-9919-4180-98fc-a5d633cc6e15",
-    "usuario": "Ouvinte",
+    "usuario": "bt.kety",
     "progresso": 56,
-    "capitulo": "7h 06min ouvidos"
+    "capitulo": "7h 08min ouvidos"
   },
   {
     "id": "52d9b2e9-026c-4c40-bff5-9c9996acb36e",
@@ -298,5 +292,11 @@
     "usuario": "Ouvinte",
     "progresso": 39,
     "capitulo": "4h 04min ouvidos"
+  },
+  {
+    "id": "d0d66f45-d4f0-410d-b2a6-87ccb9c2e3fb",
+    "usuario": "Ouvinte",
+    "progresso": 98,
+    "capitulo": "12h 40min ouvidos"
   }
 ]
