@@ -150,12 +150,6 @@
     "capitulo": "13h 02min ouvidos"
   },
   {
-    "id": "444a986f-c190-44a2-abbc-c768558d2de1",
-    "usuario": "Ouvinte",
-    "progresso": 92,
-    "capitulo": "8h 29min ouvidos"
-  },
-  {
     "id": "ed8d5c5b-8677-4ece-929d-6b3ab62e3cc9",
     "usuario": "Ouvinte",
     "progresso": 79,
@@ -298,5 +292,11 @@
     "usuario": "Ouvinte",
     "progresso": 99,
     "capitulo": "7h 49min ouvidos"
+  },
+  {
+    "id": "444a986f-c190-44a2-abbc-c768558d2de1",
+    "usuario": "pa.leandroaraujo",
+    "progresso": 92,
+    "capitulo": "8h 30min ouvidos"
   }
 ]
