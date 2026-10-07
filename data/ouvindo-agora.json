@@ -85,7 +85,7 @@
   },
   {
     "id": "d6ef29bf-7975-4a14-a149-13e3058ec87d",
-    "usuario": "pa.baudagrazi",
+    "usuario": "Ouvinte",
     "progresso": 0,
     "capitulo": "Em reproducao"
   },
@@ -142,12 +142,6 @@
     "usuario": "Ouvinte",
     "progresso": 64,
     "capitulo": "7h 48min ouvidos"
-  },
-  {
-    "id": "d0d66f45-d4f0-410d-b2a6-87ccb9c2e3fb",
-    "usuario": "Ouvinte",
-    "progresso": 99,
-    "capitulo": "12h 55min ouvidos"
   },
   {
     "id": "54f7a2db-6f97-4be1-acd4-a0d92a095093",
@@ -235,15 +229,15 @@
   },
   {
     "id": "c86562ea-54ce-4aa5-a75a-eebd922c5973",
-    "usuario": "pa.baudagrazi",
-    "progresso": 42,
-    "capitulo": "3h 33min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 43,
+    "capitulo": "3h 38min ouvidos"
   },
   {
     "id": "7698ddbd-f025-45b1-befa-58edab7e223d",
     "usuario": "Ouvinte",
     "progresso": 63,
-    "capitulo": "14h 50min ouvidos"
+    "capitulo": "14h 55min ouvidos"
   },
   {
     "id": "32415ee8-b1a4-4b28-b223-bbcd7ec88fda",
@@ -262,12 +256,6 @@
     "usuario": "Ouvinte",
     "progresso": 2,
     "capitulo": "27min ouvidos"
-  },
-  {
-    "id": "d04e14c3-78d5-4ce3-a46b-852b760ae1a9",
-    "usuario": "Ouvinte",
-    "progresso": 88,
-    "capitulo": "7h 32min ouvidos"
   },
   {
     "id": "c4ccf65e-08d4-4735-aa64-d35bb820819e",
@@ -303,7 +291,7 @@
     "id": "4f57008d-f989-48ca-b64d-9fb50736d383",
     "usuario": "Ouvinte",
     "progresso": 9,
-    "capitulo": "7h 28min ouvidos"
+    "capitulo": "7h 32min ouvidos"
   },
   {
     "id": "5cd853cf-a830-4a47-92b8-836ff0fa3e43",
@@ -315,6 +303,18 @@
     "id": "3e7ea143-5e3b-44cc-a191-bd2d545f5161",
     "usuario": "pa.teste",
     "progresso": 9,
-    "capitulo": "3h 27min ouvidos"
+    "capitulo": "3h 32min ouvidos"
+  },
+  {
+    "id": "2c73906a-a344-45e4-a91b-65473945770e",
+    "usuario": "Ouvinte",
+    "progresso": 1,
+    "capitulo": "1min ouvidos"
+  },
+  {
+    "id": "5cd853cf-a830-4a47-92b8-836ff0fa3e43",
+    "usuario": "bt.DiegoMartins",
+    "progresso": 0,
+    "capitulo": "0min ouvidos"
   }
 ]
