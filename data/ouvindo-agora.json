@@ -79,9 +79,9 @@
   },
   {
     "id": "52d9b2e9-026c-4c40-bff5-9c9996acb36e",
-    "usuario": "Ouvinte",
-    "progresso": 36,
-    "capitulo": "6h 18min ouvidos"
+    "usuario": "pa.fernandokugi",
+    "progresso": 37,
+    "capitulo": "6h 23min ouvidos"
   },
   {
     "id": "c4ccf65e-08d4-4735-aa64-d35bb820819e",
@@ -182,14 +182,14 @@
   {
     "id": "e7a3cd58-4bd5-4885-a60c-72e984ec736d",
     "usuario": "Ouvinte",
-    "progresso": 67,
-    "capitulo": "14h 57min ouvidos"
+    "progresso": 68,
+    "capitulo": "15h 01min ouvidos"
   },
   {
     "id": "c9ae0241-a379-49ae-bd2c-767c49b77c1d",
     "usuario": "Ouvinte",
     "progresso": 78,
-    "capitulo": "12h 54min ouvidos"
+    "capitulo": "12h 58min ouvidos"
   },
   {
     "id": "a255f6ce-368a-411e-a930-736bc1693101",
@@ -236,8 +236,8 @@
   {
     "id": "dd8e6c43-94bc-46b7-b3c4-fcbdf514e2fe",
     "usuario": "Ouvinte",
-    "progresso": 53,
-    "capitulo": "7h 49min ouvidos"
+    "progresso": 54,
+    "capitulo": "7h 54min ouvidos"
   },
   {
     "id": "b52afd74-463a-4f7b-b1d9-1581d9689f76",
@@ -254,25 +254,31 @@
   {
     "id": "5b3e146b-33c7-4801-8004-edb8fbd403fc",
     "usuario": "yt.teste",
-    "progresso": 21,
-    "capitulo": "7h 07min ouvidos"
+    "progresso": 22,
+    "capitulo": "7h 12min ouvidos"
   },
   {
     "id": "ed8d5c5b-8677-4ece-929d-6b3ab62e3cc9",
     "usuario": "yt.teste",
     "progresso": 86,
-    "capitulo": "8h 53min ouvidos"
+    "capitulo": "8h 52min ouvidos"
   },
   {
     "id": "ad856114-ddc7-4f98-b449-30e84a9c255d",
-    "usuario": "pa.baudagrazi",
-    "progresso": 7,
-    "capitulo": "39min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 8,
+    "capitulo": "44min ouvidos"
   },
   {
     "id": "8d3beb8c-4dc9-4b07-8f35-71729a32eaa2",
     "usuario": "pa.valte",
-    "progresso": 25,
-    "capitulo": "12h 37min ouvidos"
+    "progresso": 31,
+    "capitulo": "16h 06min ouvidos"
+  },
+  {
+    "id": "09a42f14-fdd7-4c2f-ba32-63a10bfb612f",
+    "usuario": "yt.teste",
+    "progresso": 0,
+    "capitulo": "4min ouvidos"
   }
 ]
