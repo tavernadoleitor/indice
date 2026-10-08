@@ -141,7 +141,7 @@
     "id": "4f57008d-f989-48ca-b64d-9fb50736d383",
     "usuario": "Ouvinte",
     "progresso": 12,
-    "capitulo": "10h 01min ouvidos"
+    "capitulo": "10h 05min ouvidos"
   },
   {
     "id": "d0d66f45-d4f0-410d-b2a6-87ccb9c2e3fb",
@@ -196,12 +196,6 @@
     "usuario": "Ouvinte",
     "progresso": 1,
     "capitulo": "13min ouvidos"
-  },
-  {
-    "id": "a422471c-0f90-4d99-8205-9fb0fd82be8a",
-    "usuario": "Ouvinte",
-    "progresso": 8,
-    "capitulo": "1h 59min ouvidos"
   },
   {
     "id": "2c73906a-a344-45e4-a91b-65473945770e",
@@ -280,5 +274,11 @@
     "usuario": "Ouvinte",
     "progresso": 26,
     "capitulo": "9min ouvidos"
+  },
+  {
+    "id": "a422471c-0f90-4d99-8205-9fb0fd82be8a",
+    "usuario": "pa.leandroaraujo",
+    "progresso": 8,
+    "capitulo": "2h 00min ouvidos"
   }
 ]
