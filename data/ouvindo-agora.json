@@ -78,12 +78,6 @@
     "capitulo": "13min ouvidos"
   },
   {
-    "id": "dd8e6c43-94bc-46b7-b3c4-fcbdf514e2fe",
-    "usuario": "Ouvinte",
-    "progresso": 56,
-    "capitulo": "8h 18min ouvidos"
-  },
-  {
     "id": "ad856114-ddc7-4f98-b449-30e84a9c255d",
     "usuario": "Ouvinte",
     "progresso": 14,
@@ -230,7 +224,13 @@
   {
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
     "usuario": "bt.Barbaratoff",
-    "progresso": 71,
-    "capitulo": "23h 12min ouvidos"
+    "progresso": 1,
+    "capitulo": "13min ouvidos"
+  },
+  {
+    "id": "dd8e6c43-94bc-46b7-b3c4-fcbdf514e2fe",
+    "usuario": "paLarinhaarts",
+    "progresso": 56,
+    "capitulo": "8h 18min ouvidos"
   }
 ]
