@@ -163,7 +163,7 @@
   },
   {
     "id": "b2880789-895e-4b28-864c-900aebf59ee7",
-    "usuario": "Ouvinte",
+    "usuario": "bt.teste",
     "progresso": 40,
     "capitulo": "4h 13min ouvidos"
   },
@@ -229,7 +229,7 @@
   },
   {
     "id": "72f1ea0f-3148-4118-a277-b0356431d05d",
-    "usuario": "Ouvinte",
+    "usuario": "bt.teste",
     "progresso": 20,
     "capitulo": "5h 34min ouvidos"
   },
@@ -243,6 +243,6 @@
     "id": "5cd853cf-a830-4a47-92b8-836ff0fa3e43",
     "usuario": "pa.JessicaStein",
     "progresso": 76,
-    "capitulo": "18h 38min ouvidos"
+    "capitulo": "18h 45min ouvidos"
   }
 ]
