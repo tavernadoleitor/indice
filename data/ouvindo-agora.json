@@ -123,7 +123,7 @@
     "id": "7698ddbd-f025-45b1-befa-58edab7e223d",
     "usuario": "Ouvinte",
     "progresso": 81,
-    "capitulo": "19h 09min ouvidos"
+    "capitulo": "19h 14min ouvidos"
   },
   {
     "id": "a422471c-0f90-4d99-8205-9fb0fd82be8a",
@@ -226,5 +226,11 @@
     "usuario": "Ouvinte",
     "progresso": 55,
     "capitulo": "9h 14min ouvidos"
+  },
+  {
+    "id": "c4ccf65e-08d4-4735-aa64-d35bb820819e",
+    "usuario": "pa.teste",
+    "progresso": 0,
+    "capitulo": "2min ouvidos"
   }
 ]
