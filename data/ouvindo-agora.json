@@ -211,9 +211,9 @@
   },
   {
     "id": "5cd853cf-a830-4a47-92b8-836ff0fa3e43",
-    "usuario": "Ouvinte",
+    "usuario": "pa.JessicaStein",
     "progresso": 67,
-    "capitulo": "16h 26min ouvidos"
+    "capitulo": "16h 30min ouvidos"
   },
   {
     "id": "e0179961-7970-443a-bb23-39585891d782",
@@ -232,5 +232,11 @@
     "usuario": "Ouvinte",
     "progresso": 59,
     "capitulo": "9h 55min ouvidos"
+  },
+  {
+    "id": "cbdfec61-ae58-4055-bed9-4e3270ab085f",
+    "usuario": "Ouvinte",
+    "progresso": 0,
+    "capitulo": "0min ouvidos"
   }
 ]
