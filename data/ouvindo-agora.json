@@ -234,15 +234,15 @@
     "capitulo": "5h 34min ouvidos"
   },
   {
-    "id": "4f57008d-f989-48ca-b64d-9fb50736d383",
-    "usuario": "bx.brunof",
-    "progresso": 19,
-    "capitulo": "15h 50min ouvidos"
-  },
-  {
     "id": "5cd853cf-a830-4a47-92b8-836ff0fa3e43",
     "usuario": "Ouvinte",
     "progresso": 77,
     "capitulo": "18h 52min ouvidos"
+  },
+  {
+    "id": "4f57008d-f989-48ca-b64d-9fb50736d383",
+    "usuario": "bx.brunof",
+    "progresso": 19,
+    "capitulo": "15h 51min ouvidos"
   }
 ]
