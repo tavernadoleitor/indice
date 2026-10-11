@@ -1,7 +1,7 @@
 [
   {
     "id": "479c20ee-5e1d-4fa6-890f-fe48e564fa30",
-    "usuario": "pa.teste2",
+    "usuario": "Ouvinte",
     "progresso": 51,
     "capitulo": "4h 52min ouvidos"
   },
@@ -187,7 +187,7 @@
   },
   {
     "id": "1eabaa45-ae0a-4f55-a81d-f3c797c08f2f",
-    "usuario": "pa.teste2",
+    "usuario": "Ouvinte",
     "progresso": 67,
     "capitulo": "4h 04min ouvidos"
   },
@@ -201,6 +201,6 @@
     "id": "97511337-e745-4fa7-be02-bf1875399af7",
     "usuario": "Ouvinte",
     "progresso": 6,
-    "capitulo": "53min ouvidos"
+    "capitulo": "59min ouvidos"
   }
 ]
