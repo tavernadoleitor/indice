@@ -24,12 +24,6 @@
     "capitulo": "2h 45min ouvidos"
   },
   {
-    "id": "dd8e6c43-94bc-46b7-b3c4-fcbdf514e2fe",
-    "usuario": "Ouvinte",
-    "progresso": 88,
-    "capitulo": "12h 54min ouvidos"
-  },
-  {
     "id": "7698ddbd-f025-45b1-befa-58edab7e223d",
     "usuario": "Ouvinte",
     "progresso": 93,
@@ -184,5 +178,11 @@
     "usuario": "Ouvinte",
     "progresso": 41,
     "capitulo": "4h 21min ouvidos"
+  },
+  {
+    "id": "dd8e6c43-94bc-46b7-b3c4-fcbdf514e2fe",
+    "usuario": "paLarinhaarts",
+    "progresso": 88,
+    "capitulo": "12h 57min ouvidos"
   }
 ]
