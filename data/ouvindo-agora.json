@@ -72,12 +72,6 @@
     "capitulo": "55min ouvidos"
   },
   {
-    "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
-    "usuario": "Ouvinte",
-    "progresso": 33,
-    "capitulo": "15h 49min ouvidos"
-  },
-  {
     "id": "a422471c-0f90-4d99-8205-9fb0fd82be8a",
     "usuario": "Ouvinte",
     "progresso": 4,
@@ -184,5 +178,11 @@
     "usuario": "Ouvinte",
     "progresso": 4,
     "capitulo": "27min ouvidos"
+  },
+  {
+    "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
+    "usuario": "bt.eduardolouvize",
+    "progresso": 34,
+    "capitulo": "15h 53min ouvidos"
   }
 ]
