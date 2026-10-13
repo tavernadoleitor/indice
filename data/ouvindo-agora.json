@@ -51,7 +51,7 @@
     "id": "f9e96f86-bcf9-4434-ab06-0fb81bbf558e",
     "usuario": "pa.fernandokugi",
     "progresso": 41,
-    "capitulo": "10h 21min ouvidos"
+    "capitulo": "10h 29min ouvidos"
   },
   {
     "id": "97511337-e745-4fa7-be02-bf1875399af7",
@@ -216,12 +216,6 @@
     "capitulo": "15min ouvidos"
   },
   {
-    "id": "8d3beb8c-4dc9-4b07-8f35-71729a32eaa2",
-    "usuario": "Ouvinte",
-    "progresso": 59,
-    "capitulo": "30h 07min ouvidos"
-  },
-  {
     "id": "5b3e146b-33c7-4801-8004-edb8fbd403fc",
     "usuario": "Ouvinte",
     "progresso": 36,
@@ -284,14 +278,14 @@
   {
     "id": "cf52b770-fd8a-42cf-84b1-dd3de25126bd",
     "usuario": "bt.Barbaratoff",
-    "progresso": 9,
-    "capitulo": "21min ouvidos"
+    "progresso": 11,
+    "capitulo": "26min ouvidos"
   },
   {
     "id": "35c3da9b-2989-45bd-ab63-c2921ef2f113",
     "usuario": "Ouvinte",
-    "progresso": 2,
-    "capitulo": "16min ouvidos"
+    "progresso": 3,
+    "capitulo": "20min ouvidos"
   },
   {
     "id": "b2880789-895e-4b28-864c-900aebf59ee7",
@@ -304,5 +298,11 @@
     "usuario": "IsabellaF",
     "progresso": 0,
     "capitulo": "Em reproducao"
+  },
+  {
+    "id": "8d3beb8c-4dc9-4b07-8f35-71729a32eaa2",
+    "usuario": "Ouvinte",
+    "progresso": 59,
+    "capitulo": "30h 10min ouvidos"
   }
 ]
