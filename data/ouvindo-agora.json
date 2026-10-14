@@ -1,57 +1,15 @@
 [
   {
-    "id": "a7ab7545-1922-460a-baf9-9244f3dcbce2",
-    "usuario": "Ouvinte",
-    "progresso": 2,
-    "capitulo": "15min ouvidos"
-  },
-  {
-    "id": "a422471c-0f90-4d99-8205-9fb0fd82be8a",
-    "usuario": "Ouvinte",
-    "progresso": 5,
-    "capitulo": "1h 17min ouvidos"
-  },
-  {
-    "id": "b6db63a6-d157-4126-b22c-cdeb321aeb59",
-    "usuario": "Ouvinte",
-    "progresso": 59,
-    "capitulo": "7h 52min ouvidos"
-  },
-  {
-    "id": "33a0994a-6c24-4556-bd04-80f7f1fb4ad7",
-    "usuario": "Ouvinte",
-    "progresso": 7,
-    "capitulo": "46min ouvidos"
-  },
-  {
     "id": "4cf4034b-5cba-4f3c-a143-4bc94b0db776",
     "usuario": "Ouvinte",
     "progresso": 7,
     "capitulo": "1h 11min ouvidos"
   },
   {
-    "id": "5cd853cf-a830-4a47-92b8-836ff0fa3e43",
-    "usuario": "Ouvinte",
-    "progresso": 83,
-    "capitulo": "20h 20min ouvidos"
-  },
-  {
-    "id": "f3fe2daf-8f63-4a68-b90d-8d5e97ee9e77",
-    "usuario": "Ouvinte",
-    "progresso": 10,
-    "capitulo": "51min ouvidos"
-  },
-  {
     "id": "f9e96f86-bcf9-4434-ab06-0fb81bbf558e",
     "usuario": "Ouvinte",
     "progresso": 67,
     "capitulo": "17h 00min ouvidos"
-  },
-  {
-    "id": "97511337-e745-4fa7-be02-bf1875399af7",
-    "usuario": "Ouvinte",
-    "progresso": 11,
-    "capitulo": "1h 41min ouvidos"
   },
   {
     "id": "d6e39d4f-e505-4ebc-b216-e99233e7dd56",
@@ -200,8 +158,8 @@
   {
     "id": "35c3da9b-2989-45bd-ab63-c2921ef2f113",
     "usuario": "Ouvinte",
-    "progresso": 93,
-    "capitulo": "10h 10min ouvidos"
+    "progresso": 94,
+    "capitulo": "10h 15min ouvidos"
   },
   {
     "id": "d04e14c3-78d5-4ce3-a46b-852b760ae1a9",
@@ -302,13 +260,13 @@
   {
     "id": "1eabaa45-ae0a-4f55-a81d-f3c797c08f2f",
     "usuario": "Ouvinte",
-    "progresso": 96,
-    "capitulo": "5h 53min ouvidos"
+    "progresso": 98,
+    "capitulo": "5h 58min ouvidos"
   },
   {
     "id": "78a467bb-3d54-4883-8169-cec09c74d097",
     "usuario": "Ouvinte",
-    "progresso": 65,
-    "capitulo": "2h 42min ouvidos"
+    "progresso": 67,
+    "capitulo": "2h 47min ouvidos"
   }
 ]
