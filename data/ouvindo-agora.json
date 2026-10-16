@@ -55,15 +55,9 @@
   },
   {
     "id": "5b3e146b-33c7-4801-8004-edb8fbd403fc",
-    "usuario": "Ouvinte",
+    "usuario": "yt.teste",
     "progresso": 38,
     "capitulo": "12h 40min ouvidos"
-  },
-  {
-    "id": "17d8f434-3418-4db4-85c6-5941e04eb43f",
-    "usuario": "Ouvinte",
-    "progresso": 80,
-    "capitulo": "9h 45min ouvidos"
   },
   {
     "id": "9b4552bf-3831-452d-b8c8-be57f7a1aab5",
@@ -79,7 +73,7 @@
   },
   {
     "id": "4a9286a1-92b3-4c5a-bc12-949b44809259",
-    "usuario": "Ouvinte",
+    "usuario": "yt.teste",
     "progresso": 14,
     "capitulo": "1h 02min ouvidos"
   },
@@ -97,13 +91,13 @@
   },
   {
     "id": "5394b00c-c18b-468b-bfed-5f1191139b58",
-    "usuario": "Ouvinte",
+    "usuario": "yt.teste",
     "progresso": 63,
     "capitulo": "6h 06min ouvidos"
   },
   {
     "id": "33f64ba1-8a32-4c5d-bb91-e1d8c5acfa33",
-    "usuario": "Ouvinte",
+    "usuario": "yt.teste",
     "progresso": 8,
     "capitulo": "56min ouvidos"
   },
@@ -121,7 +115,7 @@
   },
   {
     "id": "d1174f85-faf5-442a-ae85-0531921d416c",
-    "usuario": "Ouvinte",
+    "usuario": "yt.teste",
     "progresso": 5,
     "capitulo": "25min ouvidos"
   },
@@ -139,19 +133,19 @@
   },
   {
     "id": "d1174f85-faf5-442a-ae85-0531921d416c",
-    "usuario": "Ouvinte",
+    "usuario": "yt.teste",
     "progresso": 29,
     "capitulo": "2h 16min ouvidos"
   },
   {
     "id": "0be073aa-bddb-48b3-be39-a0c13657fc23",
-    "usuario": "Ouvinte",
+    "usuario": "yt.teste",
     "progresso": 0,
     "capitulo": "1min ouvidos"
   },
   {
     "id": "c8f6d6f4-6788-4de1-8621-8d1a6213d27a",
-    "usuario": "Ouvinte",
+    "usuario": "yt.teste",
     "progresso": 57,
     "capitulo": "15h 03min ouvidos"
   },
@@ -193,7 +187,7 @@
   },
   {
     "id": "35c3da9b-2989-45bd-ab63-c2921ef2f113",
-    "usuario": "Ouvinte",
+    "usuario": "yt.teste",
     "progresso": 100,
     "capitulo": "10h 54min ouvidos"
   },
@@ -230,7 +224,13 @@
   {
     "id": "01625bb6-e180-47a0-945e-9d553f83bee7",
     "usuario": "bt.edvan",
-    "progresso": 7,
-    "capitulo": "1h 57min ouvidos"
+    "progresso": 8,
+    "capitulo": "2h 02min ouvidos"
+  },
+  {
+    "id": "17d8f434-3418-4db4-85c6-5941e04eb43f",
+    "usuario": "yt.teste",
+    "progresso": 81,
+    "capitulo": "9h 48min ouvidos"
   }
 ]
