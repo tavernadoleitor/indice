@@ -188,8 +188,8 @@
   {
     "id": "88f15dab-acd2-477f-91fb-a6e12f6f880e",
     "usuario": "Ouvinte",
-    "progresso": 25,
-    "capitulo": "2h 39min ouvidos"
+    "progresso": 26,
+    "capitulo": "2h 44min ouvidos"
   },
   {
     "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
@@ -223,8 +223,14 @@
   },
   {
     "id": "60ce20ed-89cd-4d35-a932-53b6f997e430",
-    "usuario": "Ouvinte",
-    "progresso": 21,
-    "capitulo": "1h 28min ouvidos"
+    "usuario": "Paulinha",
+    "progresso": 22,
+    "capitulo": "1h 33min ouvidos"
+  },
+  {
+    "id": "1744da46-50a6-4df4-949d-b2076cedac02",
+    "usuario": "bt.AnaFagundes2",
+    "progresso": 0,
+    "capitulo": "Em reproducao"
   }
 ]
