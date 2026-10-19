@@ -267,7 +267,7 @@
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
     "usuario": "pa.JessicaStein",
     "progresso": 3,
-    "capitulo": "1h 00min ouvidos"
+    "capitulo": "1h 08min ouvidos"
   },
   {
     "id": "b2880789-895e-4b28-864c-900aebf59ee7",
@@ -296,7 +296,13 @@
   {
     "id": "ca67478e-9e62-4ba2-b664-acb9e2ad5d7e",
     "usuario": "yt.teste",
-    "progresso": 12,
-    "capitulo": "2h 26min ouvidos"
+    "progresso": 1,
+    "capitulo": "10min ouvidos"
+  },
+  {
+    "id": "1915f79c-c89e-4c79-b420-2ec1700446a8",
+    "usuario": "bt.anatavares",
+    "progresso": 1,
+    "capitulo": "2min ouvidos"
   }
 ]
