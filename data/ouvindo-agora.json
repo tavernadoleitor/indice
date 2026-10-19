@@ -51,7 +51,7 @@
     "id": "4f57008d-f989-48ca-b64d-9fb50736d383",
     "usuario": "Ouvinte",
     "progresso": 36,
-    "capitulo": "30h 23min ouvidos"
+    "capitulo": "30h 28min ouvidos"
   },
   {
     "id": "78a467bb-3d54-4883-8169-cec09c74d097",
@@ -152,8 +152,8 @@
   {
     "id": "88f15dab-acd2-477f-91fb-a6e12f6f880e",
     "usuario": "Ouvinte",
-    "progresso": 97,
-    "capitulo": "10h 14min ouvidos"
+    "progresso": 98,
+    "capitulo": "10h 19min ouvidos"
   },
   {
     "id": "01625bb6-e180-47a0-945e-9d553f83bee7",
@@ -183,7 +183,7 @@
     "id": "d156264e-db65-4578-9efd-db28fefb53b0",
     "usuario": "pa.fernandokugi",
     "progresso": 71,
-    "capitulo": "16h 07min ouvidos"
+    "capitulo": "16h 15min ouvidos"
   },
   {
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
@@ -231,13 +231,13 @@
     "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
     "usuario": "bt.teste",
     "progresso": 58,
-    "capitulo": "27h 21min ouvidos"
+    "capitulo": "27h 24min ouvidos"
   },
   {
     "id": "5b5ff024-8f1d-4680-957d-06952720738e",
     "usuario": "pa.teste2",
     "progresso": 10,
-    "capitulo": "7h 35min ouvidos"
+    "capitulo": "7h 42min ouvidos"
   },
   {
     "id": "1744da46-50a6-4df4-949d-b2076cedac02",
@@ -249,24 +249,24 @@
     "id": "5cd853cf-a830-4a47-92b8-836ff0fa3e43",
     "usuario": "pa.JessicaStein",
     "progresso": 98,
-    "capitulo": "24h 00min ouvidos"
+    "capitulo": "24h 07min ouvidos"
   },
   {
     "id": "ab1cd1fe-d78c-436f-9702-6faa8552e47e",
     "usuario": "pa.teste2",
-    "progresso": 44,
-    "capitulo": "7h 29min ouvidos"
-  },
-  {
-    "id": "32415ee8-b1a4-4b28-b223-bbcd7ec88fda",
-    "usuario": "pa.teste",
-    "progresso": 37,
-    "capitulo": "4h 49min ouvidos"
+    "progresso": 45,
+    "capitulo": "7h 38min ouvidos"
   },
   {
     "id": "1744da46-50a6-4df4-949d-b2076cedac02",
     "usuario": "Ouvinte",
-    "progresso": 67,
-    "capitulo": "2h 58min ouvidos"
+    "progresso": 69,
+    "capitulo": "3h 05min ouvidos"
+  },
+  {
+    "id": "8b40131f-89de-4274-9617-c70291caa636",
+    "usuario": "pa.teste",
+    "progresso": 0,
+    "capitulo": "1min ouvidos"
   }
 ]
