@@ -205,20 +205,20 @@
   },
   {
     "id": "b2880789-895e-4b28-864c-900aebf59ee7",
-    "usuario": "bt.teste",
+    "usuario": "Ouvinte",
     "progresso": 66,
-    "capitulo": "6h 55min ouvidos"
+    "capitulo": "6h 59min ouvidos"
   },
   {
     "id": "ab7a10d0-52e8-4923-a0e0-927ba9bd8a6e",
     "usuario": "pa.teste2",
-    "progresso": 21,
-    "capitulo": "2h 01min ouvidos"
+    "progresso": 22,
+    "capitulo": "2h 06min ouvidos"
   },
   {
     "id": "88f15dab-acd2-477f-91fb-a6e12f6f880e",
     "usuario": "Ouvinte",
-    "progresso": 30,
-    "capitulo": "3h 10min ouvidos"
+    "progresso": 31,
+    "capitulo": "3h 15min ouvidos"
   }
 ]
