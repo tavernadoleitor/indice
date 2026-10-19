@@ -210,12 +210,6 @@
     "capitulo": "3h 15min ouvidos"
   },
   {
-    "id": "def516f7-5e44-4a46-a7df-e9c74d7615e5",
-    "usuario": "Ouvinte",
-    "progresso": 0,
-    "capitulo": "Em reproducao"
-  },
-  {
     "id": "01625bb6-e180-47a0-945e-9d553f83bee7",
     "usuario": "Ouvinte",
     "progresso": 13,
@@ -224,13 +218,13 @@
   {
     "id": "a422471c-0f90-4d99-8205-9fb0fd82be8a",
     "usuario": "Ouvinte",
-    "progresso": 44,
-    "capitulo": "11h 09min ouvidos"
+    "progresso": 45,
+    "capitulo": "11h 13min ouvidos"
   },
   {
     "id": "840a3d5c-f110-40bd-b9ae-f84937959282",
     "usuario": "Ouvinte",
     "progresso": 3,
-    "capitulo": "25min ouvidos"
+    "capitulo": "27min ouvidos"
   }
 ]
