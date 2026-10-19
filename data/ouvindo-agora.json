@@ -127,7 +127,7 @@
   },
   {
     "id": "d44909b3-e54a-4d5b-b5fc-c59d629c9785",
-    "usuario": "pa.medeiros",
+    "usuario": "Ouvinte",
     "progresso": 11,
     "capitulo": "3h 17min ouvidos"
   },
@@ -253,15 +253,15 @@
   },
   {
     "id": "d156264e-db65-4578-9efd-db28fefb53b0",
-    "usuario": "pa.fernandokugi",
+    "usuario": "Ouvinte",
     "progresso": 92,
-    "capitulo": "20h 50min ouvidos"
+    "capitulo": "20h 54min ouvidos"
   },
   {
     "id": "c383ddd6-01b2-41ca-a7e9-d6aa6553ed35",
     "usuario": "pa.teste2",
-    "progresso": 39,
-    "capitulo": "2h 55min ouvidos"
+    "progresso": 40,
+    "capitulo": "3h 00min ouvidos"
   },
   {
     "id": "8b40131f-89de-4274-9617-c70291caa636",
@@ -284,7 +284,13 @@
   {
     "id": "ab7a10d0-52e8-4923-a0e0-927ba9bd8a6e",
     "usuario": "pa.teste2",
-    "progresso": 29,
-    "capitulo": "2h 52min ouvidos"
+    "progresso": 30,
+    "capitulo": "2h 57min ouvidos"
+  },
+  {
+    "id": "0d1b5b69-9919-4180-98fc-a5d633cc6e15",
+    "usuario": "talita",
+    "progresso": 5,
+    "capitulo": "40min ouvidos"
   }
 ]
