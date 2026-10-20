@@ -73,7 +73,7 @@
   },
   {
     "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
-    "usuario": "Ouvinte",
+    "usuario": "bt.teste",
     "progresso": 60,
     "capitulo": "28h 10min ouvidos"
   },
@@ -210,12 +210,6 @@
     "capitulo": "8h 03min ouvidos"
   },
   {
-    "id": "b2880789-895e-4b28-864c-900aebf59ee7",
-    "usuario": "Ouvinte",
-    "progresso": 78,
-    "capitulo": "8h 13min ouvidos"
-  },
-  {
     "id": "ab7a10d0-52e8-4923-a0e0-927ba9bd8a6e",
     "usuario": "Ouvinte",
     "progresso": 42,
@@ -283,15 +277,15 @@
   },
   {
     "id": "f77cab08-ca7a-449c-a90c-ba38ad6aa36c",
-    "usuario": "sterphany",
-    "progresso": 45,
-    "capitulo": "1h 48min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 46,
+    "capitulo": "1h 52min ouvidos"
   },
   {
     "id": "35c3da9b-2989-45bd-ab63-c2921ef2f113",
     "usuario": "Ouvinte",
-    "progresso": 32,
-    "capitulo": "3h 31min ouvidos"
+    "progresso": 33,
+    "capitulo": "3h 36min ouvidos"
   },
   {
     "id": "43b97057-d94d-4a12-9606-fbdb99400b23",
@@ -308,25 +302,31 @@
   {
     "id": "5cd853cf-a830-4a47-92b8-836ff0fa3e43",
     "usuario": "yt.teste",
-    "progresso": 25,
-    "capitulo": "6h 11min ouvidos"
+    "progresso": 26,
+    "capitulo": "6h 16min ouvidos"
   },
   {
     "id": "f77cab08-ca7a-449c-a90c-ba38ad6aa36c",
-    "usuario": "Ouvinte",
-    "progresso": 7,
-    "capitulo": "16min ouvidos"
+    "usuario": "bt.Barbaratoff",
+    "progresso": 8,
+    "capitulo": "19min ouvidos"
   },
   {
     "id": "4f57008d-f989-48ca-b64d-9fb50736d383",
-    "usuario": "Ouvinte",
+    "usuario": "bx.brunof",
     "progresso": 39,
-    "capitulo": "32h 57min ouvidos"
+    "capitulo": "32h 59min ouvidos"
   },
   {
     "id": "f8304f8c-bc39-4e79-8ae9-959e2df1a272",
     "usuario": "Ouvinte",
-    "progresso": 18,
-    "capitulo": "57min ouvidos"
+    "progresso": 19,
+    "capitulo": "1h 02min ouvidos"
+  },
+  {
+    "id": "b2880789-895e-4b28-864c-900aebf59ee7",
+    "usuario": "bt.teste",
+    "progresso": 79,
+    "capitulo": "8h 17min ouvidos"
   }
 ]
