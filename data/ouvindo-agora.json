@@ -176,8 +176,8 @@
   {
     "id": "50b92410-ce76-49c0-8912-2b166276f756",
     "usuario": "Ouvinte",
-    "progresso": 28,
-    "capitulo": "3h 31min ouvidos"
+    "progresso": 30,
+    "capitulo": "3h 44min ouvidos"
   },
   {
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
@@ -316,5 +316,11 @@
     "usuario": "Ouvinte",
     "progresso": 0,
     "capitulo": "0min ouvidos"
+  },
+  {
+    "id": "8d3beb8c-4dc9-4b07-8f35-71729a32eaa2",
+    "usuario": "Ouvinte",
+    "progresso": 0,
+    "capitulo": "Em reproducao"
   }
 ]
