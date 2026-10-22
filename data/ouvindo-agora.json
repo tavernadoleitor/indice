@@ -96,12 +96,6 @@
     "capitulo": "10h 49min ouvidos"
   },
   {
-    "id": "71dc41de-2ef3-42b3-9aee-dcd29f999b44",
-    "usuario": "Ouvinte",
-    "progresso": 11,
-    "capitulo": "58min ouvidos"
-  },
-  {
     "id": "ab1cd1fe-d78c-436f-9702-6faa8552e47e",
     "usuario": "Ouvinte",
     "progresso": 99,
@@ -129,7 +123,7 @@
     "id": "43b97057-d94d-4a12-9606-fbdb99400b23",
     "usuario": "Ouvinte",
     "progresso": 44,
-    "capitulo": "16h 05min ouvidos"
+    "capitulo": "16h 08min ouvidos"
   },
   {
     "id": "4dcafe98-e5f6-4d0d-8f04-f7951055098f",
@@ -282,12 +276,6 @@
     "capitulo": "1h 56min ouvidos"
   },
   {
-    "id": "4f57008d-f989-48ca-b64d-9fb50736d383",
-    "usuario": "bx.brunof",
-    "progresso": 50,
-    "capitulo": "41h 32min ouvidos"
-  },
-  {
     "id": "10019cb0-caee-47d8-92fb-f3cf6f9dec7d",
     "usuario": "Ouvinte",
     "progresso": 71,
@@ -331,8 +319,20 @@
   },
   {
     "id": "01625bb6-e180-47a0-945e-9d553f83bee7",
-    "usuario": "bt.Barbaratoff",
+    "usuario": "Ouvinte",
     "progresso": 13,
-    "capitulo": "3h 31min ouvidos"
+    "capitulo": "3h 33min ouvidos"
+  },
+  {
+    "id": "71dc41de-2ef3-42b3-9aee-dcd29f999b44",
+    "usuario": "Ouvinte",
+    "progresso": 11,
+    "capitulo": "1h 00min ouvidos"
+  },
+  {
+    "id": "4fb375b9-af7f-407b-873b-4d0f666a5a55",
+    "usuario": "bx.brunof",
+    "progresso": 0,
+    "capitulo": "1min ouvidos"
   }
 ]
