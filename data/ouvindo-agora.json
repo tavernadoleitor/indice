@@ -212,19 +212,25 @@
   {
     "id": "01625bb6-e180-47a0-945e-9d553f83bee7",
     "usuario": "bt.Barbaratoff",
-    "progresso": 39,
-    "capitulo": "10h 21min ouvidos"
+    "progresso": 43,
+    "capitulo": "11h 21min ouvidos"
   },
   {
     "id": "3c7db869-f0e7-4861-b2f3-3c4667f86ce6",
     "usuario": "bt.AnaFagundes2",
-    "progresso": 94,
-    "capitulo": "10h 04min ouvidos"
+    "progresso": 100,
+    "capitulo": "10h 41min ouvidos"
   },
   {
     "id": "43b97057-d94d-4a12-9606-fbdb99400b23",
     "usuario": "Ouvinte",
     "progresso": 78,
     "capitulo": "28h 22min ouvidos"
+  },
+  {
+    "id": "3c7db869-f0e7-4861-b2f3-3c4667f86ce6",
+    "usuario": "Ruby",
+    "progresso": 0,
+    "capitulo": "0min ouvidos"
   }
 ]
