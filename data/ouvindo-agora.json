@@ -135,7 +135,7 @@
     "id": "aae32722-31e1-4cd1-b602-73d5336b18a9",
     "usuario": "pa.gabrielah",
     "progresso": 49,
-    "capitulo": "11h 59min ouvidos"
+    "capitulo": "12h 04min ouvidos"
   },
   {
     "id": "4a7fd336-9c10-4dce-a4cc-fbdfe1eb65df",
@@ -153,7 +153,7 @@
     "id": "abaf0b84-d4be-4cfd-b2da-543c0b61234b",
     "usuario": "Ouvinte",
     "progresso": 42,
-    "capitulo": "16h 40min ouvidos"
+    "capitulo": "16h 47min ouvidos"
   },
   {
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
@@ -165,6 +165,12 @@
     "id": "aae32722-31e1-4cd1-b602-73d5336b18a9",
     "usuario": "Ouvinte",
     "progresso": 18,
-    "capitulo": "4h 25min ouvidos"
+    "capitulo": "4h 30min ouvidos"
+  },
+  {
+    "id": "840a3d5c-f110-40bd-b9ae-f84937959282",
+    "usuario": "Ouvinte",
+    "progresso": 10,
+    "capitulo": "1h 27min ouvidos"
   }
 ]
