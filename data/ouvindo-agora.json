@@ -128,12 +128,12 @@
   {
     "id": "c5a5f16e-8134-4164-9873-067acf98ee4c",
     "usuario": "yt.teste",
-    "progresso": 21,
-    "capitulo": "1h 57min ouvidos"
+    "progresso": 22,
+    "capitulo": "2h 02min ouvidos"
   },
   {
     "id": "b3c803f3-0da4-454f-939e-3fd35c95c34d",
-    "usuario": "Ouvinte",
+    "usuario": "bt.teste",
     "progresso": 30,
     "capitulo": "2h 47min ouvidos"
   },
@@ -142,5 +142,11 @@
     "usuario": "Ouvinte",
     "progresso": 24,
     "capitulo": "5h 46min ouvidos"
+  },
+  {
+    "id": "514f4830-bc1e-45cc-8122-9ee4c08c7c23",
+    "usuario": "bt.teste",
+    "progresso": 0,
+    "capitulo": "Em reproducao"
   }
 ]
