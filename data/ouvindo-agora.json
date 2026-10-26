@@ -111,7 +111,7 @@
     "id": "43b97057-d94d-4a12-9606-fbdb99400b23",
     "usuario": "Ouvinte",
     "progresso": 81,
-    "capitulo": "29h 30min ouvidos"
+    "capitulo": "29h 36min ouvidos"
   },
   {
     "id": "f04440d0-c69f-41b8-a332-e9fec2ff3458",
@@ -142,5 +142,11 @@
     "usuario": "Ouvinte",
     "progresso": 40,
     "capitulo": "9h 47min ouvidos"
+  },
+  {
+    "id": "4a7fd336-9c10-4dce-a4cc-fbdfe1eb65df",
+    "usuario": "talita",
+    "progresso": 0,
+    "capitulo": "4min ouvidos"
   }
 ]
