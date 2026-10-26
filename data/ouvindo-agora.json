@@ -164,19 +164,25 @@
   {
     "id": "cf52b770-fd8a-42cf-84b1-dd3de25126bd",
     "usuario": "Ouvinte",
-    "progresso": 13,
-    "capitulo": "31min ouvidos"
+    "progresso": 15,
+    "capitulo": "36min ouvidos"
   },
   {
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
     "usuario": "pa.JessicaStein",
-    "progresso": 31,
-    "capitulo": "10h 17min ouvidos"
+    "progresso": 32,
+    "capitulo": "10h 24min ouvidos"
   },
   {
     "id": "9ba1da52-365d-423c-a111-c90cd53e6eb8",
     "usuario": "Ouvinte",
     "progresso": 64,
     "capitulo": "10h 03min ouvidos"
+  },
+  {
+    "id": "5b5ff024-8f1d-4680-957d-06952720738e",
+    "usuario": "pa.fernandokugi",
+    "progresso": 30,
+    "capitulo": "21h 49min ouvidos"
   }
 ]
