@@ -128,8 +128,8 @@
   {
     "id": "aae32722-31e1-4cd1-b602-73d5336b18a9",
     "usuario": "pa.gabrielah",
-    "progresso": 87,
-    "capitulo": "21h 20min ouvidos"
+    "progresso": 91,
+    "capitulo": "22h 21min ouvidos"
   },
   {
     "id": "78a467bb-3d54-4883-8169-cec09c74d097",
@@ -156,22 +156,10 @@
     "capitulo": "3h 27min ouvidos"
   },
   {
-    "id": "b2880789-895e-4b28-864c-900aebf59ee7",
-    "usuario": "yt.teste",
-    "progresso": 28,
-    "capitulo": "2h 56min ouvidos"
-  },
-  {
     "id": "b14ed8b1-d999-48db-aa09-b7ffc11bf7a3",
     "usuario": "Ouvinte",
     "progresso": 5,
     "capitulo": "56min ouvidos"
-  },
-  {
-    "id": "aae32722-31e1-4cd1-b602-73d5336b18a9",
-    "usuario": "Ouvinte",
-    "progresso": 26,
-    "capitulo": "6h 22min ouvidos"
   },
   {
     "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
@@ -182,8 +170,8 @@
   {
     "id": "1744da46-50a6-4df4-949d-b2076cedac02",
     "usuario": "Ouvinte",
-    "progresso": 78,
-    "capitulo": "3h 28min ouvidos"
+    "progresso": 89,
+    "capitulo": "3h 58min ouvidos"
   },
   {
     "id": "f8304f8c-bc39-4e79-8ae9-959e2df1a272",
@@ -200,19 +188,49 @@
   {
     "id": "61ba2536-be45-48a6-abe6-4bc5d176eb59",
     "usuario": "yt.teste",
-    "progresso": 5,
-    "capitulo": "47min ouvidos"
+    "progresso": 12,
+    "capitulo": "1h 46min ouvidos"
   },
   {
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
-    "usuario": "Ouvinte",
-    "progresso": 40,
-    "capitulo": "13h 13min ouvidos"
+    "usuario": "pa.JessicaStein",
+    "progresso": 42,
+    "capitulo": "13h 51min ouvidos"
   },
   {
     "id": "ab9a74dc-0286-42fa-9ded-d16b97c8d547",
     "usuario": "Ouvinte",
     "progresso": 13,
     "capitulo": "6h 16min ouvidos"
+  },
+  {
+    "id": "71dc41de-2ef3-42b3-9aee-dcd29f999b44",
+    "usuario": "Ouvinte",
+    "progresso": 31,
+    "capitulo": "2h 49min ouvidos"
+  },
+  {
+    "id": "9075d8c9-02ea-442a-bdbd-dd0f2b8b7a23",
+    "usuario": "yt.teste",
+    "progresso": 2,
+    "capitulo": "32min ouvidos"
+  },
+  {
+    "id": "b2880789-895e-4b28-864c-900aebf59ee7",
+    "usuario": "yt.teste",
+    "progresso": 32,
+    "capitulo": "3h 23min ouvidos"
+  },
+  {
+    "id": "7fd76906-bf5f-46a6-a793-ffbd2c964f0f",
+    "usuario": "pa.joicemota",
+    "progresso": 1,
+    "capitulo": "3min ouvidos"
+  },
+  {
+    "id": "b3d2c481-af54-42b3-bf65-6d6e85923c24",
+    "usuario": "yt.teste",
+    "progresso": 0,
+    "capitulo": "0min ouvidos"
   }
 ]
