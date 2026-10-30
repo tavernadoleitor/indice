@@ -13,7 +13,7 @@
   },
   {
     "id": "50b92410-ce76-49c0-8912-2b166276f756",
-    "usuario": "Ouvinte",
+    "usuario": "pa.teste",
     "progresso": 95,
     "capitulo": "11h 55min ouvidos"
   },
@@ -315,6 +315,6 @@
     "id": "a255f6ce-368a-411e-a930-736bc1693101",
     "usuario": "pa.teste2",
     "progresso": 21,
-    "capitulo": "3h 40min ouvidos"
+    "capitulo": "3h 45min ouvidos"
   }
 ]
