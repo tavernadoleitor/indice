@@ -84,12 +84,6 @@
     "capitulo": "20h 17min ouvidos"
   },
   {
-    "id": "b2880789-895e-4b28-864c-900aebf59ee7",
-    "usuario": "yt.teste",
-    "progresso": 52,
-    "capitulo": "5h 29min ouvidos"
-  },
-  {
     "id": "01625bb6-e180-47a0-945e-9d553f83bee7",
     "usuario": "Ouvinte",
     "progresso": 29,
@@ -248,14 +242,14 @@
   {
     "id": "abaf0b84-d4be-4cfd-b2da-543c0b61234b",
     "usuario": "pa.fernandokugi",
-    "progresso": 61,
-    "capitulo": "24h 25min ouvidos"
+    "progresso": 62,
+    "capitulo": "24h 32min ouvidos"
   },
   {
     "id": "71c0a1f7-82fc-40b9-9eee-a7e57511236f",
     "usuario": "Ouvinte",
-    "progresso": 27,
-    "capitulo": "3h 15min ouvidos"
+    "progresso": 28,
+    "capitulo": "3h 20min ouvidos"
   },
   {
     "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
@@ -266,8 +260,8 @@
   {
     "id": "dd4da6dc-93bc-40ff-9dc7-ee1541c16c73",
     "usuario": "yt.teste",
-    "progresso": 12,
-    "capitulo": "1h 08min ouvidos"
+    "progresso": 13,
+    "capitulo": "1h 13min ouvidos"
   },
   {
     "id": "88f15dab-acd2-477f-91fb-a6e12f6f880e",
@@ -285,13 +279,13 @@
     "id": "61c75b1c-84a8-41d4-be6e-2a649253864b",
     "usuario": "yt.teste",
     "progresso": 4,
-    "capitulo": "44min ouvidos"
+    "capitulo": "48min ouvidos"
   },
   {
     "id": "1a1e654a-5028-4193-adce-fc26545543b2",
     "usuario": "bt.Barbaratoff",
-    "progresso": 36,
-    "capitulo": "2h 51min ouvidos"
+    "progresso": 37,
+    "capitulo": "2h 56min ouvidos"
   },
   {
     "id": "a255f6ce-368a-411e-a930-736bc1693101",
@@ -304,5 +298,11 @@
     "usuario": "yt.teste",
     "progresso": 31,
     "capitulo": "2h 13min ouvidos"
+  },
+  {
+    "id": "b2880789-895e-4b28-864c-900aebf59ee7",
+    "usuario": "yt.teste",
+    "progresso": 53,
+    "capitulo": "5h 35min ouvidos"
   }
 ]
