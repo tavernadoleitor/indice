@@ -328,5 +328,11 @@
     "usuario": "Ouvinte",
     "progresso": 51,
     "capitulo": "2h 03min ouvidos"
+  },
+  {
+    "id": "cbacdd77-c87c-409a-96fd-c29cbb112887",
+    "usuario": "Ouvinte",
+    "progresso": 0,
+    "capitulo": "Em reproducao"
   }
 ]
