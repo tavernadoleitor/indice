@@ -175,7 +175,7 @@
   },
   {
     "id": "cbacdd77-c87c-409a-96fd-c29cbb112887",
-    "usuario": "Ouvinte",
+    "usuario": "pa.teste",
     "progresso": 0,
     "capitulo": "Em reproducao"
   },
@@ -338,7 +338,7 @@
   {
     "id": "5b3e146b-33c7-4801-8004-edb8fbd403fc",
     "usuario": "bt.teste",
-    "progresso": 18,
-    "capitulo": "6h 06min ouvidos"
+    "progresso": 19,
+    "capitulo": "6h 11min ouvidos"
   }
 ]
