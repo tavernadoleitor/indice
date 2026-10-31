@@ -296,7 +296,13 @@
   {
     "id": "ed6a6120-ec01-4aae-911f-466551236c99",
     "usuario": "yt.teste",
-    "progresso": 20,
-    "capitulo": "1h 23min ouvidos"
+    "progresso": 19,
+    "capitulo": "1h 18min ouvidos"
+  },
+  {
+    "id": "7ad349dc-6851-422a-ba14-40840051db19",
+    "usuario": "yt.teste",
+    "progresso": 32,
+    "capitulo": "4h 24min ouvidos"
   }
 ]
