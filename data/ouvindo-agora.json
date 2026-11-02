@@ -272,12 +272,18 @@
   {
     "id": "9e78723b-686e-4d8c-adf6-15999d86767e",
     "usuario": "pa.teste2",
-    "progresso": 74,
-    "capitulo": "13h 41min ouvidos"
+    "progresso": 75,
+    "capitulo": "13h 46min ouvidos"
   },
   {
     "id": "338992d6-3adc-4320-a5ae-a225bf70aeff",
     "usuario": "pa.teste2",
+    "progresso": 0,
+    "capitulo": "0min ouvidos"
+  },
+  {
+    "id": "b7e3e072-1214-4601-b1f1-6dfb0d270b44",
+    "usuario": "bx.bueno",
     "progresso": 0,
     "capitulo": "0min ouvidos"
   }
