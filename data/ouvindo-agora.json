@@ -111,7 +111,7 @@
     "id": "a69eeef2-04e4-4299-8c8e-956f16e2597d",
     "usuario": "pa.teste2",
     "progresso": 55,
-    "capitulo": "9h 44min ouvidos"
+    "capitulo": "9h 45min ouvidos"
   },
   {
     "id": "ed6a6120-ec01-4aae-911f-466551236c99",
@@ -122,8 +122,8 @@
   {
     "id": "61c75b1c-84a8-41d4-be6e-2a649253864b",
     "usuario": "yt.teste",
-    "progresso": 69,
-    "capitulo": "13h 02min ouvidos"
+    "progresso": 70,
+    "capitulo": "13h 10min ouvidos"
   },
   {
     "id": "03a4b5fc-ed68-433a-b8a8-b3d3bab1f9cc",
@@ -171,13 +171,13 @@
     "id": "8d3beb8c-4dc9-4b07-8f35-71729a32eaa2",
     "usuario": "pa.teste2",
     "progresso": 11,
-    "capitulo": "5h 44min ouvidos"
+    "capitulo": "5h 50min ouvidos"
   },
   {
     "id": "c32280f3-67d8-422b-a507-658e58b40bd2",
     "usuario": "IsabelaC",
-    "progresso": 15,
-    "capitulo": "1h 51min ouvidos"
+    "progresso": 16,
+    "capitulo": "1h 57min ouvidos"
   },
   {
     "id": "1a1e654a-5028-4193-adce-fc26545543b2",
@@ -195,7 +195,7 @@
     "id": "32415ee8-b1a4-4b28-b223-bbcd7ec88fda",
     "usuario": "Ouvinte",
     "progresso": 35,
-    "capitulo": "4h 33min ouvidos"
+    "capitulo": "4h 38min ouvidos"
   },
   {
     "id": "abaf0b84-d4be-4cfd-b2da-543c0b61234b",
@@ -206,8 +206,8 @@
   {
     "id": "5b3e146b-33c7-4801-8004-edb8fbd403fc",
     "usuario": "bt.teste",
-    "progresso": 41,
-    "capitulo": "13h 46min ouvidos"
+    "progresso": 42,
+    "capitulo": "13h 51min ouvidos"
   },
   {
     "id": "b2880789-895e-4b28-864c-900aebf59ee7",
@@ -224,19 +224,19 @@
   {
     "id": "166ebba0-7d9f-4976-9c66-9d0b9be7b64a",
     "usuario": "pa.teste2",
-    "progresso": 16,
-    "capitulo": "1h 26min ouvidos"
+    "progresso": 17,
+    "capitulo": "1h 28min ouvidos"
   },
   {
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
     "usuario": "bt.lagaresgisele",
     "progresso": 13,
-    "capitulo": "4h 10min ouvidos"
+    "capitulo": "4h 15min ouvidos"
   },
   {
     "id": "662f218f-d4c0-4a8b-8164-02958dc61c9e",
     "usuario": "pa.bernardorato",
-    "progresso": 68,
-    "capitulo": "6h 21min ouvidos"
+    "progresso": 70,
+    "capitulo": "6h 31min ouvidos"
   }
 ]
