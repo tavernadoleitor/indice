@@ -1,5 +1,29 @@
 [
   {
+    "id": "091ea20f-d4f6-4465-8a0e-a53c4436be9d",
+    "titulo": "Sharpe em Trafalgar",
+    "autor": "Bernard Cornwell",
+    "narrador": "",
+    "genero": "",
+    "duracao": "13h 13min",
+    "serie": "",
+    "adicionado_em": "2026-11-03",
+    "capa": "capas/hero-library.svg",
+    "descricao": "As Aventuras de Sharpe - Livro 4"
+  },
+  {
+    "id": "277cd1b9-3bec-48f8-a01e-2f2112cb1a15",
+    "titulo": "A Fortaleza de Sharpe",
+    "autor": "Bernard Cornwell",
+    "narrador": "",
+    "genero": "",
+    "duracao": "12h 58min",
+    "serie": "Sharpe #3",
+    "adicionado_em": "2026-11-03",
+    "capa": "capas/277cd1b9-3bec-48f8-a01e-2f2112cb1a15.jpg",
+    "descricao": "As Aventuras de Sharpe - Livro 3"
+  },
+  {
     "id": "7c2e488b-911e-42e5-ac31-940ba94fda70",
     "titulo": "Tempestade de ônix",
     "autor": "Rebecca Yarros",
