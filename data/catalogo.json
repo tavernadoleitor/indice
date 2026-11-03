@@ -1,5 +1,41 @@
 [
   {
+    "id": "e5732fb9-121c-4b70-afb6-3d926e08f908",
+    "titulo": "A Devastação de Sharpe",
+    "autor": "Bernard Cornwell",
+    "narrador": "",
+    "genero": "",
+    "duracao": "11h 57min",
+    "serie": "Sharpe #7",
+    "adicionado_em": "2026-11-03",
+    "capa": "capas/e5732fb9-121c-4b70-afb6-3d926e08f908.jpg",
+    "descricao": "As Aventuras de Sharpe - Livro 7"
+  },
+  {
+    "id": "e7024261-c9e7-4478-9b79-aa4c5ee1dfbc",
+    "titulo": "Os Fuzileiros de Sharpe",
+    "autor": "Bernard Cornwell",
+    "narrador": "",
+    "genero": "",
+    "duracao": "11h 37min",
+    "serie": "",
+    "adicionado_em": "2026-11-03",
+    "capa": "capas/e7024261-c9e7-4478-9b79-aa4c5ee1dfbc.jpg",
+    "descricao": "As Aventuras de Sharpe - Livro 6"
+  },
+  {
+    "id": "c05017db-2f3a-46f9-978e-e230dc44ba0d",
+    "titulo": "A Presa de Sharpe",
+    "autor": "Bernard Cornwell",
+    "narrador": "",
+    "genero": "",
+    "duracao": "11h 28min",
+    "serie": "",
+    "adicionado_em": "2026-11-03",
+    "capa": "capas/c05017db-2f3a-46f9-978e-e230dc44ba0d.jpg",
+    "descricao": "As Aventuras de Sharpe - Livro 5"
+  },
+  {
     "id": "091ea20f-d4f6-4465-8a0e-a53c4436be9d",
     "titulo": "Sharpe em Trafalgar",
     "autor": "Bernard Cornwell",
@@ -8,7 +44,7 @@
     "duracao": "13h 13min",
     "serie": "",
     "adicionado_em": "2026-11-03",
-    "capa": "capas/hero-library.svg",
+    "capa": "capas/091ea20f-d4f6-4465-8a0e-a53c4436be9d.jpg",
     "descricao": "As Aventuras de Sharpe - Livro 4"
   },
   {
