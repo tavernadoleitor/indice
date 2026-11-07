@@ -260,8 +260,8 @@
   {
     "id": "aae32722-31e1-4cd1-b602-73d5336b18a9",
     "usuario": "Ouvinte",
-    "progresso": 34,
-    "capitulo": "8h 23min ouvidos"
+    "progresso": 35,
+    "capitulo": "8h 28min ouvidos"
   },
   {
     "id": "1d1241d4-e7fd-495c-a61d-1c0338d00bea",
@@ -333,6 +333,12 @@
     "id": "c224e638-db4c-477f-bd6f-28430f26fee8",
     "usuario": "bt.artenizia",
     "progresso": 8,
-    "capitulo": "55min ouvidos"
+    "capitulo": "1h 01min ouvidos"
+  },
+  {
+    "id": "e5650f34-71da-400a-ad8e-ebb4cf33275d",
+    "usuario": "Taina",
+    "progresso": 0,
+    "capitulo": "0min ouvidos"
   }
 ]
