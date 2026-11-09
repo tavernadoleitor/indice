@@ -1,13 +1,13 @@
 [
   {
     "id": "a69eeef2-04e4-4299-8c8e-956f16e2597d",
-    "usuario": "Ouvinte",
+    "usuario": "pa.teste2",
     "progresso": 74,
     "capitulo": "13h 03min ouvidos"
   },
   {
     "id": "568a3507-0906-44e3-9f88-25e43cfc3bda",
-    "usuario": "Ouvinte",
+    "usuario": "pa.teste2",
     "progresso": 26,
     "capitulo": "2h 23min ouvidos"
   },
@@ -16,12 +16,6 @@
     "usuario": "Ouvinte",
     "progresso": 16,
     "capitulo": "6h 18min ouvidos"
-  },
-  {
-    "id": "8d3beb8c-4dc9-4b07-8f35-71729a32eaa2",
-    "usuario": "Ouvinte",
-    "progresso": 23,
-    "capitulo": "11h 55min ouvidos"
   },
   {
     "id": "a5260265-1060-4012-8b50-06bdf0929516",
@@ -43,7 +37,7 @@
   },
   {
     "id": "3a1cd1ac-34dc-458f-975a-488ebadd8286",
-    "usuario": "Ouvinte",
+    "usuario": "pa.teste2",
     "progresso": 27,
     "capitulo": "3h 58min ouvidos"
   },
@@ -74,14 +68,8 @@
   {
     "id": "1e3affdc-7850-4baf-ad55-5e272fc3f3b5",
     "usuario": "yt.teste",
-    "progresso": 41,
-    "capitulo": "8h 02min ouvidos"
-  },
-  {
-    "id": "6a8c5cdb-4638-414e-9738-99dd7f9e1357",
-    "usuario": "Ouvinte",
-    "progresso": 13,
-    "capitulo": "1h 50min ouvidos"
+    "progresso": 42,
+    "capitulo": "8h 12min ouvidos"
   },
   {
     "id": "d7941c03-deb0-4785-be84-aed6a56c03b7",
@@ -92,8 +80,8 @@
   {
     "id": "531a3573-ff59-475f-8e09-11c93a158434",
     "usuario": "Ouvinte",
-    "progresso": 40,
-    "capitulo": "4h 25min ouvidos"
+    "progresso": 42,
+    "capitulo": "4h 38min ouvidos"
   },
   {
     "id": "5c522e98-6e50-4296-8f92-915681dd4c93",
@@ -104,7 +92,19 @@
   {
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
     "usuario": "bt.lagaresgisele",
-    "progresso": 51,
-    "capitulo": "16h 52min ouvidos"
+    "progresso": 52,
+    "capitulo": "16h 57min ouvidos"
+  },
+  {
+    "id": "6a8c5cdb-4638-414e-9738-99dd7f9e1357",
+    "usuario": "pa.teste2",
+    "progresso": 14,
+    "capitulo": "1h 53min ouvidos"
+  },
+  {
+    "id": "8d3beb8c-4dc9-4b07-8f35-71729a32eaa2",
+    "usuario": "pa.fernandokugi",
+    "progresso": 23,
+    "capitulo": "11h 58min ouvidos"
   }
 ]
