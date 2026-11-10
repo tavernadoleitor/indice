@@ -129,7 +129,7 @@
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
     "usuario": "yt.teste",
     "progresso": 42,
-    "capitulo": "13h 53min ouvidos"
+    "capitulo": "13h 58min ouvidos"
   },
   {
     "id": "b5373cef-3569-4fde-80bb-d8adbf35e1e0",
@@ -152,14 +152,14 @@
   {
     "id": "531a3573-ff59-475f-8e09-11c93a158434",
     "usuario": "Ouvinte",
-    "progresso": 77,
-    "capitulo": "8h 31min ouvidos"
+    "progresso": 79,
+    "capitulo": "8h 46min ouvidos"
   },
   {
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
     "usuario": "pa.JessicaStein",
     "progresso": 84,
-    "capitulo": "27h 37min ouvidos"
+    "capitulo": "27h 44min ouvidos"
   },
   {
     "id": "c4ccf65e-08d4-4735-aa64-d35bb820819e",
@@ -168,22 +168,10 @@
     "capitulo": "12h 32min ouvidos"
   },
   {
-    "id": "33960044-c2f1-4627-bef8-c961d792a848",
-    "usuario": "yt.teste",
-    "progresso": 37,
-    "capitulo": "4h 57min ouvidos"
-  },
-  {
     "id": "fc818402-925d-4216-a8ea-06a894653d10",
     "usuario": "Ouvinte",
     "progresso": 19,
-    "capitulo": "7h 46min ouvidos"
-  },
-  {
-    "id": "a35b6a63-2781-4970-bc68-c48a2160e3a8",
-    "usuario": "pa.teste2",
-    "progresso": 58,
-    "capitulo": "6h 11min ouvidos"
+    "capitulo": "7h 53min ouvidos"
   },
   {
     "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
@@ -200,8 +188,8 @@
   {
     "id": "a69eeef2-04e4-4299-8c8e-956f16e2597d",
     "usuario": "pa.teste2",
-    "progresso": 77,
-    "capitulo": "13h 44min ouvidos"
+    "progresso": 78,
+    "capitulo": "13h 49min ouvidos"
   },
   {
     "id": "afb1d186-cb88-44f2-889e-429e00a7a634",
@@ -212,7 +200,19 @@
   {
     "id": "15462679-8651-413d-9e97-b64958d90483",
     "usuario": "Ouvinte",
-    "progresso": 55,
-    "capitulo": "7h 15min ouvidos"
+    "progresso": 56,
+    "capitulo": "7h 20min ouvidos"
+  },
+  {
+    "id": "a35b6a63-2781-4970-bc68-c48a2160e3a8",
+    "usuario": "pa.teste2",
+    "progresso": 58,
+    "capitulo": "6h 15min ouvidos"
+  },
+  {
+    "id": "33960044-c2f1-4627-bef8-c961d792a848",
+    "usuario": "yt.teste",
+    "progresso": 39,
+    "capitulo": "5h 11min ouvidos"
   }
 ]
