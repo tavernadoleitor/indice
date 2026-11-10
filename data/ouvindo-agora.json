@@ -122,8 +122,8 @@
   {
     "id": "168406b7-a111-4b6c-9154-8b1e4db7fe39",
     "usuario": "bt.lauriane",
-    "progresso": 95,
-    "capitulo": "10h 46min ouvidos"
+    "progresso": 96,
+    "capitulo": "10h 55min ouvidos"
   },
   {
     "id": "a255f6ce-368a-411e-a930-736bc1693101",
@@ -134,13 +134,19 @@
   {
     "id": "9050c4d6-88d5-4897-887c-940553f77ab4",
     "usuario": "pa.teste2",
-    "progresso": 63,
-    "capitulo": "6h 12min ouvidos"
+    "progresso": 64,
+    "capitulo": "6h 17min ouvidos"
   },
   {
     "id": "7c2e488b-911e-42e5-ac31-940ba94fda70",
     "usuario": "Ouvinte",
     "progresso": 37,
     "capitulo": "10h 06min ouvidos"
+  },
+  {
+    "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
+    "usuario": "bt.mikahil",
+    "progresso": 0,
+    "capitulo": "Em reproducao"
   }
 ]
