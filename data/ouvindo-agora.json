@@ -128,8 +128,8 @@
   {
     "id": "9050c4d6-88d5-4897-887c-940553f77ab4",
     "usuario": "pa.teste2",
-    "progresso": 65,
-    "capitulo": "6h 24min ouvidos"
+    "progresso": 66,
+    "capitulo": "6h 29min ouvidos"
   },
   {
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
@@ -165,7 +165,7 @@
     "id": "2cfbe67f-e501-432f-850c-a09cceae2ed2",
     "usuario": "pa.teste2",
     "progresso": 62,
-    "capitulo": "6h 55min ouvidos"
+    "capitulo": "6h 59min ouvidos"
   },
   {
     "id": "a255f6ce-368a-411e-a930-736bc1693101",
@@ -183,6 +183,6 @@
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
     "usuario": "yt.teste",
     "progresso": 35,
-    "capitulo": "11h 25min ouvidos"
+    "capitulo": "11h 30min ouvidos"
   }
 ]
