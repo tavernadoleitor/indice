@@ -290,25 +290,25 @@
   {
     "id": "2cfbe67f-e501-432f-850c-a09cceae2ed2",
     "usuario": "pa.teste2",
-    "progresso": 75,
-    "capitulo": "8h 27min ouvidos"
-  },
-  {
-    "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
-    "usuario": "yt.teste",
-    "progresso": 61,
-    "capitulo": "20h 13min ouvidos"
-  },
-  {
-    "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
-    "usuario": "bt.lagaresgisele",
-    "progresso": 66,
-    "capitulo": "21h 49min ouvidos"
+    "progresso": 76,
+    "capitulo": "8h 32min ouvidos"
   },
   {
     "id": "6a8c5cdb-4638-414e-9738-99dd7f9e1357",
     "usuario": "pa.teste2",
-    "progresso": 44,
-    "capitulo": "6h 13min ouvidos"
+    "progresso": 45,
+    "capitulo": "6h 23min ouvidos"
+  },
+  {
+    "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
+    "usuario": "bt.lagaresgisele",
+    "progresso": 67,
+    "capitulo": "21h 53min ouvidos"
+  },
+  {
+    "id": "2dcd1504-2367-455a-937e-977ca0a3a600",
+    "usuario": "yt.teste",
+    "progresso": 0,
+    "capitulo": "0min ouvidos"
   }
 ]
