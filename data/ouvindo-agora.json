@@ -78,12 +78,6 @@
     "capitulo": "5h 41min ouvidos"
   },
   {
-    "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
-    "usuario": "Ouvinte",
-    "progresso": 69,
-    "capitulo": "32h 30min ouvidos"
-  },
-  {
     "id": "1e3affdc-7850-4baf-ad55-5e272fc3f3b5",
     "usuario": "yt.teste",
     "progresso": 100,
@@ -224,8 +218,8 @@
   {
     "id": "fac9d9c3-f3af-41c4-a341-a34ba840e263",
     "usuario": "yt.teste",
-    "progresso": 14,
-    "capitulo": "2h 19min ouvidos"
+    "progresso": 15,
+    "capitulo": "2h 34min ouvidos"
   },
   {
     "id": "ca67478e-9e62-4ba2-b664-acb9e2ad5d7e",
@@ -279,42 +273,48 @@
     "id": "7698ddbd-f025-45b1-befa-58edab7e223d",
     "usuario": "pa.teste2",
     "progresso": 3,
-    "capitulo": "36min ouvidos"
+    "capitulo": "41min ouvidos"
   },
   {
     "id": "40facd49-d17f-4882-bcbf-a713ec2a5359",
     "usuario": "yt.teste",
-    "progresso": 54,
-    "capitulo": "7h 59min ouvidos"
+    "progresso": 55,
+    "capitulo": "8h 06min ouvidos"
   },
   {
     "id": "e6f84546-b822-4108-b73f-4e7d07e773e7",
     "usuario": "bx.artenizia",
-    "progresso": 25,
-    "capitulo": "4h 03min ouvidos"
+    "progresso": 26,
+    "capitulo": "4h 11min ouvidos"
   },
   {
     "id": "ed6a6120-ec01-4aae-911f-466551236c99",
     "usuario": "yt.teste",
-    "progresso": 47,
-    "capitulo": "3h 17min ouvidos"
+    "progresso": 48,
+    "capitulo": "3h 22min ouvidos"
   },
   {
     "id": "8a58d8d7-d10d-4b3f-a50b-e1e84d5ed32a",
     "usuario": "Ouvinte",
-    "progresso": 43,
-    "capitulo": "6h 10min ouvidos"
+    "progresso": 44,
+    "capitulo": "6h 15min ouvidos"
   },
   {
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
     "usuario": "yt.teste",
     "progresso": 73,
-    "capitulo": "23h 55min ouvidos"
+    "capitulo": "23h 58min ouvidos"
   },
   {
     "id": "79f956d7-06ea-4522-a97f-17376fd8985f",
-    "usuario": "Jarlene",
-    "progresso": 28,
-    "capitulo": "1h 02min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 32,
+    "capitulo": "1h 11min ouvidos"
+  },
+  {
+    "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
+    "usuario": "bt.eduardolouvize",
+    "progresso": 69,
+    "capitulo": "32h 35min ouvidos"
   }
 ]
