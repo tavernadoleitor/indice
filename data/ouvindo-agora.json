@@ -84,12 +84,6 @@
     "capitulo": "32h 30min ouvidos"
   },
   {
-    "id": "c5e27748-869e-497a-b39e-7f5cee196fa2",
-    "usuario": "Ouvinte",
-    "progresso": 71,
-    "capitulo": "10h 55min ouvidos"
-  },
-  {
     "id": "8a58d8d7-d10d-4b3f-a50b-e1e84d5ed32a",
     "usuario": "Ouvinte",
     "progresso": 43,
@@ -124,12 +118,6 @@
     "usuario": "Ouvinte",
     "progresso": 18,
     "capitulo": "2h 58min ouvidos"
-  },
-  {
-    "id": "40facd49-d17f-4882-bcbf-a713ec2a5359",
-    "usuario": "yt.teste",
-    "progresso": 51,
-    "capitulo": "7h 31min ouvidos"
   },
   {
     "id": "40facd49-d17f-4882-bcbf-a713ec2a5359",
@@ -207,7 +195,7 @@
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
     "usuario": "yt.teste",
     "progresso": 72,
-    "capitulo": "23h 35min ouvidos"
+    "capitulo": "23h 40min ouvidos"
   },
   {
     "id": "b5a263f3-ca4d-4c07-83e8-638bf8082f82",
@@ -267,7 +255,7 @@
     "id": "72a23466-b355-4d3b-a902-83bc34f8bf51",
     "usuario": "yt.teste",
     "progresso": 85,
-    "capitulo": "13h 07min ouvidos"
+    "capitulo": "13h 14min ouvidos"
   },
   {
     "id": "70b9e9f8-365b-4089-9b53-48c780744332",
@@ -279,7 +267,7 @@
     "id": "6d20759f-5de9-41dd-9474-e4913e52cff6",
     "usuario": "pa.teste2",
     "progresso": 1,
-    "capitulo": "10min ouvidos"
+    "capitulo": "11min ouvidos"
   },
   {
     "id": "857146bc-2138-4623-aaf4-9802f9de660c",
@@ -296,8 +284,8 @@
   {
     "id": "79f956d7-06ea-4522-a97f-17376fd8985f",
     "usuario": "Ouvinte",
-    "progresso": 12,
-    "capitulo": "26min ouvidos"
+    "progresso": 15,
+    "capitulo": "34min ouvidos"
   },
   {
     "id": "3c0191cc-b204-490e-8831-3ea89666c13b",
@@ -309,6 +297,18 @@
     "id": "7698ddbd-f025-45b1-befa-58edab7e223d",
     "usuario": "pa.teste2",
     "progresso": 1,
-    "capitulo": "12min ouvidos"
+    "capitulo": "17min ouvidos"
+  },
+  {
+    "id": "40facd49-d17f-4882-bcbf-a713ec2a5359",
+    "usuario": "yt.teste",
+    "progresso": 51,
+    "capitulo": "7h 33min ouvidos"
+  },
+  {
+    "id": "e6f84546-b822-4108-b73f-4e7d07e773e7",
+    "usuario": "bx.artenizia",
+    "progresso": 27,
+    "capitulo": "4h 24min ouvidos"
   }
 ]
