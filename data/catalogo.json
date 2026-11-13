@@ -1,5 +1,29 @@
 [
   {
+    "id": "550ab761-4d0f-4019-9c4b-7ca92a46c03a",
+    "titulo": "Relíquias",
+    "autor": "Tess Gerritsen",
+    "narrador": "",
+    "genero": "",
+    "duracao": "12h 06min",
+    "serie": "Rizzoli & Isles #7",
+    "adicionado_em": "2026-11-13",
+    "capa": "capas/550ab761-4d0f-4019-9c4b-7ca92a46c03a.jpg",
+    "descricao": "Livro 7 - Rizzoli e Isles"
+  },
+  {
+    "id": "4794f49b-0216-4329-bb24-e17cf3177ec9",
+    "titulo": "Dublê de Corpo",
+    "autor": "Tess Gerritsen",
+    "narrador": "",
+    "genero": "",
+    "duracao": "12h 12min",
+    "serie": "Rizzoli & Isles #4",
+    "adicionado_em": "2026-11-13",
+    "capa": "capas/4794f49b-0216-4329-bb24-e17cf3177ec9.jpg",
+    "descricao": ""
+  },
+  {
     "id": "c6559921-2118-4336-a964-34c94e9831c2",
     "titulo": "O Pecador",
     "autor": "Tess Gerritsen",
