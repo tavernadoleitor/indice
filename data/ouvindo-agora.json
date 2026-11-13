@@ -1,75 +1,9 @@
 [
   {
-    "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
-    "usuario": "Ouvinte",
-    "progresso": 72,
-    "capitulo": "23h 31min ouvidos"
-  },
-  {
-    "id": "6e168718-2ea4-4d27-b157-bd67ab4d7590",
-    "usuario": "Ouvinte",
-    "progresso": 0,
-    "capitulo": "2min ouvidos"
-  },
-  {
-    "id": "055e598d-557f-4646-8d10-9dcd437f44bf",
-    "usuario": "Ouvinte",
-    "progresso": 100,
-    "capitulo": "18h 52min ouvidos"
-  },
-  {
-    "id": "cbdfec61-ae58-4055-bed9-4e3270ab085f",
-    "usuario": "Ouvinte",
-    "progresso": 1,
-    "capitulo": "8min ouvidos"
-  },
-  {
-    "id": "c5e27748-869e-497a-b39e-7f5cee196fa2",
-    "usuario": "Ouvinte",
-    "progresso": 28,
-    "capitulo": "4h 17min ouvidos"
-  },
-  {
-    "id": "b3c803f3-0da4-454f-939e-3fd35c95c34d",
-    "usuario": "Ouvinte",
-    "progresso": 100,
-    "capitulo": "9h 17min ouvidos"
-  },
-  {
-    "id": "a69eeef2-04e4-4299-8c8e-956f16e2597d",
-    "usuario": "pa.teste2",
-    "progresso": 90,
-    "capitulo": "16h 00min ouvidos"
-  },
-  {
-    "id": "8c2495ea-613b-46b5-957a-294f30cb575b",
-    "usuario": "Ouvinte",
-    "progresso": 0,
-    "capitulo": "Em reproducao"
-  },
-  {
-    "id": "20eeb7db-f989-4a6a-abd8-90703c75c168",
-    "usuario": "Ouvinte",
-    "progresso": 44,
-    "capitulo": "4h 58min ouvidos"
-  },
-  {
-    "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
-    "usuario": "Ouvinte",
-    "progresso": 95,
-    "capitulo": "31h 18min ouvidos"
-  },
-  {
     "id": "b44b34dd-fc54-4f21-8cbe-3c1f260b6d55",
     "usuario": "Ouvinte",
     "progresso": 37,
     "capitulo": "12h 14min ouvidos"
-  },
-  {
-    "id": "d6816d2d-8ae9-484f-af39-6ca7b80458c1",
-    "usuario": "Ouvinte",
-    "progresso": 59,
-    "capitulo": "5h 41min ouvidos"
   },
   {
     "id": "1e3affdc-7850-4baf-ad55-5e272fc3f3b5",
@@ -308,8 +242,8 @@
   {
     "id": "7698ddbd-f025-45b1-befa-58edab7e223d",
     "usuario": "pa.teste2",
-    "progresso": 21,
-    "capitulo": "5h 03min ouvidos"
+    "progresso": 22,
+    "capitulo": "5h 08min ouvidos"
   },
   {
     "id": "70b9e9f8-365b-4089-9b53-48c780744332",
