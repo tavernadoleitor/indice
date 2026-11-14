@@ -1,5 +1,53 @@
 [
   {
+    "id": "d10f716c-a260-4ede-8eea-48287afffe71",
+    "titulo": "O Predador",
+    "autor": "Tess Gerritsen",
+    "narrador": "",
+    "genero": "",
+    "duracao": "12h 00min",
+    "serie": "Rizzoli & Isles #11",
+    "adicionado_em": "2026-11-13",
+    "capa": "capas/d10f716c-a260-4ede-8eea-48287afffe71.jpg",
+    "descricao": ""
+  },
+  {
+    "id": "cb21b8c5-7764-4dd3-924a-8f61476e34b9",
+    "titulo": "A Última Vítima",
+    "autor": "Tess Gerritsen",
+    "narrador": "",
+    "genero": "",
+    "duracao": "11h 49min",
+    "serie": "Rizzoli & Isles #10",
+    "adicionado_em": "2026-11-13",
+    "capa": "capas/cb21b8c5-7764-4dd3-924a-8f61476e34b9.jpg",
+    "descricao": "Livro 10 - Rizzoli e Isles"
+  },
+  {
+    "id": "633a3758-7ca5-4f28-ba9f-901aacd92c7e",
+    "titulo": "A Garota Silenciosa",
+    "autor": "Tess Gerritsen",
+    "narrador": "",
+    "genero": "",
+    "duracao": "12h 11min",
+    "serie": "Rizzoli & Isles #9",
+    "adicionado_em": "2026-11-13",
+    "capa": "capas/633a3758-7ca5-4f28-ba9f-901aacd92c7e.jpg",
+    "descricao": "Livro 9 - Rizzoli e Isles"
+  },
+  {
+    "id": "2e32ddd9-c26b-4a8c-a29b-e0f9e40d3f94",
+    "titulo": "Gélido",
+    "autor": "Tess Gerritsen",
+    "narrador": "",
+    "genero": "",
+    "duracao": "12h 10min",
+    "serie": "Rizzoli & Isles #8",
+    "adicionado_em": "2026-11-13",
+    "capa": "capas/2e32ddd9-c26b-4a8c-a29b-e0f9e40d3f94.jpg",
+    "descricao": ""
+  },
+  {
     "id": "550ab761-4d0f-4019-9c4b-7ca92a46c03a",
     "titulo": "Relíquias",
     "autor": "Tess Gerritsen",
