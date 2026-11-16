@@ -73,7 +73,7 @@
   },
   {
     "id": "857146bc-2138-4623-aaf4-9802f9de660c",
-    "usuario": "Ouvinte",
+    "usuario": "pa.teste2",
     "progresso": 35,
     "capitulo": "2h 58min ouvidos"
   },
@@ -109,7 +109,7 @@
   },
   {
     "id": "6d20759f-5de9-41dd-9474-e4913e52cff6",
-    "usuario": "Ouvinte",
+    "usuario": "pa.teste2",
     "progresso": 61,
     "capitulo": "7h 50min ouvidos"
   },
@@ -118,12 +118,6 @@
     "usuario": "Ouvinte",
     "progresso": 74,
     "capitulo": "14h 52min ouvidos"
-  },
-  {
-    "id": "a255f6ce-368a-411e-a930-736bc1693101",
-    "usuario": "Ouvinte",
-    "progresso": 80,
-    "capitulo": "13h 56min ouvidos"
   },
   {
     "id": "f43bff1a-3f8e-49bf-9993-6a88d49bfb99",
@@ -157,7 +151,7 @@
   },
   {
     "id": "70b9e9f8-365b-4089-9b53-48c780744332",
-    "usuario": "Ouvinte",
+    "usuario": "pa.teste2",
     "progresso": 100,
     "capitulo": "22h 08min ouvidos"
   },
@@ -175,13 +169,13 @@
   },
   {
     "id": "7698ddbd-f025-45b1-befa-58edab7e223d",
-    "usuario": "Ouvinte",
+    "usuario": "pa.teste2",
     "progresso": 77,
     "capitulo": "18h 17min ouvidos"
   },
   {
     "id": "43b97057-d94d-4a12-9606-fbdb99400b23",
-    "usuario": "Ouvinte",
+    "usuario": "pa.teste2",
     "progresso": 40,
     "capitulo": "14h 33min ouvidos"
   },
@@ -205,7 +199,7 @@
   },
   {
     "id": "044a43ac-2c7e-4721-a797-cbf1a80ba90b",
-    "usuario": "Ouvinte",
+    "usuario": "pa.teste2",
     "progresso": 0,
     "capitulo": "Em reproducao"
   },
@@ -217,7 +211,7 @@
   },
   {
     "id": "deb1c177-1ff0-49c5-ba9a-130f492cc3bd",
-    "usuario": "Ouvinte",
+    "usuario": "pa.teste2",
     "progresso": 9,
     "capitulo": "56min ouvidos"
   },
@@ -277,8 +271,14 @@
   },
   {
     "id": "e47d4702-fd57-4dd1-8452-f2acb7be32bc",
-    "usuario": "bt.guiaguiar",
+    "usuario": "Ouvinte",
     "progresso": 64,
-    "capitulo": "7h 10min ouvidos"
+    "capitulo": "7h 12min ouvidos"
+  },
+  {
+    "id": "a255f6ce-368a-411e-a930-736bc1693101",
+    "usuario": "pa.teste2",
+    "progresso": 80,
+    "capitulo": "13h 57min ouvidos"
   }
 ]
