@@ -84,12 +84,6 @@
     "capitulo": "6h 13min ouvidos"
   },
   {
-    "id": "8c635836-0414-413e-b9da-88310a08f856",
-    "usuario": "Ouvinte",
-    "progresso": 29,
-    "capitulo": "6h 48min ouvidos"
-  },
-  {
     "id": "09539aea-c7c8-433c-92f9-dd627df94cbb",
     "usuario": "Ouvinte",
     "progresso": 92,
@@ -144,12 +138,6 @@
     "capitulo": "1h 01min ouvidos"
   },
   {
-    "id": "ae10a3ee-4c38-4acc-be22-7ed44b85d27f",
-    "usuario": "pa.monicars",
-    "progresso": 1,
-    "capitulo": "3min ouvidos"
-  },
-  {
     "id": "fc821574-3322-434e-bbaf-e596040d0e11",
     "usuario": "Ouvinte",
     "progresso": 19,
@@ -163,20 +151,32 @@
   },
   {
     "id": "7c2e488b-911e-42e5-ac31-940ba94fda70",
-    "usuario": "pa.JessicaStein",
-    "progresso": 16,
-    "capitulo": "4h 18min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 17,
+    "capitulo": "4h 37min ouvidos"
   },
   {
     "id": "7c2e488b-911e-42e5-ac31-940ba94fda70",
-    "usuario": "bt.lagaresgisele",
-    "progresso": 15,
-    "capitulo": "4h 10min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 16,
+    "capitulo": "4h 17min ouvidos"
   },
   {
     "id": "bbaebb23-d30c-46cc-ba9a-5a794f0cfa5d",
     "usuario": "Ouvinte",
-    "progresso": 35,
-    "capitulo": "3h 33min ouvidos"
+    "progresso": 36,
+    "capitulo": "3h 38min ouvidos"
+  },
+  {
+    "id": "568a3507-0906-44e3-9f88-25e43cfc3bda",
+    "usuario": "pa.monicars",
+    "progresso": 2,
+    "capitulo": "13min ouvidos"
+  },
+  {
+    "id": "8c635836-0414-413e-b9da-88310a08f856",
+    "usuario": "Ouvinte",
+    "progresso": 30,
+    "capitulo": "6h 56min ouvidos"
   }
 ]
