@@ -150,22 +150,10 @@
     "capitulo": "10h 31min ouvidos"
   },
   {
-    "id": "857146bc-2138-4623-aaf4-9802f9de660c",
-    "usuario": "Ouvinte",
-    "progresso": 31,
-    "capitulo": "2h 39min ouvidos"
-  },
-  {
     "id": "129a65e7-4abf-4e5c-ba1a-dde63dac5e01",
     "usuario": "yt.teste",
     "progresso": 1,
     "capitulo": "10min ouvidos"
-  },
-  {
-    "id": "7c2e488b-911e-42e5-ac31-940ba94fda70",
-    "usuario": "Ouvinte",
-    "progresso": 24,
-    "capitulo": "6h 39min ouvidos"
   },
   {
     "id": "f9d63c37-6729-4cf7-bb49-1aa93ee9db07",
@@ -201,7 +189,7 @@
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
     "usuario": "yt.teste",
     "progresso": 95,
-    "capitulo": "31h 17min ouvidos"
+    "capitulo": "31h 22min ouvidos"
   },
   {
     "id": "550ab761-4d0f-4019-9c4b-7ca92a46c03a",
@@ -223,14 +211,26 @@
   },
   {
     "id": "43b97057-d94d-4a12-9606-fbdb99400b23",
-    "usuario": "pa.fernandokugi",
+    "usuario": "Ouvinte",
     "progresso": 73,
-    "capitulo": "26h 29min ouvidos"
+    "capitulo": "26h 31min ouvidos"
   },
   {
     "id": "2541af24-a731-4b4e-a88b-26c78d612a6e",
-    "usuario": "Jarlene",
-    "progresso": 0,
-    "capitulo": "Em reproducao"
+    "usuario": "Ouvinte",
+    "progresso": 1,
+    "capitulo": "7min ouvidos"
+  },
+  {
+    "id": "7c2e488b-911e-42e5-ac31-940ba94fda70",
+    "usuario": "bt.lagaresgisele",
+    "progresso": 25,
+    "capitulo": "6h 42min ouvidos"
+  },
+  {
+    "id": "857146bc-2138-4623-aaf4-9802f9de660c",
+    "usuario": "cur.vitor",
+    "progresso": 30,
+    "capitulo": "2h 34min ouvidos"
   }
 ]
