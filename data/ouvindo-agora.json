@@ -218,8 +218,8 @@
   {
     "id": "166ebba0-7d9f-4976-9c66-9d0b9be7b64a",
     "usuario": "yt.teste",
-    "progresso": 40,
-    "capitulo": "3h 31min ouvidos"
+    "progresso": 41,
+    "capitulo": "3h 36min ouvidos"
   },
   {
     "id": "044a43ac-2c7e-4721-a797-cbf1a80ba90b",
@@ -262,5 +262,11 @@
     "usuario": "yt.teste",
     "progresso": 56,
     "capitulo": "10h 49min ouvidos"
+  },
+  {
+    "id": "49826cc9-da2e-478f-95a6-70b6ad309cf9",
+    "usuario": "Lihla",
+    "progresso": 40,
+    "capitulo": "2h 33min ouvidos"
   }
 ]
