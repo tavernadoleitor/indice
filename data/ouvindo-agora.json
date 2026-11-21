@@ -218,8 +218,8 @@
   {
     "id": "166ebba0-7d9f-4976-9c66-9d0b9be7b64a",
     "usuario": "yt.teste",
-    "progresso": 87,
-    "capitulo": "7h 40min ouvidos"
+    "progresso": 88,
+    "capitulo": "7h 45min ouvidos"
   },
   {
     "id": "c4ccf65e-08d4-4735-aa64-d35bb820819e",
@@ -232,5 +232,11 @@
     "usuario": "Ouvinte",
     "progresso": 95,
     "capitulo": "3h 49min ouvidos"
+  },
+  {
+    "id": "f98b6c61-a891-45d2-aea4-77ba54db8d3b",
+    "usuario": "jonamachado",
+    "progresso": 0,
+    "capitulo": "0min ouvidos"
   }
 ]
