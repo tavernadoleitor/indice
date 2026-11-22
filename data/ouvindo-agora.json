@@ -1,7 +1,7 @@
 [
   {
     "id": "672f09dc-c38d-47e0-b6ec-d3a979c0afda",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 56,
     "capitulo": "10h 43min ouvidos"
   },
@@ -25,7 +25,7 @@
   },
   {
     "id": "672f09dc-c38d-47e0-b6ec-d3a979c0afda",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 56,
     "capitulo": "10h 49min ouvidos"
   },
@@ -55,7 +55,7 @@
   },
   {
     "id": "9050c4d6-88d5-4897-887c-940553f77ab4",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 41,
     "capitulo": "4h 00min ouvidos"
   },
@@ -151,15 +151,15 @@
   },
   {
     "id": "9b75846d-b0b6-4864-8314-89b563b0ab2a",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 24,
     "capitulo": "4h 26min ouvidos"
   },
   {
     "id": "b44b34dd-fc54-4f21-8cbe-3c1f260b6d55",
     "usuario": "pa.teste2",
-    "progresso": 48,
-    "capitulo": "15h 58min ouvidos"
+    "progresso": 52,
+    "capitulo": "17h 11min ouvidos"
   },
   {
     "id": "2f8376c9-9311-4192-bc69-d566aea95bc1",
@@ -176,8 +176,8 @@
   {
     "id": "1d5026be-a6b1-4f2e-aff8-cd648835db7a",
     "usuario": "Ouvinte",
-    "progresso": 76,
-    "capitulo": "15h 31min ouvidos"
+    "progresso": 77,
+    "capitulo": "15h 33min ouvidos"
   },
   {
     "id": "d38d1ab8-db01-4c46-8113-789482bc24f0",
@@ -188,14 +188,14 @@
   {
     "id": "f707ce58-3faf-4721-8c59-0cca4105ce37",
     "usuario": "pa.teste2",
-    "progresso": 13,
-    "capitulo": "1h 24min ouvidos"
+    "progresso": 14,
+    "capitulo": "1h 26min ouvidos"
   },
   {
     "id": "8a58d8d7-d10d-4b3f-a50b-e1e84d5ed32a",
     "usuario": "Ouvinte",
     "progresso": 70,
-    "capitulo": "9h 56min ouvidos"
+    "capitulo": "9h 57min ouvidos"
   },
   {
     "id": "e7a3cd58-4bd5-4885-a60c-72e984ec736d",
@@ -207,17 +207,17 @@
     "id": "7c2e488b-911e-42e5-ac31-940ba94fda70",
     "usuario": "pa.JessicaStein",
     "progresso": 36,
-    "capitulo": "9h 39min ouvidos"
+    "capitulo": "9h 43min ouvidos"
   },
   {
     "id": "88f15dab-acd2-477f-91fb-a6e12f6f880e",
     "usuario": "giseleup",
-    "progresso": 99,
-    "capitulo": "10h 24min ouvidos"
+    "progresso": 100,
+    "capitulo": "10h 28min ouvidos"
   },
   {
     "id": "7f209a72-dae7-48a0-8551-11124af8952e",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 76,
     "capitulo": "7h 47min ouvidos"
   }
