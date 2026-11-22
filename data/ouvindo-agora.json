@@ -1,65 +1,5 @@
 [
   {
-    "id": "129a65e7-4abf-4e5c-ba1a-dde63dac5e01",
-    "usuario": "Ouvinte",
-    "progresso": 11,
-    "capitulo": "1h 25min ouvidos"
-  },
-  {
-    "id": "b5373cef-3569-4fde-80bb-d8adbf35e1e0",
-    "usuario": "Ouvinte",
-    "progresso": 51,
-    "capitulo": "4h 05min ouvidos"
-  },
-  {
-    "id": "b0979702-ae5b-4fb0-9f58-365e54fc31eb",
-    "usuario": "pa.teste2",
-    "progresso": 62,
-    "capitulo": "8h 30min ouvidos"
-  },
-  {
-    "id": "857146bc-2138-4623-aaf4-9802f9de660c",
-    "usuario": "pa.teste2",
-    "progresso": 44,
-    "capitulo": "3h 47min ouvidos"
-  },
-  {
-    "id": "129a65e7-4abf-4e5c-ba1a-dde63dac5e01",
-    "usuario": "yt.teste",
-    "progresso": 1,
-    "capitulo": "10min ouvidos"
-  },
-  {
-    "id": "f43bff1a-3f8e-49bf-9993-6a88d49bfb99",
-    "usuario": "Ouvinte",
-    "progresso": 21,
-    "capitulo": "2h 39min ouvidos"
-  },
-  {
-    "id": "a255f6ce-368a-411e-a930-736bc1693101",
-    "usuario": "pa.teste2",
-    "progresso": 99,
-    "capitulo": "17h 22min ouvidos"
-  },
-  {
-    "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
-    "usuario": "yt.teste",
-    "progresso": 98,
-    "capitulo": "32h 06min ouvidos"
-  },
-  {
-    "id": "091ea20f-d4f6-4465-8a0e-a53c4436be9d",
-    "usuario": "Ouvinte",
-    "progresso": 12,
-    "capitulo": "1h 32min ouvidos"
-  },
-  {
-    "id": "80218832-efd5-4a01-9739-97c213abef73",
-    "usuario": "Ouvinte",
-    "progresso": 29,
-    "capitulo": "6h 14min ouvidos"
-  },
-  {
     "id": "672f09dc-c38d-47e0-b6ec-d3a979c0afda",
     "usuario": "yt.teste",
     "progresso": 56,
@@ -242,19 +182,19 @@
   {
     "id": "88f15dab-acd2-477f-91fb-a6e12f6f880e",
     "usuario": "Ouvinte",
-    "progresso": 67,
-    "capitulo": "7h 01min ouvidos"
+    "progresso": 68,
+    "capitulo": "7h 09min ouvidos"
   },
   {
     "id": "b44b34dd-fc54-4f21-8cbe-3c1f260b6d55",
     "usuario": "pa.teste2",
-    "progresso": 52,
-    "capitulo": "17h 27min ouvidos"
+    "progresso": 53,
+    "capitulo": "17h 33min ouvidos"
   },
   {
     "id": "2f8376c9-9311-4192-bc69-d566aea95bc1",
-    "usuario": "bt.Barbaratoff",
-    "progresso": 28,
-    "capitulo": "2h 47min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 29,
+    "capitulo": "2h 52min ouvidos"
   }
 ]
