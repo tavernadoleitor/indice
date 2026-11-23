@@ -57,7 +57,7 @@
     "id": "b44b34dd-fc54-4f21-8cbe-3c1f260b6d55",
     "usuario": "pa.teste2",
     "progresso": 69,
-    "capitulo": "23h 03min ouvidos"
+    "capitulo": "23h 08min ouvidos"
   },
   {
     "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
@@ -134,8 +134,8 @@
   {
     "id": "8a58d8d7-d10d-4b3f-a50b-e1e84d5ed32a",
     "usuario": "Ouvinte",
-    "progresso": 79,
-    "capitulo": "11h 13min ouvidos"
+    "progresso": 80,
+    "capitulo": "11h 18min ouvidos"
   },
   {
     "id": "4cfa724d-c067-4b1a-baaf-048cb24b42e3",
@@ -206,8 +206,8 @@
   {
     "id": "616ac3d6-cb68-4ac1-8a84-bfd6ae52d7e2",
     "usuario": "yt.teste",
-    "progresso": 19,
-    "capitulo": "1h 34min ouvidos"
+    "progresso": 20,
+    "capitulo": "1h 39min ouvidos"
   },
   {
     "id": "f8536c60-e247-4d75-af83-db87aa968a78",
@@ -224,8 +224,8 @@
   {
     "id": "2a3cb0c0-62e7-4ff7-a520-20dadcfbde30",
     "usuario": "pa.teste2",
-    "progresso": 49,
-    "capitulo": "6h 58min ouvidos"
+    "progresso": 50,
+    "capitulo": "7h 03min ouvidos"
   },
   {
     "id": "5cd853cf-a830-4a47-92b8-836ff0fa3e43",
@@ -242,8 +242,8 @@
   {
     "id": "091ea20f-d4f6-4465-8a0e-a53c4436be9d",
     "usuario": "Ouvinte",
-    "progresso": 20,
-    "capitulo": "2h 37min ouvidos"
+    "progresso": 21,
+    "capitulo": "2h 42min ouvidos"
   },
   {
     "id": "166ebba0-7d9f-4976-9c66-9d0b9be7b64a",
@@ -260,14 +260,14 @@
   {
     "id": "b5373cef-3569-4fde-80bb-d8adbf35e1e0",
     "usuario": "pa.viviansousa",
-    "progresso": 11,
-    "capitulo": "52min ouvidos"
+    "progresso": 12,
+    "capitulo": "57min ouvidos"
   },
   {
     "id": "672f09dc-c38d-47e0-b6ec-d3a979c0afda",
     "usuario": "yt.teste",
-    "progresso": 64,
-    "capitulo": "12h 17min ouvidos"
+    "progresso": 65,
+    "capitulo": "12h 32min ouvidos"
   },
   {
     "id": "71c0a1f7-82fc-40b9-9eee-a7e57511236f",
@@ -279,6 +279,6 @@
     "id": "a3939997-9189-4bc9-91e2-86db62ef94f0",
     "usuario": "bt.eduardolouvize",
     "progresso": 76,
-    "capitulo": "35h 57min ouvidos"
+    "capitulo": "36h 03min ouvidos"
   }
 ]
