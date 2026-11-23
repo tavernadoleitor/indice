@@ -246,15 +246,15 @@
     "capitulo": "6h 11min ouvidos"
   },
   {
-    "id": "2b5c2f4a-741b-4fe1-a3b9-b8a80f9021e8",
-    "usuario": "bt.vilman",
-    "progresso": 1,
-    "capitulo": "0min ouvidos"
-  },
-  {
     "id": "7c2e488b-911e-42e5-ac31-940ba94fda70",
     "usuario": "Ouvinte",
     "progresso": 36,
     "capitulo": "9h 38min ouvidos"
+  },
+  {
+    "id": "055e598d-557f-4646-8d10-9dcd437f44bf",
+    "usuario": "Ouvinte",
+    "progresso": 0,
+    "capitulo": "4min ouvidos"
   }
 ]
