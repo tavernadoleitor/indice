@@ -1,5 +1,17 @@
 [
   {
+    "id": "11f65084-21c7-47e3-a39b-640b4389debf",
+    "titulo": "A Cama de Procusto",
+    "autor": "Nassim Nicholas Taleb",
+    "narrador": "",
+    "genero": "",
+    "duracao": "1h 36min",
+    "serie": "",
+    "adicionado_em": "2026-11-24",
+    "capa": "capas/hero-library.svg",
+    "descricao": ""
+  },
+  {
     "id": "c01d171b-2002-4283-a88c-022dab4a6f8d",
     "titulo": "O Sino Calou - Temporada 1: O Vale do Sossego",
     "autor": "Leonardo Lorençoni",
