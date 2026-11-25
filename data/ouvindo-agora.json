@@ -93,7 +93,7 @@
     "id": "b44b34dd-fc54-4f21-8cbe-3c1f260b6d55",
     "usuario": "pa.teste2",
     "progresso": 98,
-    "capitulo": "32h 44min ouvidos"
+    "capitulo": "32h 49min ouvidos"
   },
   {
     "id": "2a3cb0c0-62e7-4ff7-a520-20dadcfbde30",
@@ -112,12 +112,6 @@
     "usuario": "Ouvinte",
     "progresso": 3,
     "capitulo": "3min ouvidos"
-  },
-  {
-    "id": "857146bc-2138-4623-aaf4-9802f9de660c",
-    "usuario": "Ouvinte",
-    "progresso": 46,
-    "capitulo": "3h 57min ouvidos"
   },
   {
     "id": "50b92410-ce76-49c0-8912-2b166276f756",
@@ -218,8 +212,8 @@
   {
     "id": "56f90182-533a-484d-90c8-602664b580cf",
     "usuario": "pa.teste2",
-    "progresso": 8,
-    "capitulo": "1h 15min ouvidos"
+    "progresso": 9,
+    "capitulo": "1h 20min ouvidos"
   },
   {
     "id": "4794f49b-0216-4329-bb24-e17cf3177ec9",
@@ -290,8 +284,8 @@
   {
     "id": "49c5269f-0139-4a0d-9553-4be2e74b3698",
     "usuario": "yt.teste",
-    "progresso": 60,
-    "capitulo": "6h 39min ouvidos"
+    "progresso": 62,
+    "capitulo": "6h 46min ouvidos"
   },
   {
     "id": "849c5d94-ad14-4916-bfdf-eff962f163fa",
@@ -314,20 +308,20 @@
   {
     "id": "84e7d108-0392-49ac-bcda-aae1437fc87d",
     "usuario": "yt.teste",
-    "progresso": 50,
-    "capitulo": "3h 42min ouvidos"
+    "progresso": 55,
+    "capitulo": "4h 07min ouvidos"
   },
   {
     "id": "b8d3c2c8-54b4-49ee-a14b-97e349f34c84",
     "usuario": "pa.isabelamuller",
     "progresso": 75,
-    "capitulo": "17h 53min ouvidos"
+    "capitulo": "17h 58min ouvidos"
   },
   {
     "id": "b5373cef-3569-4fde-80bb-d8adbf35e1e0",
     "usuario": "Ouvinte",
-    "progresso": 62,
-    "capitulo": "4h 59min ouvidos"
+    "progresso": 64,
+    "capitulo": "5h 09min ouvidos"
   },
   {
     "id": "168406b7-a111-4b6c-9154-8b1e4db7fe39",
@@ -338,7 +332,13 @@
   {
     "id": "166ebba0-7d9f-4976-9c66-9d0b9be7b64a",
     "usuario": "Ouvinte",
-    "progresso": 87,
-    "capitulo": "7h 40min ouvidos"
+    "progresso": 88,
+    "capitulo": "7h 45min ouvidos"
+  },
+  {
+    "id": "857146bc-2138-4623-aaf4-9802f9de660c",
+    "usuario": "cur.vitor",
+    "progresso": 39,
+    "capitulo": "3h 18min ouvidos"
   }
 ]
