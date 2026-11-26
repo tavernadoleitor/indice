@@ -72,12 +72,6 @@
     "capitulo": "9h 35min ouvidos"
   },
   {
-    "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
-    "usuario": "Ouvinte",
-    "progresso": 80,
-    "capitulo": "26h 18min ouvidos"
-  },
-  {
     "id": "a3a6a955-76ce-4d63-9561-2532754a5c56",
     "usuario": "Ouvinte",
     "progresso": 7,
@@ -268,5 +262,11 @@
     "usuario": "Ouvinte",
     "progresso": 32,
     "capitulo": "2h 22min ouvidos"
+  },
+  {
+    "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
+    "usuario": "bt.mikahil",
+    "progresso": 80,
+    "capitulo": "26h 18min ouvidos"
   }
 ]
