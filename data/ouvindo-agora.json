@@ -49,13 +49,13 @@
   },
   {
     "id": "5b9e4abb-9e73-4239-9276-acc924eec23a",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 100,
     "capitulo": "32h 50min ouvidos"
   },
   {
     "id": "88f15dab-acd2-477f-91fb-a6e12f6f880e",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 69,
     "capitulo": "7h 14min ouvidos"
   },
@@ -97,13 +97,13 @@
   },
   {
     "id": "d721597e-8272-44a5-bb1f-13b24d8cc015",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 0,
     "capitulo": "Em reproducao"
   },
   {
     "id": "77052bc3-30fd-41f8-8971-32d12e75b62a",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 21,
     "capitulo": "3h 00min ouvidos"
   },
@@ -133,7 +133,7 @@
   },
   {
     "id": "ccec5197-8a67-4d6f-bbf2-ab01f900b657",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 35,
     "capitulo": "52min ouvidos"
   },
@@ -157,7 +157,7 @@
   },
   {
     "id": "f9d63c37-6729-4cf7-bb49-1aa93ee9db07",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 15,
     "capitulo": "3h 32min ouvidos"
   },
@@ -193,7 +193,7 @@
   },
   {
     "id": "a3a6a955-76ce-4d63-9561-2532754a5c56",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 15,
     "capitulo": "1h 30min ouvidos"
   },
@@ -218,8 +218,8 @@
   {
     "id": "9050c4d6-88d5-4897-887c-940553f77ab4",
     "usuario": "Ouvinte",
-    "progresso": 49,
-    "capitulo": "4h 50min ouvidos"
+    "progresso": 50,
+    "capitulo": "4h 52min ouvidos"
   },
   {
     "id": "ab9a74dc-0286-42fa-9ded-d16b97c8d547",
@@ -229,7 +229,7 @@
   },
   {
     "id": "77052bc3-30fd-41f8-8971-32d12e75b62a",
-    "usuario": "yt.teste",
+    "usuario": "Ouvinte",
     "progresso": 29,
     "capitulo": "4h 13min ouvidos"
   },
@@ -240,21 +240,15 @@
     "capitulo": "7h 21min ouvidos"
   },
   {
+    "id": "56f90182-533a-484d-90c8-602664b580cf",
+    "usuario": "pa.teste2",
+    "progresso": 33,
+    "capitulo": "5h 11min ouvidos"
+  },
+  {
     "id": "07e846b5-729e-44ed-9cd2-dee60eef5627",
     "usuario": "Ouvinte",
     "progresso": 32,
     "capitulo": "8h 50min ouvidos"
-  },
-  {
-    "id": "56f90182-533a-484d-90c8-602664b580cf",
-    "usuario": "pa.teste2",
-    "progresso": 32,
-    "capitulo": "5h 06min ouvidos"
-  },
-  {
-    "id": "aeee4baa-fe5d-4298-826b-27f4fab99f38",
-    "usuario": "pa.monicars",
-    "progresso": 64,
-    "capitulo": "5h 36min ouvidos"
   }
 ]
