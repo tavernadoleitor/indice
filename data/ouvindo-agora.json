@@ -97,7 +97,7 @@
   },
   {
     "id": "17947eac-9c4e-4e7c-801d-4d961d107667",
-    "usuario": "Lihla",
+    "usuario": "Ouvinte",
     "progresso": 0,
     "capitulo": "Em reproducao"
   },
@@ -129,7 +129,7 @@
     "id": "e7a3cd58-4bd5-4885-a60c-72e984ec736d",
     "usuario": "pa.teste2",
     "progresso": 32,
-    "capitulo": "7h 01min ouvidos"
+    "capitulo": "7h 06min ouvidos"
   },
   {
     "id": "01625bb6-e180-47a0-945e-9d553f83bee7",
@@ -301,8 +301,8 @@
   },
   {
     "id": "f04440d0-c69f-41b8-a332-e9fec2ff3458",
-    "usuario": "Lihla",
-    "progresso": 98,
-    "capitulo": "3h 33min ouvidos"
+    "usuario": "Ouvinte",
+    "progresso": 100,
+    "capitulo": "3h 38min ouvidos"
   }
 ]
